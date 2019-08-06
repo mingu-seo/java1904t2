@@ -18,7 +18,7 @@
 			<isNotEqual property="sval" compareValue="" prepend="and">
 				<!-- 검색 타입이 all일 때 -->
 				<isEqual property="stype" compareValue="all">
-					((name LIKE '%$sval$%' ) OR (tel LIKE '%$sval$%' ))
+					((name LIKE '%$sval$%' ) OR (tel1 LIKE '%$sval$%' )) OR (tel2 LIKE '%$sval$%' )) OR (tel3 LIKE '%$sval$%' ))
 				</isEqual>
 				<!-- 검색 타입이 all이 아닐때 해당 stype으로 검색 -->
 				<isNotEqual property="stype" compareValue="all">
@@ -57,9 +57,9 @@
 
 	<insert id="insert" parameterClass="doctorvo">
 		INSERT INTO doctor
-		(name, department, position, addr, tel, category, doc_image, doc_image_org, gender)
+		(name, department, position, addr, tel1,, tel2, tel3, category, doc_image, doc_image_org, gender)
 		VALUES
-		(#name#, #department#, #position#, #addr#, #tel#, #category#, #doc_image#, #doc_image_org#, #gender#)
+		(#name#, #department#, #position#, #addr#, #tel1#, #tel2#, #tel3#, #category#, #doc_image#, #doc_image_org#, #gender#)
 		<selectKey keyProperty="no" resultClass="Integer">
 			SELECT
 			LAST_INSERT_ID()
@@ -69,7 +69,7 @@
 	<update id="update" parameterClass="doctorvo">
 		UPDATE doctor SET
 		name=#name#, department=#department#,
-		position=#position#, addr=#addr#, gender=#gender#,
+		position=#position#, addr=#addr#, gender=#gender#, tel1=#tel1#, tel2=#tel2#,
 		<isEqual property="doc_imagename_chk" compareValue="1">
 			doc_image='', doc_image_org='',
 		</isEqual>
@@ -78,7 +78,7 @@
 				doc_image=#doc_image#, doc_image_org=#doc_image_org#,
 			</isNotNull>
 		</isNotEqual>
-		 tel=#tel#
+		 tel3=#tel3#
 		WHERE no=#no#
 	</update>
 

@@ -106,8 +106,11 @@
 											</tr>
 											<tr>
 												<th scope="row"><label for="">연락처</label></th>
-												<td colspan="3"><input type="text" id="tel"
-													name="tel" class="w50" title="제목을 입력해주세요" /></td>
+												<td colspan="3">
+												<input type="text" id="tel1" name="tel1" title="번호를 입력해주세요">
+												<input type="text" id="tel2" name="tel2" title="번호를 입력해주세요">
+												<input type="text" id="tel3" name="tel3" title="번호를 입력해주세요">
+												</td>
 											</tr>
 											<tr>
 												<th scope="row"><label for="">사진</label></th>

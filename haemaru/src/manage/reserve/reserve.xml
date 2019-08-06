@@ -150,6 +150,6 @@
 		INSERT INTO reserve
 			(name, tel1, tel2, tel3, res_date, res_hour, member_pk, doctor_pk, res_contents, route)
 		VALUES
-			(#name#, #tel1#,, #tel2#, #tel3#, #res_date#, #res_hour#, #member_pk#, #doctor_pk#, #res_contents#, 1)
+			(#name#, #tel1#, #tel2#, #tel3#, #res_date#, #res_hour#, #member_pk#, #doctor_pk#, #res_contents#, 1)
 	</insert>
 </sqlMap>
