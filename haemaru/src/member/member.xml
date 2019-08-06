@@ -46,10 +46,14 @@
     </insert>
     <update id="update" parameterClass="membervo">
         update member set
-        	<isNotEqual property="pw" compareValue="">
-        	    pw = md5(#pw#),
-        	</isNotEqual>
-        	name=#name#
+        	name=#name#,
+        	email1=#email1#,
+        	email2=#email2#,
+        	tel1=#tel1#,
+        	tel2=#tel2#,
+        	tel3=#tel3#,
+        	birth=#birth#,
+        	memo=#memo# 
         where no=#no#
     </update>
     

@@ -112,7 +112,7 @@ function goSave() {
 									<tr>
 										<th scope="row"><label for="">비밀번호</label></th>
 										<td>
-											<input type="pw" id="pw" name="pw" value="" size="17px";/>
+											<input type="password" id="pw" name="pw" value=""/>
 										</td>
 									</tr>
 									<tr>
