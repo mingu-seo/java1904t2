@@ -32,7 +32,7 @@
 .sub6-my > div h5 {color:#666; font-size:30px;}
 .sub6-my .myinfo-btn {color:#98a2aa; letter-spacing: 0.5px; transition: all 0.3s; border:1.5px #e8eaec solid; text-align: center; display: block; line-height: 38px; border-radius: 35px; font-size:12px; position: absolute; right:40px; top:40%; transform: translateY(-50%); width:80px; height:40px; }
 .sub6-my .myinfo-btn:hover {color:#83c1aa; border:1.5px solid #83c1aa;}
-.sub6-my > div:nth-child(1) {margin-right:50px; margin-left:30px; border:2px solid #ebebeb; border-radius: 50%; width:150px; height:150px; background-image: url(../icon/man.jpg); background-size:150px; background-repeat: no-repeat; background-position: left -2px top -20px;}
+.sub6-my > div:nth-child(1) {margin-right:50px; margin-left:30px; border:2px solid #ebebeb; border-radius: 50%; width:150px; height:150px; background-image: url(../icon/myinfor5.jpg); background-size:170px; background-repeat: no-repeat; background-position: left 20px light 0px top -10px;}
 .sub6-contact::before {content: ''; display: block; background-color:#e8eaec; width:70px; height:2px; margin-bottom:20px; margin-left:40px;}
 .sub6-contact {width:800px; margin:0 auto;}
 .sub6-contact h3 {text-indent: 40px; font-size:20px; color:#666; margin-top:20px;}
