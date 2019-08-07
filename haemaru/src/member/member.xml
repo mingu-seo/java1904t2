@@ -86,4 +86,17 @@
     <select id="loginSessionInfo" parameterClass="membervo" resultClass="membervo">
         select * from member where concat(email1, email2) = #email1# and pw=md5(#pw#)
     </select>
+    
+    <select id = "reservationSchedule" parameterClass="java.util.HashMap" resultClass="manage.reserve.ReserveVO">
+    	SELECT *
+		FROM reserve 
+		WHERE member_pk = #member_pk# AND res_date >= CURDATE()
+		ORDER BY res_date, res_hour LIMIT 1 
+    </select>
+    
+     <select id = "memberReservationList" parameterClass="manage.reserve.ReserveVO" resultClass="manage.reserve.ReserveVO">
+    	SELECT *
+		FROM reserve 
+		ORDER BY res_date, res_hour DESC
+    </select>
 </sqlMap>

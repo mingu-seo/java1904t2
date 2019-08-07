@@ -1,7 +1,12 @@
+<%@page import="util.DateUtil"%>
+<%@page import="util.CodeUtil"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="member.*" %>
+<%@ page import="manage.reserve.*"%>
 <%
-   MemberVO mdata = (MemberVO)request.getAttribute("data");
+	MemberVO mdata = (MemberVO)request.getAttribute("data");
+	MemberVO loginInfo = (MemberVO)session.getAttribute("memberInfo");
+	ReserveVO rdata = (ReserveVO) request.getAttribute("rdata");
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -137,13 +142,16 @@ function goSave() {
                     </div>
                     <div>
                         <h5>RegistDate</h5>
-                        <p><%=mdata.getRegistdate()%></p>
+                        <p> <%= DateUtil.getDateFormat(mdata.getRegistdate()) %></p>
                     </div>
                 </div>
+                <%if(rdata!=null) {%>
                 <div class="sub6-botbox">
-                    <p><span><%=mdata.getName()%></span> 님의 다음 진료 / 접종 예정일은 2019 년 06 월 20 일 입니다.</p>
+                    <p><span><%=mdata.getName()%></span> 님의 다음 진료 예정일은 <span><%=rdata.getRes_date()%> <%=CodeUtil.getDoctorScheduleName(rdata.getRes_hour())%></span> 입니다.</p>
                 </div>
+                <%} %>
             </div>
+ 			<input type="hidden" name="member_pk" id="member_pk" value="<%=mdata.getNo()%>" />
         </div>
     </div>
 <script>

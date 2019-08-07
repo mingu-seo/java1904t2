@@ -2,6 +2,7 @@ package member;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,7 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import manage.admin.AdminVO;
+import manage.reserve.ReserveVO;
 import member.MypettVO;
+import util.DateUtil;
 import util.Page;
 
 @Service
@@ -88,6 +91,18 @@ public class MemberService {
 	
 	public void insertLoginHistory(MemberVO vo) throws SQLException {
 		memberDAO.insertLoginHistory(vo);
+	}
+	
+	public ReserveVO reservationSchedule(int member_pk) throws Exception {
+		HashMap hm = new HashMap();
+		hm.put("member_pk", member_pk);
+		//hm.put("res_hour", res_hour);
+		return memberDAO.reservationSchedule(hm);
+	}
+	
+	public ArrayList memberReservationList(ReserveVO rvo) throws SQLException {
+		ArrayList rlist = memberDAO.memberReservationList(rvo);
+		return rlist;
 	}
 	
 }
