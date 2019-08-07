@@ -4084,6 +4084,511 @@
 2019-08-07 14:42:59,185 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100029} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
 2019-08-07 14:42:59,185 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100029} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
 2019-08-07 14:42:59,185 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100029} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+<<<<<<< HEAD
+2019-08-07 14:50:13,080 [http-bio-8080-exec-8] DEBUG Connection - {conn-100030} Connection
+2019-08-07 14:50:13,080 [http-bio-8080-exec-8] DEBUG Connection - {conn-100030} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:50:13,080 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100031} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:50:13,080 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100031} Parameters: []
+2019-08-07 14:50:13,080 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100031} Types: []
+2019-08-07 14:50:13,083 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} ResultSet
+2019-08-07 14:50:13,083 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 14:50:13,083 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:50:13,083 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:50:13,083 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 14:50:13,083 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:50:13,083 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:50:13,084 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:50:13,084 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 14:50:13,084 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:50:13,084 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:50:13,084 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:50:13,084 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 14:50:13,084 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:50:13,084 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:50:13,084 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:50:13,084 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:50:13,084 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 14:50:13,085 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 14:50:13,085 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 14:50:13,085 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 14:50:13,085 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 14:50:13,085 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 14:50:13,085 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100032} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 14:55:47,813 [http-bio-8080-exec-6] DEBUG Connection - {conn-100033} Connection
+2019-08-07 14:55:47,813 [http-bio-8080-exec-6] DEBUG Connection - {conn-100033} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:55:47,814 [http-bio-8080-exec-6] DEBUG PreparedStatement - {pstm-100034} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:55:47,814 [http-bio-8080-exec-6] DEBUG PreparedStatement - {pstm-100034} Parameters: []
+2019-08-07 14:55:47,814 [http-bio-8080-exec-6] DEBUG PreparedStatement - {pstm-100034} Types: []
+2019-08-07 14:55:47,815 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} ResultSet
+2019-08-07 14:55:47,816 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 14:55:47,816 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:47,816 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:47,816 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 14:55:47,816 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:55:47,816 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:55:47,816 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 14:55:47,817 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 14:55:47,818 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 14:55:47,818 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 14:55:47,818 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100035} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 14:55:48,051 [http-bio-8080-exec-1] DEBUG Connection - {conn-100036} Connection
+2019-08-07 14:55:48,051 [http-bio-8080-exec-1] DEBUG Connection - {conn-100036} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:55:48,051 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100037} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:55:48,052 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100037} Parameters: []
+2019-08-07 14:55:48,052 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100037} Types: []
+2019-08-07 14:55:48,052 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} ResultSet
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 14:55:48,053 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100038} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 14:55:48,185 [http-bio-8080-exec-4] DEBUG Connection - {conn-100039} Connection
+2019-08-07 14:55:48,185 [http-bio-8080-exec-4] DEBUG Connection - {conn-100039} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:55:48,185 [http-bio-8080-exec-4] DEBUG PreparedStatement - {pstm-100040} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:55:48,185 [http-bio-8080-exec-4] DEBUG PreparedStatement - {pstm-100040} Parameters: []
+2019-08-07 14:55:48,185 [http-bio-8080-exec-4] DEBUG PreparedStatement - {pstm-100040} Types: []
+2019-08-07 14:55:48,186 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} ResultSet
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 14:55:48,187 [http-bio-8080-exec-4] DEBUG ResultSet - {rset-100041} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 14:55:48,466 [http-bio-8080-exec-2] DEBUG Connection - {conn-100042} Connection
+2019-08-07 14:55:48,466 [http-bio-8080-exec-2] DEBUG Connection - {conn-100042} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:55:48,467 [http-bio-8080-exec-2] DEBUG PreparedStatement - {pstm-100043} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:55:48,467 [http-bio-8080-exec-2] DEBUG PreparedStatement - {pstm-100043} Parameters: []
+2019-08-07 14:55:48,467 [http-bio-8080-exec-2] DEBUG PreparedStatement - {pstm-100043} Types: []
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} ResultSet
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,468 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 14:55:48,469 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100044} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 14:55:48,985 [http-bio-8080-exec-9] DEBUG Connection - {conn-100045} Connection
+2019-08-07 14:55:48,986 [http-bio-8080-exec-9] DEBUG Connection - {conn-100045} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:55:48,987 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100046} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 14:55:48,988 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100046} Parameters: []
+2019-08-07 14:55:48,988 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100046} Types: []
+2019-08-07 14:55:48,992 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} ResultSet
+2019-08-07 14:55:48,994 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 14:55:48,994 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,994 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,994 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 14:55:48,995 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:55:48,995 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:55:48,995 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 14:55:48,995 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 14:55:48,995 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:55:48,995 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,996 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 14:55:48,996 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 14:55:48,996 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,996 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,996 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 14:55:48,996 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 14:55:48,997 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 14:55:48,997 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 14:55:48,997 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 14:55:48,997 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 14:55:48,997 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 14:55:48,997 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 14:55:48,998 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100047} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:11,126 [http-bio-8080-exec-8] DEBUG Connection - {conn-100048} Connection
+2019-08-07 15:02:11,126 [http-bio-8080-exec-8] DEBUG Connection - {conn-100048} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:11,127 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100049} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:11,127 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100049} Parameters: []
+2019-08-07 15:02:11,127 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100049} Types: []
+2019-08-07 15:02:11,129 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} ResultSet
+2019-08-07 15:02:11,130 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:02:11,130 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,130 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,130 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 15:02:11,130 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:11,130 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:11,130 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:11,130 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 15:02:11,130 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:11,130 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:11,131 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100050} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:11,820 [http-bio-8080-exec-5] DEBUG Connection - {conn-100051} Connection
+2019-08-07 15:02:11,821 [http-bio-8080-exec-5] DEBUG Connection - {conn-100051} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:11,821 [http-bio-8080-exec-5] DEBUG PreparedStatement - {pstm-100052} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:11,821 [http-bio-8080-exec-5] DEBUG PreparedStatement - {pstm-100052} Parameters: []
+2019-08-07 15:02:11,821 [http-bio-8080-exec-5] DEBUG PreparedStatement - {pstm-100052} Types: []
+2019-08-07 15:02:11,822 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} ResultSet
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 15:02:11,823 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,824 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,824 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:11,824 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:11,824 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 15:02:11,824 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 15:02:11,824 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 15:02:11,824 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:11,824 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:11,824 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:11,824 [http-bio-8080-exec-5] DEBUG ResultSet - {rset-100053} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:12,201 [http-bio-8080-exec-10] DEBUG Connection - {conn-100054} Connection
+2019-08-07 15:02:12,201 [http-bio-8080-exec-10] DEBUG Connection - {conn-100054} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:12,202 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100055} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:12,202 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100055} Parameters: []
+2019-08-07 15:02:12,202 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100055} Types: []
+2019-08-07 15:02:12,205 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} ResultSet
+2019-08-07 15:02:12,205 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:02:12,205 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,206 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,206 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 15:02:12,206 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:12,206 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:12,206 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:12,206 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 15:02:12,206 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:12,207 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,207 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:12,207 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 15:02:12,207 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,207 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,207 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,208 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:12,208 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 15:02:12,208 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 15:02:12,208 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 15:02:12,208 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:12,208 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:12,208 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:12,208 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100056} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:12,765 [http-bio-8080-exec-10] DEBUG Connection - {conn-100057} Connection
+2019-08-07 15:02:12,765 [http-bio-8080-exec-10] DEBUG Connection - {conn-100057} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:12,766 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100058} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:12,766 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100058} Parameters: []
+2019-08-07 15:02:12,766 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100058} Types: []
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} ResultSet
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,767 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,768 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:12,768 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:12,768 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 15:02:12,768 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 15:02:12,768 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 15:02:12,768 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:12,768 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:12,768 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:12,768 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100059} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:27,461 [http-bio-8080-exec-1] DEBUG Connection - {conn-100000} Connection
+2019-08-07 15:02:27,467 [http-bio-8080-exec-1] DEBUG Connection - {conn-100000} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:27,506 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100001} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:27,506 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100001} Parameters: []
+2019-08-07 15:02:27,506 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100001} Types: []
+2019-08-07 15:02:27,531 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} ResultSet
+2019-08-07 15:02:27,539 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:02:27,539 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,540 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,540 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 15:02:27,540 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:27,540 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:27,540 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:27,540 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 15:02:27,541 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:27,541 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,541 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:27,541 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 15:02:27,541 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,541 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,541 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,542 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:27,543 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 15:02:27,543 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 15:02:27,544 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 15:02:27,544 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:27,544 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:27,544 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:27,544 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100002} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:27,552 [http-bio-8080-exec-2] DEBUG Connection - {conn-100003} Connection
+2019-08-07 15:02:27,554 [http-bio-8080-exec-2] DEBUG Connection - {conn-100003} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:27,554 [http-bio-8080-exec-2] DEBUG PreparedStatement - {pstm-100004} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:27,562 [http-bio-8080-exec-2] DEBUG PreparedStatement - {pstm-100004} Parameters: []
+2019-08-07 15:02:27,562 [http-bio-8080-exec-2] DEBUG PreparedStatement - {pstm-100004} Types: []
+2019-08-07 15:02:27,577 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} ResultSet
+2019-08-07 15:02:27,599 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:02:27,599 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,599 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,599 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:27,600 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:27,601 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 15:02:27,601 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 15:02:27,601 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 15:02:27,601 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:27,601 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:27,601 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:27,601 [http-bio-8080-exec-2] DEBUG ResultSet - {rset-100005} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:35,568 [http-bio-8080-exec-10] DEBUG Connection - {conn-100006} Connection
+2019-08-07 15:02:35,568 [http-bio-8080-exec-10] DEBUG Connection - {conn-100006} Preparing Statement:       SELECT count(*) FROM haemaru.member where concat(email1, email2) = ? and pw=md5(?)     
+2019-08-07 15:02:35,569 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100007} Executing Statement:       SELECT count(*) FROM haemaru.member where concat(email1, email2) = ? and pw=md5(?)     
+2019-08-07 15:02:35,569 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100007} Parameters: [test@gmail.com, test]
+2019-08-07 15:02:35,569 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100007} Types: [java.lang.String, java.lang.String]
+2019-08-07 15:02:35,571 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100008} ResultSet
+2019-08-07 15:02:35,572 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100008} Header: [count(*)]
+2019-08-07 15:02:35,572 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100008} Result: [1]
+2019-08-07 15:02:35,574 [http-bio-8080-exec-10] DEBUG Connection - {conn-100009} Connection
+2019-08-07 15:02:35,575 [http-bio-8080-exec-10] DEBUG Connection - {conn-100009} Preparing Statement:          select * from member where concat(email1, email2) = ? and pw=md5(?)     
+2019-08-07 15:02:35,575 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100010} Executing Statement:          select * from member where concat(email1, email2) = ? and pw=md5(?)     
+2019-08-07 15:02:35,575 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100010} Parameters: [test@gmail.com, test]
+2019-08-07 15:02:35,575 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100010} Types: [java.lang.String, java.lang.String]
+2019-08-07 15:02:35,576 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100011} ResultSet
+2019-08-07 15:02:35,576 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100011} Header: [no, name, email1, email2, pw, tel1, tel2, tel3, birth, registdate, memo]
+2019-08-07 15:02:35,576 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100011} Result: [42, test, test, @gmail.com, 098f6bcd4621d373cade4e832627b4f6, 010, 1234, 5678, 19940504, 2019-08-07 12:02:46.0, null]
+2019-08-07 15:02:37,473 [http-bio-8080-exec-9] DEBUG Connection - {conn-100012} Connection
+2019-08-07 15:02:37,473 [http-bio-8080-exec-9] DEBUG Connection - {conn-100012} Preparing Statement:                select no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate,          ifnull((select max(no) from member where no>1 and no<?), 0) as prev_no,          ifnull((select min(no) from member where no>1 and no>?), 0) as next_no          from member where no=?               
+2019-08-07 15:02:37,473 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100013} Executing Statement:                select no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate,          ifnull((select max(no) from member where no>1 and no<?), 0) as prev_no,          ifnull((select min(no) from member where no>1 and no>?), 0) as next_no          from member where no=?               
+2019-08-07 15:02:37,473 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100013} Parameters: [42, 42, 42]
+2019-08-07 15:02:37,473 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100013} Types: [java.lang.Integer, java.lang.Integer, java.lang.Integer]
+2019-08-07 15:02:37,474 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100014} ResultSet
+2019-08-07 15:02:37,475 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100014} Header: [no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate]
+2019-08-07 15:02:37,475 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100014} Result: [42, test, @gmail.com, 010, 1234, 5678, 19940504, 098f6bcd4621d373cade4e832627b4f6, test, null, 2019-08-07 12:02:46.0]
+2019-08-07 15:02:37,478 [http-bio-8080-exec-9] DEBUG Connection - {conn-100015} Connection
+2019-08-07 15:02:37,478 [http-bio-8080-exec-9] DEBUG Connection - {conn-100015} Preparing Statement:       SELECT *   FROM reserve    WHERE member_pk = ? AND res_date >= CURDATE()   ORDER BY res_date, res_hour LIMIT 1      
+2019-08-07 15:02:37,479 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100016} Executing Statement:       SELECT *   FROM reserve    WHERE member_pk = ? AND res_date >= CURDATE()   ORDER BY res_date, res_hour LIMIT 1      
+2019-08-07 15:02:37,479 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100016} Parameters: [42]
+2019-08-07 15:02:37,479 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100016} Types: [java.lang.Integer]
+2019-08-07 15:02:37,482 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100017} ResultSet
+2019-08-07 15:02:37,483 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100017} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:02:37,483 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100017} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:39,236 [http-bio-8080-exec-9] DEBUG Connection - {conn-100018} Connection
+2019-08-07 15:02:39,237 [http-bio-8080-exec-9] DEBUG Connection - {conn-100018} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:39,237 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100019} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:02:39,237 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100019} Parameters: []
+2019-08-07 15:02:39,237 [http-bio-8080-exec-9] DEBUG PreparedStatement - {pstm-100019} Types: []
+2019-08-07 15:02:39,249 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} ResultSet
+2019-08-07 15:02:39,251 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:02:39,251 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:39,251 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:39,252 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 15:02:39,252 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:39,253 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:39,253 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:02:39,253 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 15:02:39,254 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:39,254 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:39,254 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:02:39,254 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 15:02:39,255 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:39,255 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:39,255 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:02:39,256 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:02:39,256 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 15:02:39,257 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 15:02:39,257 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 15:02:39,257 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:02:39,258 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:39,258 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 15:02:39,258 [http-bio-8080-exec-9] DEBUG ResultSet - {rset-100020} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:11:42,069 [http-bio-8080-exec-6] DEBUG Connection - {conn-100021} Connection
+2019-08-07 15:11:42,069 [http-bio-8080-exec-6] DEBUG Connection - {conn-100021} Preparing Statement:       SELECT count(*) FROM haemaru.member where concat(email1, email2) = ? and pw=md5(?)     
+2019-08-07 15:11:42,071 [http-bio-8080-exec-6] DEBUG PreparedStatement - {pstm-100022} Executing Statement:       SELECT count(*) FROM haemaru.member where concat(email1, email2) = ? and pw=md5(?)     
+2019-08-07 15:11:42,071 [http-bio-8080-exec-6] DEBUG PreparedStatement - {pstm-100022} Parameters: [test@gmail.com, test]
+2019-08-07 15:11:42,071 [http-bio-8080-exec-6] DEBUG PreparedStatement - {pstm-100022} Types: [java.lang.String, java.lang.String]
+2019-08-07 15:11:42,073 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100023} ResultSet
+2019-08-07 15:11:42,073 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100023} Header: [count(*)]
+2019-08-07 15:11:42,073 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100023} Result: [1]
+2019-08-07 15:11:42,076 [http-bio-8080-exec-6] DEBUG Connection - {conn-100024} Connection
+2019-08-07 15:11:42,076 [http-bio-8080-exec-6] DEBUG Connection - {conn-100024} Preparing Statement:          select * from member where concat(email1, email2) = ? and pw=md5(?)     
+2019-08-07 15:11:42,077 [http-bio-8080-exec-6] DEBUG PreparedStatement - {pstm-100025} Executing Statement:          select * from member where concat(email1, email2) = ? and pw=md5(?)     
+2019-08-07 15:11:42,077 [http-bio-8080-exec-6] DEBUG PreparedStatement - {pstm-100025} Parameters: [test@gmail.com, test]
+2019-08-07 15:11:42,077 [http-bio-8080-exec-6] DEBUG PreparedStatement - {pstm-100025} Types: [java.lang.String, java.lang.String]
+2019-08-07 15:11:42,078 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100026} ResultSet
+2019-08-07 15:11:42,079 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100026} Header: [no, name, email1, email2, pw, tel1, tel2, tel3, birth, registdate, memo]
+2019-08-07 15:11:42,079 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100026} Result: [42, test, test, @gmail.com, 098f6bcd4621d373cade4e832627b4f6, 010, 1234, 5678, 19940504, 2019-08-07 12:02:46.0, null]
+2019-08-07 15:11:46,134 [http-bio-8080-exec-1] DEBUG Connection - {conn-100027} Connection
+2019-08-07 15:11:46,134 [http-bio-8080-exec-1] DEBUG Connection - {conn-100027} Preparing Statement:                select no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate,          ifnull((select max(no) from member where no>1 and no<?), 0) as prev_no,          ifnull((select min(no) from member where no>1 and no>?), 0) as next_no          from member where no=?               
+2019-08-07 15:11:46,134 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100028} Executing Statement:                select no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate,          ifnull((select max(no) from member where no>1 and no<?), 0) as prev_no,          ifnull((select min(no) from member where no>1 and no>?), 0) as next_no          from member where no=?               
+2019-08-07 15:11:46,134 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100028} Parameters: [42, 42, 42]
+2019-08-07 15:11:46,134 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100028} Types: [java.lang.Integer, java.lang.Integer, java.lang.Integer]
+2019-08-07 15:11:46,136 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100029} ResultSet
+2019-08-07 15:11:46,137 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100029} Header: [no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate]
+2019-08-07 15:11:46,137 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100029} Result: [42, test, @gmail.com, 010, 1234, 5678, 19940504, 098f6bcd4621d373cade4e832627b4f6, test, null, 2019-08-07 12:02:46.0]
+2019-08-07 15:11:46,140 [http-bio-8080-exec-1] DEBUG Connection - {conn-100030} Connection
+2019-08-07 15:11:46,140 [http-bio-8080-exec-1] DEBUG Connection - {conn-100030} Preparing Statement:       SELECT *   FROM reserve    WHERE member_pk = ? AND res_date >= CURDATE()   ORDER BY res_date, res_hour LIMIT 1      
+2019-08-07 15:11:46,140 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100031} Executing Statement:       SELECT *   FROM reserve    WHERE member_pk = ? AND res_date >= CURDATE()   ORDER BY res_date, res_hour LIMIT 1      
+2019-08-07 15:11:46,140 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100031} Parameters: [42]
+2019-08-07 15:11:46,140 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100031} Types: [java.lang.Integer]
+2019-08-07 15:11:46,141 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100032} ResultSet
+2019-08-07 15:11:46,141 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100032} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:11:46,141 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100032} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 15:11:49,106 [http-bio-8080-exec-1] DEBUG Connection - {conn-100033} Connection
+2019-08-07 15:11:49,106 [http-bio-8080-exec-1] DEBUG Connection - {conn-100033} Preparing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:11:49,107 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100034} Executing Statement:       SELECT *   FROM reserve    ORDER BY res_date, res_hour DESC     
+2019-08-07 15:11:49,107 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100034} Parameters: []
+2019-08-07 15:11:49,107 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100034} Types: []
+2019-08-07 15:11:49,111 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} ResultSet
+2019-08-07 15:11:49,112 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:11:49,112 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [90, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:11:49,112 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [94, 14, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:11:49,112 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [96, 13, 39, 50, 2019-08-06, 1, z, 맹다영, null, null, null]
+2019-08-07 15:11:49,112 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [101, 12, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:11:49,113 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [107, 11, 39, 50, 2019-08-06, 1, 이건 또 왜 안되는거야? , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:11:49,113 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [106, 10, 39, 50, 2019-08-06, 1, , 맹다영, 010 , 2417 , 0504 ]
+2019-08-07 15:11:49,113 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [91, 9, 39, 50, 2019-08-06, 1, 왜 전화번호가 저장이 안돼?, 맹다영, null, null, null]
+2019-08-07 15:11:49,113 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [104, 8, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:11:49,114 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [102, 7, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:11:49,114 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [103, 6, 40, 50, 2019-08-06, 1, , zz, null, null, null]
+2019-08-07 15:11:49,114 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [100, 5, 39, 50, 2019-08-06, 1, qqq, 맹다영, null, null, null]
+2019-08-07 15:11:49,114 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [98, 4, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:11:49,115 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [97, 3, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:11:49,115 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [95, 2, 39, 50, 2019-08-06, 1, , 맹다영, null, null, null]
+2019-08-07 15:11:49,115 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [92, 1, 39, 50, 2019-08-06, 1, zz, 맹다영, null, null, null]
+2019-08-07 15:11:49,115 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [93, 1, 39, 50, 2019-08-06, 1, zzzzz, 맹다영, null, null, null]
+2019-08-07 15:11:49,116 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [99, 1, 39, 50, 2019-08-06, 1, 222, 맹다영, null, null, null]
+2019-08-07 15:11:49,116 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [105, 1, 41, 45, 2019-08-06, 1, <p>zz</p>, zz, null, null, null]
+2019-08-07 15:11:49,116 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [88, 7, 39, 48, 2019-08-07, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:11:49,117 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [108, 7, 42, 50, 2019-08-07, 1, ㅎㅎ, test, 010 , 1234 , 5678 ]
+2019-08-07 15:11:49,117 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 15:11:49,117 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100035} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
+2019-08-07 15:13:48,763 [http-bio-8080-exec-3] DEBUG Connection - {conn-100036} Connection
+2019-08-07 15:13:48,763 [http-bio-8080-exec-3] DEBUG Connection - {conn-100036} Preparing Statement:                select no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate,          ifnull((select max(no) from member where no>1 and no<?), 0) as prev_no,          ifnull((select min(no) from member where no>1 and no>?), 0) as next_no          from member where no=?               
+2019-08-07 15:13:48,764 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100037} Executing Statement:                select no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate,          ifnull((select max(no) from member where no>1 and no<?), 0) as prev_no,          ifnull((select min(no) from member where no>1 and no>?), 0) as next_no          from member where no=?               
+2019-08-07 15:13:48,764 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100037} Parameters: [42, 42, 42]
+2019-08-07 15:13:48,764 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100037} Types: [java.lang.Integer, java.lang.Integer, java.lang.Integer]
+2019-08-07 15:13:48,766 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100038} ResultSet
+2019-08-07 15:13:48,768 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100038} Header: [no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate]
+2019-08-07 15:13:48,769 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100038} Result: [42, test, @gmail.com, 010, 1234, 5678, 19940504, 098f6bcd4621d373cade4e832627b4f6, test, null, 2019-08-07 12:02:46.0]
+2019-08-07 15:13:48,773 [http-bio-8080-exec-3] DEBUG Connection - {conn-100039} Connection
+2019-08-07 15:13:48,773 [http-bio-8080-exec-3] DEBUG Connection - {conn-100039} Preparing Statement:       SELECT *   FROM reserve    WHERE member_pk = ? AND res_date >= CURDATE()   ORDER BY res_date, res_hour LIMIT 1      
+2019-08-07 15:13:48,774 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100040} Executing Statement:       SELECT *   FROM reserve    WHERE member_pk = ? AND res_date >= CURDATE()   ORDER BY res_date, res_hour LIMIT 1      
+2019-08-07 15:13:48,774 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100040} Parameters: [42]
+2019-08-07 15:13:48,774 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100040} Types: [java.lang.Integer]
+2019-08-07 15:13:48,775 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100041} ResultSet
+2019-08-07 15:13:48,775 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100041} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:13:48,775 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100041} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+2019-08-07 15:13:49,818 [http-bio-8080-exec-3] DEBUG Connection - {conn-100042} Connection
+2019-08-07 15:13:49,819 [http-bio-8080-exec-3] DEBUG Connection - {conn-100042} Preparing Statement:                select no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate,          ifnull((select max(no) from member where no>1 and no<?), 0) as prev_no,          ifnull((select min(no) from member where no>1 and no>?), 0) as next_no          from member where no=?               
+2019-08-07 15:13:49,819 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100043} Executing Statement:                select no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate,          ifnull((select max(no) from member where no>1 and no<?), 0) as prev_no,          ifnull((select min(no) from member where no>1 and no>?), 0) as next_no          from member where no=?               
+2019-08-07 15:13:49,819 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100043} Parameters: [42, 42, 42]
+2019-08-07 15:13:49,819 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100043} Types: [java.lang.Integer, java.lang.Integer, java.lang.Integer]
+2019-08-07 15:13:49,822 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100044} ResultSet
+2019-08-07 15:13:49,823 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100044} Header: [no, email1, email2, tel1, tel2, tel3, birth, pw, name, memo, registdate]
+2019-08-07 15:13:49,823 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100044} Result: [42, test, @gmail.com, 010, 1234, 5678, 19940504, 098f6bcd4621d373cade4e832627b4f6, test, null, 2019-08-07 12:02:46.0]
+2019-08-07 15:13:49,826 [http-bio-8080-exec-3] DEBUG Connection - {conn-100045} Connection
+2019-08-07 15:13:49,827 [http-bio-8080-exec-3] DEBUG Connection - {conn-100045} Preparing Statement:       SELECT *   FROM reserve    WHERE member_pk = ? AND res_date >= CURDATE()   ORDER BY res_date, res_hour LIMIT 1      
+2019-08-07 15:13:49,829 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100046} Executing Statement:       SELECT *   FROM reserve    WHERE member_pk = ? AND res_date >= CURDATE()   ORDER BY res_date, res_hour LIMIT 1      
+2019-08-07 15:13:49,829 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100046} Parameters: [42]
+2019-08-07 15:13:49,829 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100046} Types: [java.lang.Integer]
+2019-08-07 15:13:49,831 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100047} ResultSet
+2019-08-07 15:13:49,832 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100047} Header: [no, res_hour, member_pk, doctor_pk, res_date, route, res_contents, name, tel1, tel2, tel3]
+2019-08-07 15:13:49,832 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100047} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
+=======
+>>>>>>> branch 'master' of https://github.com/mingu-seo/java1904t2.git
 >>>>>>> branch 'master' of https://github.com/mingu-seo/java1904t2.git
 2019-08-07 15:06:35,325 [http-bio-8080-exec-3] DEBUG Connection - {conn-100000} Connection
 2019-08-07 15:06:35,331 [http-bio-8080-exec-3] DEBUG Connection - {conn-100000} Preparing Statement:          select count(*) from notice                                        

@@ -36,7 +36,7 @@
         <div class="doc-btn" data-doctorpk="<%=list.get(i).getNo()%>">
             <a href="#">예약하기</a>
         </div>
-        <img src="/img/icon/doctor<%=list.get(i).getGender()==1?"2":"1" %>.jpg">
+        <img src="/icon/doctor<%=list.get(i).getGender()==1?"2":"1" %>.jpg">
 	</div>
 </div>
 		<%
