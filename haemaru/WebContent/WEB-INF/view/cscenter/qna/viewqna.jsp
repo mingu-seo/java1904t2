@@ -9,6 +9,18 @@ QnaVO data = (QnaVO)request.getAttribute("data");
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<script type="text/javascript">
+	function goDelete() {
+		var del = confirm ('삭제하시겠습니까?');
+		if (del){
+			document.location.href="process.do?no=<%=data.getNo()%>&cmd=delete";
+		} else {
+			return false;
+		}
+	}
+	
+	
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -62,11 +74,7 @@ QnaVO data = (QnaVO)request.getAttribute("data");
                     </div>
                     <ul class="sub5-5-btn clear">
                         <li><a href="<%=param.getTargetURLParam("qna", param, 0)%>">목록으로</a></li>
-                        <li><a href="<%=param.getTargetURLParam("edit", param, data.getNo())%>">수정하기</a></li>
-                    </ul>
-                    <ul class="sub5-5-page">
-                        <li><a href="sub5-3.html"><span>이전글</span><span>진료예약 문의 드립니다.</span><span>윤미연(mail***)</span><span>2019-05-04</span></a></li>
-                        <li><a href="sub5-3.html"><span>다음글</span><span>고양이 중성화수술 문의드립니다.</span><span>이윤(mail***)</span><span>2019-05-01</span></a></li>
+                        <li><a href="#" onClick="goDelete();">삭제하기</a></li>
                     </ul>
                 </div>
             </div>

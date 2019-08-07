@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import manage.reserve.ReserveVO;
+import board.qna.*;
 
 /**
  * 각종 코드값 가져오기
@@ -12,7 +13,42 @@ import manage.reserve.ReserveVO;
  *
  */
 public class CodeUtil {
+	
+	public static String getNoticeCategory(int category) {
+		String result = "";
+		if (category == 1) {
+			result = "소식";
+		} else if (category == 2) {
+			result = "칼럼";
+		} else if (category == 3) {
+			result = "보도자료";
+		} else if (category == 4) {
+			result = "증례소개";
+		}
+		return result;
+	}
+	
 
+	public static String getCategoryName(int category) {
+		String result = "";
+		if (category == 1) {
+			result = "외과";
+		} else if (category == 2) {
+			result = "내과";
+		} else if (category == 3) {
+			result = "영상의학과";
+		} else if (category == 4) {
+			result = "응급의료센터";
+		} else if (category == 5) {
+			result = "예약";
+		} else if (category == 6) {
+			result = "입양";
+		}	
+		return result;
+	}
+	
+	
+	
 	/**
 	 * 관리자 등급
 	 * @param type int

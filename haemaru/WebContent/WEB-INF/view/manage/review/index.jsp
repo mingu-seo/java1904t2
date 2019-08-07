@@ -1,11 +1,11 @@
 <%@ page contentType="text/html; charset=utf-8" %>
-<%@ page import="board.qna.*" %>
-<%@ page import="property.SiteProperty" %>
+<%@ page import="java.util.*" %>
+<%@ page import="manage.adopt.*" %>
 <%@ page import="util.*" %>
 <%@ page import="java.util.*" %>
 <%
-QnaVO param = (QnaVO)request.getAttribute("vo");
-ArrayList<QnaVO> list = (ArrayList)request.getAttribute("list");
+AdoptVO param = (AdoptVO)request.getAttribute("vo");
+ArrayList<AdoptVO> list = (ArrayList)request.getAttribute("list");
 int totCount = (Integer)request.getAttribute("totCount");
 int totPage = (Integer)request.getAttribute("totPage");
 %>
@@ -24,23 +24,6 @@ function groupDelete() {
 		alert("삭제할 항목을 하나 이상 선택해 주세요.");
 	}
 }
-
-function goReply(v) {	
-	if (confirm ('답변을 작성하시겠습니까?')) {
-		document.location.href = "reply.do?no="+v;
-	}
-}
-
-function goDelete(v) {	
-	if (confirm ('삭제하시겠습니까?')) {
-		document.location.href = "process.do?no="+v+"&cmd=delete";
-	}
-}
-
-function goSearch() {
-	$("#searchForm").submit();
-}
-
 </script>
 </head>
 <body> 
@@ -56,7 +39,7 @@ function goSearch() {
 		<div id="container">
 			<div id="content">
 				<div class="con_tit">
-					<h2>문의 - [목록]</h2>
+					<h2>입양동물관리 - [목록]</h2>
 				</div>
 				<!-- //con_tit -->
 				<div class="con">
@@ -65,58 +48,61 @@ function goSearch() {
 						<div id="blist">
 							<p><span><strong>총 <%=totCount%>개</strong>  |  <%=param.getReqPageNo()%>/<%=totPage%>페이지</span></p>
 							<form name="frm" id="frm" action="process.do" method="post">
-							<table width="100%" border="0" cellspacing="0" cellpadding="0" summary="관리자 관리목록입니다.">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" summary="입양동물 관리목록입니다.">
 								<colgroup>
+									<col class="w3" /> 
 									<col class="w3" />
 									<col class="w5" />
-									<col class="w5" />
-									<col class="w15" />
-									<col class="w20" />
-									<col class="w15" />
-									<col class="w5" />
-									<col class="w5" />
+									<col class="w10" />
+									<col class="w10" />
+									<col class="w3" />
+									<col class="w3" />
+									<col class="" />
+									<col class="w10" />
+									<col class="w10" />
+									<col class="w10" />
+									<col class="w10" />
 								</colgroup>
 								<thead>
 									<tr>
 										<th scope="col" class="first"><input type="checkbox" name="allChk" id="allChk" onClick="check(this, document.frm.no)"/></th>
 										<th scope="col">번호</th>
 										<th scope="col">카테고리</th>
-										<th scope="col">회원이메일</th> 
-										<th scope="col">제목</th>
-										<th scope="col">등록일</th>
-										<th scope="col" class="last">댓글</th>
+										<th scope="col">이미지</th>
+										<th scope="col">이름</th>
+										<th scope="col">성별</th>
+										<th scope="col">나이</th>
+										<th scope="col">성격</th>
+										<th scope="col">품종</th>
+										<th scope="col">접종현황</th>
+										<th scope="col">상태</th>
+										<th scope="col" class="last">등록일</th>
 									</tr>
 								</thead>
 								<tbody>
-								<% if (totCount == 0) { %>
+								<% if (list.size() == 0) { %>
 									<tr>
-										<td class="first" colspan="8">등록된 질문이 없습니다.</td>
+										<td class="first" colspan="14">등록된 자료가 없습니다.</td>
 									</tr>
 								<%
 									 } else {
 										String targetUrl = "";
-										String topClass = "";
-										QnaVO data;
 										for (int i=0; i<list.size(); i++) {
-											data = list.get(i);
-											targetUrl = "style='cursor:pointer;' onclick=\"location.href='"+param.getTargetURLParam("read", param, data.getNo())+"'\"";
+											targetUrl = "style='cursor:pointer;' onclick=\"location.href='"+param.getTargetURLParam("read", param, list.get(i).getNo())+"'\"";
 								%>
-										<tr <%=topClass%>>
-										<td class="first"><input type="checkbox" name="no" id="no" value="<%=data.getNo()%>"/></td>
-										<td <%=targetUrl%>><%=totCount - ((param.getReqPageNo()-1)*param.getPageRows()) - i%></td>
-										<td <%=targetUrl%>><%=CodeUtil.getCategoryName(data.getCategory())%></td>
-										<td <%=targetUrl%>><%=data.getMember_pk()%></td>
-										<td <%=targetUrl%> class="title">
-											<%for(int j=0; j<data.getNested(); j++){ %>
-											&nbsp;&nbsp;&nbsp;&nbsp;
-											<%}%>
-											<%if(data.getNested()>0){ %>
-											<img src="/icon/icon-reply.png" width="18px" height="18px"/>
-											<% } %>
-											<%=data.getTitle()%>
-										</td>
-										<td <%=targetUrl%>><%=DateUtil.getDateFormat(data.getRegistdate())%></td>
-										<td class="last"><input type="button" value="댓글" onclick="goReply(<%=data.getNo()%>);"/></td>
+									<tr>
+										<td class="first"><input type="checkbox" name="no" id="no" value="<%=list.get(i).getNo()%>"/></td>
+										<td <%=targetUrl%>><%=list.get(i).getNo()%></td>
+										<td <%=targetUrl%>><%=list.get(i).getAnimal_category()%></td>
+										<td <%=targetUrl%>><img src="/upload/adopt/<%=list.get(i).getAnimal_image()%>" width="100px" height="100px"/></td>
+										<td <%=targetUrl%>><%=list.get(i).getName()%></td>
+										<td <%=targetUrl%>><%=list.get(i).getGender()%></td>
+										<td <%=targetUrl%>><%=list.get(i).getAge()%></td>
+										<td <%=targetUrl%>><%=list.get(i).getCharr()%></td>
+										<td <%=targetUrl%>><%=list.get(i).getBreed()%></td>
+										<td <%=targetUrl%>><%=list.get(i).getVac()%></td>
+										<td <%=targetUrl%>><%=list.get(i).getState()%></td>
+										<td <%=targetUrl%>><%=DateUtil.getDateTimeFormat(list.get(i).getRegistdate())%></td>
 									</tr>
 								<%
 										}
@@ -124,16 +110,16 @@ function goSearch() {
 								%>
 								</tbody>
 							</table>
-								<input type="hidden" name="cmd" id="cmd" value="groupDelete"/>
-								<input type="hidden" name="stype" id="stype" value="<%=param.getStype()%>"/>
-								<input type="hidden" name="sval" id="sval" value="<%=param.getSval()%>"/>
+							<input type="hidden" name="cmd" id="cmd" value="groupDelete"/>
+							<input type="hidden" name="stype" id="stype" value="<%=param.getStype()%>"/>
+							<input type="hidden" name="sval" id="sval" value="<%=param.getSval()%>"/>
 							</form>
 							<div class="btn">
 								<div class="btnLeft">
 									<a class="btns" href="#" onclick="groupDelete();"><strong>삭제</strong> </a>
 								</div>
 								<div class="btnRight">
-									<a class="wbtn" href="write"><strong>등록</strong> </a>
+									<a class="wbtn" href="write"><strong>글쓰기</strong> </a>
 								</div>
 							</div>
 							<!--//btn-->
@@ -142,17 +128,10 @@ function goSearch() {
 							<!-- //페이징 처리 -->
 							<form name="searchForm" id="searchForm" action="index" method="post">
 								<div class="search">
-									<select name="category" onchange="$('#searchForm').submit();">
-										<option value="0" <%=Function.getSelected(param.getCategory(), 0)%>>전체</option>
-										<option value="1" <%=Function.getSelected(param.getCategory(), 1)%>>일반</option>
-										<option value="2" <%=Function.getSelected(param.getCategory(), 2)%>>입양</option>
-										<option value="3" <%=Function.getSelected(param.getCategory(), 3)%>>진료</option>
-									</select>
 									<select name="stype" title="검색을 선택해주세요">
 										<option value="all" <%=Function.getSelected(param.getStype(), "all") %>>전체</option>
-										<option value="email" <%=Function.getSelected(param.getStype(), "email") %>>이메일</option>
-										<option value="title" <%=Function.getSelected(param.getStype(), "title") %>>제목</option>
-										<option value="contents" <%=Function.getSelected(param.getStype(), "contents") %>>내용</option>
+										<option value="name" <%=Function.getSelected(param.getStype(), "name") %>>이름</option>
+										<option value="charr" <%=Function.getSelected(param.getStype(), "charr") %>>성격</option>
 									</select>
 									<input type="text" name="sval" value="<%=param.getSval()%>" title="검색할 내용을 입력해주세요" />
 									<input type="image" src="/manage/img/btn_search.gif" class="sbtn" alt="검색" />
@@ -160,7 +139,7 @@ function goSearch() {
 							</form>
 							<!-- //search --> 
 						</div>
-						<!-- //blist -->	
+						<!-- //blist -->
 					</div>
 					<!-- //bbs --> 
 					<!-- 내용 : e -->
@@ -168,7 +147,6 @@ function goSearch() {
 				<!--//con -->
 			</div>
 			<!--//content -->
-			<
 		</div>
 		<!--//container --> 
 		<!-- E N D :: containerArea-->

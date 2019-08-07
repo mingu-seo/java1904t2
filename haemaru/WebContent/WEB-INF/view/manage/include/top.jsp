@@ -81,9 +81,16 @@ $(window).load(function(){
 					</div>
 				</li>
 				<li><a href="<%=request.getContextPath()%>/manage/reserve/index" class="parent"><span>예약관리</span></a></li>
-				<li><a href="<%=request.getContextPath()%>/manage/adopt/index" class="parent"><span>입양관리</span></a></li>
-
-				<li><a href="<%=request.getContextPath()%>/manage/cscenter/index.do" class="parent"><span>고객지원</span></a>
+				<li><a href="<%=request.getContextPath()%>/manage/adopt/index" class="parent"><span>입양관리</span></a>
+					<div class="standard_left">
+					<ul>
+						<li><a href="<%=request.getContextPath()%>/manage/adopt/index"><span>입양동물관리</span></a></li>
+						<li><a href="<%=request.getContextPath()%>/manage/review/index.do"><span>입양후기관리</span></a></li>
+						
+					</ul>
+					</div>
+				</li>
+				<li><a href="<%=request.getContextPath()%>/manage/board/notice/index.do" class="parent"><span>고객지원</span></a>
 					<div class="standard_left">
 					<ul>
 						<li><a href="<%=request.getContextPath()%>/manage/board/notice/index.do"><span>공지사항</span></a></li>

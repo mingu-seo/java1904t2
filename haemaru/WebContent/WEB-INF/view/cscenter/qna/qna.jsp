@@ -79,8 +79,8 @@ function goSearch() {
                                 <th>No.</th>
                                 <th>Category</th>
                                 <th>Title</th>
-                                <th>Data</th>
                                 <th>Writer</th>
+                                <th>Date</th>
                             </tr>
                         	<% if (totCount == 0) { %>
 									<tr>
@@ -93,22 +93,31 @@ function goSearch() {
 										QnaVO data;
 										for (int i=0; i<list.size(); i++) {
 											data = list.get(i);
-											targetUrl = "style='cursor:pointer;' onclick=\"location.href='"+param.getTargetURLParam("read", param, data.getNo())+"'\"";
+											targetUrl = "style='cursor:pointer;' onclick=\"location.href='"+param.getTargetURLParam("viewqna", param, data.getNo())+"'\"";
 								%>
-                            <tr>
-                                <td><%=data.getNo()%></td>
-                                <td><%=data.getCategory()%></td>
-                                <td><a href="viewqna?no=<%=data.getNo()%>"><%=data.getTitle()%></a></td>
-                                <td><%=DateUtil.getDateFormat(data.getRegistdate())%></td>
-                                <td><%=data.getMember_pk() %></td>
-                            </tr>
+								
+								<tr <%=topClass%>>
+										<td class="first"><%=data.getNo()%></td>
+										<td <%=targetUrl%>><%=CodeUtil.getCategoryName(data.getCategory())%></td>
+										<td <%=targetUrl%> class="title">
+											<%for(int j=0; j<data.getNested(); j++){ %>
+											&nbsp;&nbsp;&nbsp;&nbsp;
+											<%}%>
+											<%if(data.getNested()>0){ %>
+											<img src="/icon/icon-reply.png" width="18px" height="18px"/>
+											<% } %>
+											<%=data.getTitle()%>
+										</td>
+										<td <%=targetUrl%>><%=data.getMember_pk()%></td>
+										<td <%=targetUrl%>><%=DateUtil.getDateFormat(data.getRegistdate())%></td>
+										</tr>
                            <%
 										}
 									 }
                            %>
                         </table>
                         <ul class="reply-btn clear">
-                            <li><a href="/qna/qna.do">문의하기</a></li>
+                            <li><a href="/cscenter/qna/addqna.do">문의하기</a></li>
                             <li><a href="sub5-5.html">내 질문 보기</a></li>
                         </ul>
                         <div class="reply-number-all clear">
