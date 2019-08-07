@@ -7,8 +7,8 @@
 <%
 	MemberVO loginInfo = (MemberVO)session.getAttribute("memberInfo");
 	MemberVO mdata = (MemberVO)request.getAttribute("data");
-	ReserveVO rdata = (ReserveVO) request.getAttribute("rdata");
 	ArrayList<ReserveVO> rlist = (ArrayList) request.getAttribute("rlist");
+	ReserveVO rdata = (ReserveVO) request.getAttribute("rdata");
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -94,7 +94,7 @@
                             <p><span>진료과목</span>외과</p>
                             <p><span>참고사항*</span>-</p>
                             <p><span>예약시간</span><%=rlist.get(i).getRes_date() %> &nbsp;&nbsp; &nbsp; 
-	               		   <%=rlist.get(i).getRes_hour()<=7?"오전":"오후" %> &nbsp; <%=CodeUtil.getDoctorScheduleName(rdata.getRes_hour())%> &nbsp;예약</p>
+	               		   <%=rlist.get(i).getRes_hour()<=7?"오전":"오후" %> &nbsp; <%=CodeUtil.getDoctorScheduleName(rlist.get(i).getRes_hour())%> &nbsp;예약</p>
                             <div class="sub6-3-btn clear">
                                 <div><a href="sub3-1.html">예약변경</a></div>
                                 <div class="cancel-btn"><a href="#">취소하기</a></div>
