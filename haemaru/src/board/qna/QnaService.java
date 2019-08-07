@@ -37,20 +37,31 @@ public class QnaService {
 	}
 
 	public int insert(QnaVO vo, HttpServletRequest request) throws Exception {
-		
-		FileUtil fu = new FileUtil();
-		Map fileMap = fu.getFileMap(request);
-		MultipartFile file= (MultipartFile)fileMap.get("filename_tmp");
-		if (!file.isEmpty()) {
-			fu.upload(file, SiteProperty.QNA_UPLOAD_PATH, SiteProperty.REAL_PATH, "qna");
-			vo.setFilename(fu.getName());
-			vo.setFilename_org(fu.getSrcName());
-		}
-		
+		int maxGno = qnaDao.getMaxGno();
+		vo.setGno(maxGno);
 		int lastNo = (Integer)qnaDao.insert(vo);
 		
 		return lastNo;
 	}
+	
+	public int reply(QnaVO vo) throws Exception{
+		int maxOno = qnaDao.getMaxOno(vo); //같은 그룹 내 최대 ono
+		int minOno = qnaDao.getMinOno(vo); //같은 그룹 내 최소 ono
+		if (minOno== 0) {
+			vo.setOno(maxOno+1);
+		}else {
+			HashMap hm = new HashMap();
+			hm.put("gno", vo.getGno());
+			hm.put("minOno", minOno);
+			qnaDao.updateOno(hm);
+			vo.setOno(minOno);
+		}
+		
+		vo.setNested(vo.getNested()+1);
+		int r = qnaDao.insert(vo);
+		return r;
+	}
+	
 	
 	public QnaVO read(QnaVO vo) throws Exception {
 		QnaVO data = qnaDao.read(vo);
@@ -96,17 +107,9 @@ public class QnaService {
 		return delCount;
 	}
 
-	public ArrayList<QnaReplyVO> replylist(int no) throws Exception{
+	public ArrayList<QnaVO> replylist(int no) throws Exception{
 		return qnaDao.replylist(no);
 	}
-	public void replyInsert(QnaReplyVO vo) throws Exception{
-		qnaDao.replyInsert(vo);
-		
-	}
-	
-	public void replyDelete(int no) throws Exception {
-		qnaDao.replyDelete(no);
-	}
-	
+
 
 }

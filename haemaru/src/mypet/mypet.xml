@@ -41,7 +41,7 @@
     </insert>
     <update id="update" parameterClass="mypetvo">
         UPDATE mypet SET
-		name=#name#, age=#age#, vac=#vac#, gender=#gender#, breed=#breed#
+		name=#name#, age=#age#, vac=#vac#, gender=#gender#
 		<isEqual property="mypet_image_chk" compareValue="1">
 			mypet_image='', mypet_image_org='',
 		</isEqual>

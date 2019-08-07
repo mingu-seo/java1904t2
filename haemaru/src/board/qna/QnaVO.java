@@ -17,6 +17,9 @@ public class QnaVO extends Parameter {
 	private String filename_chk;
 	private Timestamp registdate;
 	private int display;
+	private int gno;
+	private int ono;
+	private int nested;
 		
 	public QnaVO() {
 		super.setPageRows(10);
@@ -110,6 +113,29 @@ public class QnaVO extends Parameter {
 	public void setDisplay(int display) {
 		this.display = display;
 	}
-	
-	
+
+	public int getGno() {
+		return gno;
+	}
+
+	public void setGno(int gno) {
+		this.gno = gno;
+	}
+
+	public int getOno() {
+		return ono;
+	}
+
+	public void setOno(int ono) {
+		this.ono = ono;
+	}
+
+	public int getNested() {
+		return nested;
+	}
+
+	public void setNested(int nested) {
+		this.nested = nested;
+	}
+		
 }

@@ -102,11 +102,9 @@ function goSave() {
 											</tr>
 												<tr>
 												<th scope="row"><label for="">연락처</label></th>
-												<td colspan="3">
-												<input type="text" id="tel1" name="tel1" title="제목을 입력해주세요" value="<%=data.getTel1()%>">
-												<input type="text" id="tel1" name="tel2" title="제목을 입력해주세요" value="<%=data.getTel2()%>">
-												<input type="text" id="tel1" name="tel3" title="제목을 입력해주세요" value="<%=data.getTel3()%>">
-												</td>
+												<td colspan="3"><input type="text" id="tel"
+													name="tel" class="w50" title="제목을 입력해주세요"
+													value="<%=data.getTel()%>" /></td>
 											</tr>
 											<tr>
 												<th scope="row"><label for="">사진</label></th>

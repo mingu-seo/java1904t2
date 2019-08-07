@@ -51,12 +51,10 @@ int totPage = (Integer)request.getAttribute("totPage");
                 <div class="notice-area">
                     <form class="search-btn" method="GET" action="text.php">
                         <select>
-                            <option>전체</option>
-                            <option>소식</option>
-                            <option>칼럼</option>
-                            <option>보도자료</option>
-                            <option>카드뉴스</option>
-                            <option>증례소개</option>
+                            <option value="1">소식</option>
+                            <option value="2">칼럼</option>
+                            <option value="3">보도자료</option>
+                            <option value="4">증례소개</option>
                         </select>
                         <input type="text" id="search_input" placeholder="검색어를 입력하세요.">
                         <input type="submit" value="검색"  id="btn_submit_search">
@@ -85,7 +83,7 @@ int totPage = (Integer)request.getAttribute("totPage");
 							%>
                             <tr>
                                 <td><%=data.getNo()%></td>
-                                <td><%=data.getType()%></td>
+                                <td><%=CodeUtil.getNoticeCategory(data.getType())%></td>
                                 <td><a href="viewnotice?no=<%=data.getNo()%>"><%=data.getTitle()%></a></td>
                                 <td><%=DateUtil.getDateFormat(data.getCre_date())%></td>
                                 <td><%=data.getReadno()%></td>

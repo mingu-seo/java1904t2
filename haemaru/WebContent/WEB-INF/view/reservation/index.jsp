@@ -113,7 +113,7 @@ $(function() {
 					success : function(data) {
 						//alert("정상적으로 예약되었습니다.");
 						getReservationDoctorList();
-						//getSchedList();
+						getSchedList();
 						$('.reservation-page').stop().fadeIn(500);
 						
 					}

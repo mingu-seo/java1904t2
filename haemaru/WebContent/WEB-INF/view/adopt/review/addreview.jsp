@@ -11,6 +11,22 @@ int totPage = (Integer)request.getAttribute("totPage");
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<script type="text/javascript">
+function goSave() {
+	if ($("#title").val() == "") {
+		alert("제목을 입력해주세요.");
+		$("#title").focus();
+		return false;
+	}
+	
+	if ($("#contents").val() == "") {
+		alert("내용을 입력해주세요.");
+		$("#contents").focus();
+		return false;
+	}
+	$("#frm").submit();
+}
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -87,7 +103,7 @@ int totPage = (Integer)request.getAttribute("totPage");
                                 <h4>반려동물 사진 추가</h4>
                         	        <p>사진을 추가해주세요.</p>
                             </div>
-                            <div class="sub4-file"><input type="file" id="filename_tmp" name="filename_tmp" value="파일찾기"></div>
+                            <div class="sub4-file"><input type="file" name="title" id="filename_tmp" name="filename_tmp" value="파일찾기"></div>
                         </div>
                         <!-- 후기 적는 텍스트 박스 부분 -->
                         <div class="sub4-3-list">
@@ -98,7 +114,7 @@ int totPage = (Integer)request.getAttribute("totPage");
                     </div>
                     <!-- 등록하기 버튼 부분 -->
                     <div class="review-last-box">
-                        <a href="#"><input type="hidden" value="후기 등록" onclick="submit">후기 등록하기</a>
+                        <a href="javascript:$('#frm').submit();"><input type="hidden" value="후기 등록">후기 등록하기</a>
                     </div>
                 </div>
             </div>

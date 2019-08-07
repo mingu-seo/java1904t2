@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import manage.reserve.ReserveVO;
+import board.qna.*;
 
 /**
  * 각종 코드값 가져오기
@@ -12,7 +13,42 @@ import manage.reserve.ReserveVO;
  *
  */
 public class CodeUtil {
+	
+	public static String getNoticeCategory(int category) {
+		String result = "";
+		if (category == 1) {
+			result = "소식";
+		} else if (category == 2) {
+			result = "칼럼";
+		} else if (category == 3) {
+			result = "보도자료";
+		} else if (category == 4) {
+			result = "증례소개";
+		}
+		return result;
+	}
+	
 
+	public static String getCategoryName(int category) {
+		String result = "";
+		if (category == 1) {
+			result = "외과";
+		} else if (category == 2) {
+			result = "내과";
+		} else if (category == 3) {
+			result = "영상의학과";
+		} else if (category == 4) {
+			result = "응급의료센터";
+		} else if (category == 5) {
+			result = "예약";
+		} else if (category == 6) {
+			result = "입양";
+		}	
+		return result;
+	}
+	
+	
+	
 	/**
 	 * 관리자 등급
 	 * @param type int
@@ -891,7 +927,6 @@ public class CodeUtil {
 						res_hour[i] = timeList.get(i).getRes_hour();
 						res_date[i] = timeList.get(i).getRes_date();
 					}
-					Arrays.parallelSort(res_hour);
 			        StringBuffer result = new StringBuffer();
 			        for (int i=start; i<=end; i++) {
 			        	if (Arrays.binarySearch(res_hour, i) < 0 || arg == i ) {
@@ -901,33 +936,6 @@ public class CodeUtil {
 			        }
 			        return result.toString();
 			    }
-				
-				public static void main(String[] args) throws Exception {
-					ArrayList<ReserveVO> tlist = new ArrayList<ReserveVO>();
-					ReserveVO vo = new ReserveVO();
-					vo.setRes_hour(14);
-					vo.setRes_date("2019-08-06");
-					tlist.add(vo);
-					vo = new ReserveVO();
-					vo.setRes_hour(9);
-					vo.setRes_date("2019-08-06");
-					tlist.add(vo);
-					vo = new ReserveVO();
-					vo.setRes_hour(1);
-					vo.setRes_date("2019-08-06");
-					tlist.add(vo);
-					
-					int[] res_hour = new int[tlist.size()];
-					for (int i=0; i<tlist.size(); i++) {
-						res_hour[i] = tlist.get(i).getRes_hour();
-					}
-					for (int i=0; i<tlist.size(); i++) {
-						System.out.println(res_hour[i]);
-					}
-					Arrays.sort(res_hour);
-					System.out.println(Arrays.binarySearch(res_hour, 1));
-					System.out.println(getDoctorScheduleOptionForReserve(0, 1, 25, tlist));
-				}
 				
 				public static String getReserveRouteOption(int arg){
 			        StringBuffer result = new StringBuffer();

@@ -34,30 +34,48 @@
 	<select id="list" parameterClass="qnavo" resultClass="qnavo">
         select * from qna
         <include refid="searchSql" />
-		ORDER BY registdate DESC LIMIT $startPageNo$, $pageRows$
+		ORDER BY gno DESC, ono ASC LIMIT $startPageNo$, $pageRows$
     </select>
 	
 	<!-- 해당 테이블에 게시글 작성 -->
     <insert id="insert" parameterClass="qnavo">
-        INSERT INTO qna (email, category, title, contents, member_pk, filename, filename_org, registdate, display) VALUES (
-        	#email#, #category#, #title#, #contents#, #member_pk#, #filename#, #filename_org#, now(), #display#)
+        INSERT INTO qna (
+        	gno, ono, nested, email, category, title, contents, member_pk, registdate
+        ) VALUES (
+        	#gno#, #ono#, #nested#, #email#, #category#, #title#, #contents#, #member_pk#, now())
         <selectKey keyProperty="no" resultClass="Integer">
         	SELECT LAST_INSERT_ID()
         </selectKey>
     </insert>
     
+     <!-- 등록시 최대 gno + 1 -->
+    <select id="getMaxGno" parameterClass="qnavo" resultClass="Integer">
+    	SELECT ifnull(max(gno),0)+1 FROM qna
+    </select>
+    
+    <!-- 답변달때 같은 그룹 내에 최대ono -->
+    <select id="getMaxOno" parameterClass="qnavo" resultClass="Integer">
+    	SELECT max(ono) FROM qna where gno=#gno#
+    </select>
+    
+    <!-- 답변달때 같은 그룹 내에 원글 ono보다 크고(&) 원글 nested보다 작거나 같은 최소ono -->
+    <select id="getMinOno" parameterClass="qnavo" resultClass="Integer">
+    	<![CDATA[
+    	SELECT ifnull(min(ono),0) FROM qna where gno=#gno# and ono > #ono# and nested <= #nested# 
+    	]]>
+    </select>
+    
+    <!-- 이미 답변이 존재할때 (minOno > 0)같은 그룹 내 ono >= minOno ono+1  -->
+    <update id="updateOno" parameterClass="java.util.HashMap">
+    <![CDATA[
+    UPDATE qna SET ono=ono+1 where gno=#gno# AND ono >= #minono#
+    ]]>
+    </update>
+    
+    
     <update id="update" parameterClass="qnavo">
         UPDATE qna SET
-        	category=#category#, title=#title#, 
-       	<isEqual property="filename_chk" compareValue="1">
-        	filename='', filename_org=''
-        </isEqual>   	
-        <isNotEqual property="filename" compareValue="">
-            <isNotNull property="filename">
-        		filename=#filename#, filename_org=#filename_org#
-        	</isNotNull>
-        </isNotEqual>
-	        contents=#contents#
+        	category=#category#, title=#title#, contents=#contents#
         WHERE no = #no#
     </update>
      
@@ -122,17 +140,5 @@
 		ORDER BY registdate DESC LIMIT 0, $number$
     </select>
         
-      <select id="replylist" parameterClass="Integer" resultClass="board.qna.QnaReplyVO">
-    	SELECT title, contents, filename, filename_org, registdate, qna_no FROM qna_reply WHERE qna_no=#no# ORDER BY registdate DESC
-      </select>
-    
-    <insert id = "replyInsert" parameterClass="board.qna.QnaReplyVO">
-    	INSERT INTO qna_reply (title, contents, filename, filename_org, registdate, qna_no) values (#title#, #contents#, #filename#, #filename_org#, now(), #qna_no#)
-    </insert>
-    
-    <delete id="replyDelete" parameterClass="Integer">
-    	DELETE FROM qna_reply WHERE no=#no#
-    </delete>      
- 
   
 </sqlMap>
