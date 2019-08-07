@@ -4085,3 +4085,848 @@
 2019-08-07 14:42:59,185 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100029} Result: [109, 1, 42, 50, 2019-08-07, 1, , test, 010 , 1234 , 5678 ]
 2019-08-07 14:42:59,185 [http-bio-8080-exec-6] DEBUG ResultSet - {rset-100029} Result: [89, 14, 39, 48, 2019-08-14, 1, 강아지 귓병, 맹다영, null, null, null]
 >>>>>>> branch 'master' of https://github.com/mingu-seo/java1904t2.git
+2019-08-07 15:06:35,325 [http-bio-8080-exec-3] DEBUG Connection - {conn-100000} Connection
+2019-08-07 15:06:35,331 [http-bio-8080-exec-3] DEBUG Connection - {conn-100000} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:06:35,360 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100001} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:06:35,360 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100001} Parameters: []
+2019-08-07 15:06:35,360 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100001} Types: []
+2019-08-07 15:06:35,376 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100002} ResultSet
+2019-08-07 15:06:35,384 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100002} Header: [count(*)]
+2019-08-07 15:06:35,384 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100002} Result: [11]
+2019-08-07 15:06:35,390 [http-bio-8080-exec-3] DEBUG Connection - {conn-100003} Connection
+2019-08-07 15:06:35,390 [http-bio-8080-exec-3] DEBUG Connection - {conn-100003} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:06:35,391 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100004} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:06:35,391 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100004} Parameters: []
+2019-08-07 15:06:35,391 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100004} Types: []
+2019-08-07 15:06:35,393 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} ResultSet
+2019-08-07 15:06:35,394 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:06:35,394 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:06:35,395 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:06:35,395 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:06:35,395 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:06:35,396 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:06:35,396 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:06:35,396 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} Result: [9, 1, 공지사항 다섯번째, <p>ㅇ</p>, 2019-08-05 10:45:49.0, 0, null, null, 0]
+2019-08-07 15:06:35,396 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} Result: [8, 1, 공지사항 네번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:38.0, 0, null, null, 0]
+2019-08-07 15:06:35,396 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} Result: [7, 1, 공지사항 세번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:27.0, 0, null, null, 0]
+2019-08-07 15:06:35,396 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100005} Result: [6, 1, 공지사항 두번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:19.0, 0, null, null, 0]
+2019-08-07 15:07:49,348 [http-bio-8080-exec-3] DEBUG Connection - {conn-100006} Connection
+2019-08-07 15:07:49,348 [http-bio-8080-exec-3] DEBUG Connection - {conn-100006} Preparing Statement:          select count(*) as cnt from admin where id=? and password=md5(?)     
+2019-08-07 15:07:49,349 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100007} Executing Statement:          select count(*) as cnt from admin where id=? and password=md5(?)     
+2019-08-07 15:07:49,349 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100007} Parameters: [test, test]
+2019-08-07 15:07:49,349 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100007} Types: [java.lang.String, java.lang.String]
+2019-08-07 15:07:49,368 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100008} ResultSet
+2019-08-07 15:07:49,368 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100008} Header: [cnt]
+2019-08-07 15:07:49,368 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100008} Result: [1]
+2019-08-07 15:07:49,370 [http-bio-8080-exec-3] DEBUG Connection - {conn-100009} Connection
+2019-08-07 15:07:49,370 [http-bio-8080-exec-3] DEBUG Connection - {conn-100009} Preparing Statement:          select * from admin where id=? and password=md5(?)     
+2019-08-07 15:07:49,370 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100010} Executing Statement:          select * from admin where id=? and password=md5(?)     
+2019-08-07 15:07:49,370 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100010} Parameters: [test, test]
+2019-08-07 15:07:49,370 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100010} Types: [java.lang.String, java.lang.String]
+2019-08-07 15:07:49,371 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100011} ResultSet
+2019-08-07 15:07:49,372 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100011} Header: [no, id, password, email, name, memo, registdate]
+2019-08-07 15:07:49,372 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100011} Result: [1, test, 098f6bcd4621d373cade4e832627b4f6, test@test.com, 테스트, 테스트, null]
+2019-08-07 15:07:49,374 [http-bio-8080-exec-3] DEBUG Connection - {conn-100012} Connection
+2019-08-07 15:07:49,374 [http-bio-8080-exec-3] DEBUG Connection - {conn-100012} Preparing Statement:          insert into admin_loginhistory          (id, name, logindate, ip)         values          (?, ?, now(), ?)     
+2019-08-07 15:07:49,374 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100013} Executing Statement:          insert into admin_loginhistory          (id, name, logindate, ip)         values          (?, ?, now(), ?)     
+2019-08-07 15:07:49,374 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100013} Parameters: [test, 테스트, 0:0:0:0:0:0:0:1]
+2019-08-07 15:07:49,374 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100013} Types: [java.lang.String, java.lang.String, java.lang.String]
+2019-08-07 15:07:49,407 [http-bio-8080-exec-3] DEBUG Connection - {conn-100014} Connection
+2019-08-07 15:07:49,407 [http-bio-8080-exec-3] DEBUG Connection - {conn-100014} Preparing Statement:          select count(*) from admin                 where       1=1               
+2019-08-07 15:07:49,407 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100015} Executing Statement:          select count(*) from admin                 where       1=1               
+2019-08-07 15:07:49,407 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100015} Parameters: []
+2019-08-07 15:07:49,407 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100015} Types: []
+2019-08-07 15:07:49,408 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100016} ResultSet
+2019-08-07 15:07:49,408 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100016} Header: [count(*)]
+2019-08-07 15:07:49,408 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100016} Result: [1]
+2019-08-07 15:07:49,410 [http-bio-8080-exec-3] DEBUG Connection - {conn-100017} Connection
+2019-08-07 15:07:49,410 [http-bio-8080-exec-3] DEBUG Connection - {conn-100017} Preparing Statement:          select no, id, password, email,         name, memo, registdate from admin                 where       1=1            ORDER BY no DESC LIMIT 0, 10      
+2019-08-07 15:07:49,410 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100018} Executing Statement:          select no, id, password, email,         name, memo, registdate from admin                 where       1=1            ORDER BY no DESC LIMIT 0, 10      
+2019-08-07 15:07:49,410 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100018} Parameters: []
+2019-08-07 15:07:49,410 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100018} Types: []
+2019-08-07 15:07:49,411 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100019} ResultSet
+2019-08-07 15:07:49,411 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100019} Header: [no, id, password, email, name, memo, registdate]
+2019-08-07 15:07:49,411 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100019} Result: [1, test, 098f6bcd4621d373cade4e832627b4f6, test@test.com, 테스트, 테스트, null]
+2019-08-07 15:07:52,688 [http-bio-8080-exec-3] DEBUG Connection - {conn-100020} Connection
+2019-08-07 15:07:52,688 [http-bio-8080-exec-3] DEBUG Connection - {conn-100020} Preparing Statement:          select count(*) from qna                                        
+2019-08-07 15:07:52,688 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100021} Executing Statement:          select count(*) from qna                                        
+2019-08-07 15:07:52,688 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100021} Parameters: []
+2019-08-07 15:07:52,688 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100021} Types: []
+2019-08-07 15:07:52,699 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100022} ResultSet
+2019-08-07 15:07:52,699 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100022} Header: [count(*)]
+2019-08-07 15:07:52,699 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100022} Result: [4]
+2019-08-07 15:07:52,702 [http-bio-8080-exec-3] DEBUG Connection - {conn-100023} Connection
+2019-08-07 15:07:52,702 [http-bio-8080-exec-3] DEBUG Connection - {conn-100023} Preparing Statement:          select * from qna                                     ORDER BY gno DESC, ono ASC LIMIT 0, 10     
+2019-08-07 15:07:52,703 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100024} Executing Statement:          select * from qna                                     ORDER BY gno DESC, ono ASC LIMIT 0, 10     
+2019-08-07 15:07:52,703 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100024} Parameters: []
+2019-08-07 15:07:52,703 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100024} Types: []
+2019-08-07 15:07:52,704 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100025} ResultSet
+2019-08-07 15:07:52,705 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100025} Header: [no, email, category, title, contents, member_pk, registdate, gno, ono, nested]
+2019-08-07 15:07:52,705 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100025} Result: [27, haemaru, 4, 응급의료센터 문의입니다., <p>d</p>, 0, 2019-08-06 17:28:02.0, 2, 0, 0]
+2019-08-07 15:07:52,705 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100025} Result: [28, null, 4, 답변: 응급의료센터 문의입니다., <p>&nbsp;</p><p>test</p><p>=========================================================<br>
+											</p><p>d</p>, 0, 2019-08-06 17:28:08.0, 2, 1, 1]
+2019-08-07 15:07:52,706 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100025} Result: [24, ㅁㅁ, 5, 예약 문의입니다., <p>문의문의</p>, 0, 2019-08-06 17:21:26.0, 1, 0, 0]
+2019-08-07 15:07:52,706 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100025} Result: [25, null, 5, 답변: 예약 문의입니다., =========================================================<br>
+											<p>문의문의</p>, 0, 2019-08-06 17:26:41.0, 1, 1, 1]
+2019-08-07 15:07:58,981 [http-bio-8080-exec-8] DEBUG Connection - {conn-100026} Connection
+2019-08-07 15:07:58,981 [http-bio-8080-exec-8] DEBUG Connection - {conn-100026} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:07:58,981 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100027} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:07:58,981 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100027} Parameters: []
+2019-08-07 15:07:58,981 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100027} Types: []
+2019-08-07 15:07:58,982 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100028} ResultSet
+2019-08-07 15:07:58,983 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100028} Header: [count(*)]
+2019-08-07 15:07:58,983 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100028} Result: [11]
+2019-08-07 15:07:58,985 [http-bio-8080-exec-8] DEBUG Connection - {conn-100029} Connection
+2019-08-07 15:07:58,985 [http-bio-8080-exec-8] DEBUG Connection - {conn-100029} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:07:58,986 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100030} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:07:58,986 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100030} Parameters: []
+2019-08-07 15:07:58,986 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100030} Types: []
+2019-08-07 15:07:58,987 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} ResultSet
+2019-08-07 15:07:58,988 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:07:58,988 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:07:58,989 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:07:58,989 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:07:58,989 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:07:58,990 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:07:58,991 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:07:58,992 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} Result: [9, 1, 공지사항 다섯번째, <p>ㅇ</p>, 2019-08-05 10:45:49.0, 0, null, null, 0]
+2019-08-07 15:07:58,992 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} Result: [8, 1, 공지사항 네번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:38.0, 0, null, null, 0]
+2019-08-07 15:07:58,992 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} Result: [7, 1, 공지사항 세번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:27.0, 0, null, null, 0]
+2019-08-07 15:07:58,992 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100031} Result: [6, 1, 공지사항 두번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:19.0, 0, null, null, 0]
+2019-08-07 15:08:19,308 [http-bio-8080-exec-8] DEBUG Connection - {conn-100032} Connection
+2019-08-07 15:08:19,309 [http-bio-8080-exec-8] DEBUG Connection - {conn-100032} Preparing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:08:19,309 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100033} Executing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:08:19,309 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100033} Parameters: [2, 공지사항 제목입니다, <p>칼럼</p>, 0, null, null, 0]
+2019-08-07 15:08:19,309 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100033} Types: [java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer, null, null, java.lang.Integer]
+2019-08-07 15:08:19,312 [http-bio-8080-exec-8] DEBUG Connection - {conn-100032} Preparing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:08:19,312 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100034} Executing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:08:19,312 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100034} Parameters: []
+2019-08-07 15:08:19,312 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100034} Types: []
+2019-08-07 15:08:19,314 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100035} ResultSet
+2019-08-07 15:08:19,314 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100035} Header: [LAST_INSERT_ID()]
+2019-08-07 15:08:19,314 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100035} Result: [16]
+2019-08-07 15:08:20,614 [http-bio-8080-exec-8] DEBUG Connection - {conn-100036} Connection
+2019-08-07 15:08:20,615 [http-bio-8080-exec-8] DEBUG Connection - {conn-100036} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:08:20,615 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100037} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:08:20,615 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100037} Parameters: []
+2019-08-07 15:08:20,615 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100037} Types: []
+2019-08-07 15:08:20,619 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100038} ResultSet
+2019-08-07 15:08:20,619 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100038} Header: [count(*)]
+2019-08-07 15:08:20,619 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100038} Result: [12]
+2019-08-07 15:08:20,622 [http-bio-8080-exec-8] DEBUG Connection - {conn-100039} Connection
+2019-08-07 15:08:20,622 [http-bio-8080-exec-8] DEBUG Connection - {conn-100039} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:08:20,622 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100040} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:08:20,622 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100040} Parameters: []
+2019-08-07 15:08:20,622 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100040} Types: []
+2019-08-07 15:08:20,624 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} ResultSet
+2019-08-07 15:08:20,624 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:08:20,624 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:08:20,624 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:08:20,624 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:08:20,625 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:08:20,625 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:08:20,625 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:08:20,625 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:08:20,626 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} Result: [9, 1, 공지사항 다섯번째, <p>ㅇ</p>, 2019-08-05 10:45:49.0, 0, null, null, 0]
+2019-08-07 15:08:20,626 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} Result: [8, 1, 공지사항 네번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:38.0, 0, null, null, 0]
+2019-08-07 15:08:20,626 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100041} Result: [7, 1, 공지사항 세번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:27.0, 0, null, null, 0]
+2019-08-07 15:08:27,060 [http-bio-8080-exec-8] DEBUG Connection - {conn-100042} Connection
+2019-08-07 15:08:27,061 [http-bio-8080-exec-8] DEBUG Connection - {conn-100042} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:08:27,062 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100043} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:08:27,063 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100043} Parameters: []
+2019-08-07 15:08:27,063 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100043} Types: []
+2019-08-07 15:08:27,066 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100044} ResultSet
+2019-08-07 15:08:27,066 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100044} Header: [count(*)]
+2019-08-07 15:08:27,067 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100044} Result: [12]
+2019-08-07 15:08:27,070 [http-bio-8080-exec-8] DEBUG Connection - {conn-100045} Connection
+2019-08-07 15:08:27,071 [http-bio-8080-exec-8] DEBUG Connection - {conn-100045} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:08:27,071 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100046} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:08:27,071 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100046} Parameters: []
+2019-08-07 15:08:27,071 [http-bio-8080-exec-8] DEBUG PreparedStatement - {pstm-100046} Types: []
+2019-08-07 15:08:27,073 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} ResultSet
+2019-08-07 15:08:27,073 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:08:27,073 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:08:27,074 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:08:27,074 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:08:27,074 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:08:27,074 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:08:27,075 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:08:27,075 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:08:27,075 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} Result: [9, 1, 공지사항 다섯번째, <p>ㅇ</p>, 2019-08-05 10:45:49.0, 0, null, null, 0]
+2019-08-07 15:08:27,075 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} Result: [8, 1, 공지사항 네번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:38.0, 0, null, null, 0]
+2019-08-07 15:08:27,075 [http-bio-8080-exec-8] DEBUG ResultSet - {rset-100047} Result: [7, 1, 공지사항 세번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:27.0, 0, null, null, 0]
+2019-08-07 15:28:54,917 [http-bio-8080-exec-7] DEBUG Connection - {conn-100048} Connection
+2019-08-07 15:28:54,918 [http-bio-8080-exec-7] DEBUG Connection - {conn-100048} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:28:54,918 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100049} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:28:54,918 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100049} Parameters: []
+2019-08-07 15:28:54,918 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100049} Types: []
+2019-08-07 15:28:54,920 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100050} ResultSet
+2019-08-07 15:28:54,921 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100050} Header: [count(*)]
+2019-08-07 15:28:54,921 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100050} Result: [12]
+2019-08-07 15:28:54,925 [http-bio-8080-exec-7] DEBUG Connection - {conn-100051} Connection
+2019-08-07 15:28:54,925 [http-bio-8080-exec-7] DEBUG Connection - {conn-100051} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:28:54,926 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100052} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:28:54,926 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100052} Parameters: []
+2019-08-07 15:28:54,926 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100052} Types: []
+2019-08-07 15:28:54,927 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} ResultSet
+2019-08-07 15:28:54,928 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:28:54,928 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:28:54,928 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:28:54,928 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:28:54,929 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:28:54,929 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:28:54,929 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:28:54,929 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:28:54,930 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} Result: [9, 1, 공지사항 다섯번째, <p>ㅇ</p>, 2019-08-05 10:45:49.0, 0, null, null, 0]
+2019-08-07 15:28:54,930 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} Result: [8, 1, 공지사항 네번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:38.0, 0, null, null, 0]
+2019-08-07 15:28:54,930 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100053} Result: [7, 1, 공지사항 세번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:27.0, 0, null, null, 0]
+2019-08-07 15:29:05,670 [http-bio-8080-exec-7] DEBUG Connection - {conn-100054} Connection
+2019-08-07 15:29:05,671 [http-bio-8080-exec-7] DEBUG Connection - {conn-100054} Preparing Statement:          select count(*) as cnt from admin where id=? and password=md5(?)     
+2019-08-07 15:29:05,671 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100055} Executing Statement:          select count(*) as cnt from admin where id=? and password=md5(?)     
+2019-08-07 15:29:05,671 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100055} Parameters: [test, test]
+2019-08-07 15:29:05,672 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100055} Types: [java.lang.String, java.lang.String]
+2019-08-07 15:29:05,674 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100056} ResultSet
+2019-08-07 15:29:05,674 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100056} Header: [cnt]
+2019-08-07 15:29:05,675 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100056} Result: [1]
+2019-08-07 15:29:05,679 [http-bio-8080-exec-7] DEBUG Connection - {conn-100057} Connection
+2019-08-07 15:29:05,679 [http-bio-8080-exec-7] DEBUG Connection - {conn-100057} Preparing Statement:          select * from admin where id=? and password=md5(?)     
+2019-08-07 15:29:05,679 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100058} Executing Statement:          select * from admin where id=? and password=md5(?)     
+2019-08-07 15:29:05,679 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100058} Parameters: [test, test]
+2019-08-07 15:29:05,679 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100058} Types: [java.lang.String, java.lang.String]
+2019-08-07 15:29:05,680 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100059} ResultSet
+2019-08-07 15:29:05,681 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100059} Header: [no, id, password, email, name, memo, registdate]
+2019-08-07 15:29:05,681 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100059} Result: [1, test, 098f6bcd4621d373cade4e832627b4f6, test@test.com, 테스트, 테스트, null]
+2019-08-07 15:29:05,682 [http-bio-8080-exec-7] DEBUG Connection - {conn-100060} Connection
+2019-08-07 15:29:05,683 [http-bio-8080-exec-7] DEBUG Connection - {conn-100060} Preparing Statement:          insert into admin_loginhistory          (id, name, logindate, ip)         values          (?, ?, now(), ?)     
+2019-08-07 15:29:05,683 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100061} Executing Statement:          insert into admin_loginhistory          (id, name, logindate, ip)         values          (?, ?, now(), ?)     
+2019-08-07 15:29:05,684 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100061} Parameters: [test, 테스트, 0:0:0:0:0:0:0:1]
+2019-08-07 15:29:05,684 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100061} Types: [java.lang.String, java.lang.String, java.lang.String]
+2019-08-07 15:29:05,696 [http-bio-8080-exec-7] DEBUG Connection - {conn-100062} Connection
+2019-08-07 15:29:05,697 [http-bio-8080-exec-7] DEBUG Connection - {conn-100062} Preparing Statement:          select count(*) from admin                 where       1=1               
+2019-08-07 15:29:05,697 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100063} Executing Statement:          select count(*) from admin                 where       1=1               
+2019-08-07 15:29:05,697 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100063} Parameters: []
+2019-08-07 15:29:05,697 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100063} Types: []
+2019-08-07 15:29:05,698 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100064} ResultSet
+2019-08-07 15:29:05,698 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100064} Header: [count(*)]
+2019-08-07 15:29:05,698 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100064} Result: [1]
+2019-08-07 15:29:05,700 [http-bio-8080-exec-7] DEBUG Connection - {conn-100065} Connection
+2019-08-07 15:29:05,701 [http-bio-8080-exec-7] DEBUG Connection - {conn-100065} Preparing Statement:          select no, id, password, email,         name, memo, registdate from admin                 where       1=1            ORDER BY no DESC LIMIT 0, 10      
+2019-08-07 15:29:05,701 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100066} Executing Statement:          select no, id, password, email,         name, memo, registdate from admin                 where       1=1            ORDER BY no DESC LIMIT 0, 10      
+2019-08-07 15:29:05,701 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100066} Parameters: []
+2019-08-07 15:29:05,701 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100066} Types: []
+2019-08-07 15:29:05,702 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100067} ResultSet
+2019-08-07 15:29:05,702 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100067} Header: [no, id, password, email, name, memo, registdate]
+2019-08-07 15:29:05,702 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100067} Result: [1, test, 098f6bcd4621d373cade4e832627b4f6, test@test.com, 테스트, 테스트, null]
+2019-08-07 15:29:08,596 [http-bio-8080-exec-1] DEBUG Connection - {conn-100068} Connection
+2019-08-07 15:29:08,597 [http-bio-8080-exec-1] DEBUG Connection - {conn-100068} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:29:08,597 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100069} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:29:08,597 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100069} Parameters: []
+2019-08-07 15:29:08,597 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100069} Types: []
+2019-08-07 15:29:08,599 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100070} ResultSet
+2019-08-07 15:29:08,599 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100070} Header: [count(*)]
+2019-08-07 15:29:08,599 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100070} Result: [12]
+2019-08-07 15:29:08,602 [http-bio-8080-exec-1] DEBUG Connection - {conn-100071} Connection
+2019-08-07 15:29:08,603 [http-bio-8080-exec-1] DEBUG Connection - {conn-100071} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:29:08,603 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100072} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:29:08,603 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100072} Parameters: []
+2019-08-07 15:29:08,603 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100072} Types: []
+2019-08-07 15:29:08,605 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} ResultSet
+2019-08-07 15:29:08,606 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:29:08,606 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:29:08,606 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:29:08,606 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:29:08,607 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:29:08,607 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:29:08,607 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:29:08,608 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:29:08,608 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} Result: [9, 1, 공지사항 다섯번째, <p>ㅇ</p>, 2019-08-05 10:45:49.0, 0, null, null, 0]
+2019-08-07 15:29:08,608 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} Result: [8, 1, 공지사항 네번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:38.0, 0, null, null, 0]
+2019-08-07 15:29:08,608 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100073} Result: [7, 1, 공지사항 세번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:27.0, 0, null, null, 0]
+2019-08-07 15:29:24,415 [http-bio-8080-exec-1] DEBUG Connection - {conn-100074} Connection
+2019-08-07 15:29:24,415 [http-bio-8080-exec-1] DEBUG Connection - {conn-100074} Preparing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:29:24,416 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100075} Executing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:29:24,416 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100075} Parameters: [3, 보도자료, <p>ㅎ</p>, 0, null, null, 0]
+2019-08-07 15:29:24,416 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100075} Types: [java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer, null, null, java.lang.Integer]
+2019-08-07 15:29:24,419 [http-bio-8080-exec-1] DEBUG Connection - {conn-100074} Preparing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:29:24,419 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100076} Executing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:29:24,419 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100076} Parameters: []
+2019-08-07 15:29:24,419 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100076} Types: []
+2019-08-07 15:29:24,420 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100077} ResultSet
+2019-08-07 15:29:24,420 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100077} Header: [LAST_INSERT_ID()]
+2019-08-07 15:29:24,420 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100077} Result: [17]
+2019-08-07 15:29:25,687 [http-bio-8080-exec-1] DEBUG Connection - {conn-100078} Connection
+2019-08-07 15:29:25,687 [http-bio-8080-exec-1] DEBUG Connection - {conn-100078} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:29:25,688 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100079} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:29:25,688 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100079} Parameters: []
+2019-08-07 15:29:25,688 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100079} Types: []
+2019-08-07 15:29:25,689 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100080} ResultSet
+2019-08-07 15:29:25,689 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100080} Header: [count(*)]
+2019-08-07 15:29:25,689 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100080} Result: [13]
+2019-08-07 15:29:25,692 [http-bio-8080-exec-1] DEBUG Connection - {conn-100081} Connection
+2019-08-07 15:29:25,692 [http-bio-8080-exec-1] DEBUG Connection - {conn-100081} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:29:25,692 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100082} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:29:25,692 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100082} Parameters: []
+2019-08-07 15:29:25,693 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100082} Types: []
+2019-08-07 15:29:25,694 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} ResultSet
+2019-08-07 15:29:25,695 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:29:25,695 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:29:25,695 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:29:25,695 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:29:25,696 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:29:25,696 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:29:25,696 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:29:25,696 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:29:25,696 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:29:25,696 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} Result: [9, 1, 공지사항 다섯번째, <p>ㅇ</p>, 2019-08-05 10:45:49.0, 0, null, null, 0]
+2019-08-07 15:29:25,697 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100083} Result: [8, 1, 공지사항 네번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:38.0, 0, null, null, 0]
+2019-08-07 15:29:36,999 [http-bio-8080-exec-1] DEBUG Connection - {conn-100084} Connection
+2019-08-07 15:29:36,999 [http-bio-8080-exec-1] DEBUG Connection - {conn-100084} Preparing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:29:36,999 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100085} Executing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:29:36,999 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100085} Parameters: [4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 0, null, null, 0]
+2019-08-07 15:29:36,999 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100085} Types: [java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer, null, null, java.lang.Integer]
+2019-08-07 15:29:37,001 [http-bio-8080-exec-1] DEBUG Connection - {conn-100084} Preparing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:29:37,002 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100086} Executing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:29:37,002 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100086} Parameters: []
+2019-08-07 15:29:37,002 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100086} Types: []
+2019-08-07 15:29:37,003 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100087} ResultSet
+2019-08-07 15:29:37,003 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100087} Header: [LAST_INSERT_ID()]
+2019-08-07 15:29:37,003 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100087} Result: [18]
+2019-08-07 15:29:38,354 [http-bio-8080-exec-1] DEBUG Connection - {conn-100088} Connection
+2019-08-07 15:29:38,354 [http-bio-8080-exec-1] DEBUG Connection - {conn-100088} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:29:38,354 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100089} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:29:38,354 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100089} Parameters: []
+2019-08-07 15:29:38,354 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100089} Types: []
+2019-08-07 15:29:38,356 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100090} ResultSet
+2019-08-07 15:29:38,356 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100090} Header: [count(*)]
+2019-08-07 15:29:38,356 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100090} Result: [14]
+2019-08-07 15:29:38,359 [http-bio-8080-exec-1] DEBUG Connection - {conn-100091} Connection
+2019-08-07 15:29:38,360 [http-bio-8080-exec-1] DEBUG Connection - {conn-100091} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:29:38,361 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100092} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:29:38,361 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100092} Parameters: []
+2019-08-07 15:29:38,361 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100092} Types: []
+2019-08-07 15:29:38,362 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} ResultSet
+2019-08-07 15:29:38,363 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:29:38,363 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:29:38,363 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:29:38,363 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:29:38,363 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:29:38,364 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:29:38,364 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:29:38,364 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:29:38,364 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:29:38,364 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:29:38,365 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100093} Result: [9, 1, 공지사항 다섯번째, <p>ㅇ</p>, 2019-08-05 10:45:49.0, 0, null, null, 0]
+2019-08-07 15:29:49,901 [http-bio-8080-exec-1] DEBUG Connection - {conn-100094} Connection
+2019-08-07 15:29:49,901 [http-bio-8080-exec-1] DEBUG Connection - {conn-100094} Preparing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:29:49,901 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100095} Executing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:29:49,901 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100095} Parameters: [2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 0, null, null, 0]
+2019-08-07 15:29:49,901 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100095} Types: [java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer, null, null, java.lang.Integer]
+2019-08-07 15:29:49,903 [http-bio-8080-exec-1] DEBUG Connection - {conn-100094} Preparing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:29:49,904 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100096} Executing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:29:49,904 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100096} Parameters: []
+2019-08-07 15:29:49,904 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100096} Types: []
+2019-08-07 15:29:49,904 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100097} ResultSet
+2019-08-07 15:29:49,904 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100097} Header: [LAST_INSERT_ID()]
+2019-08-07 15:29:49,905 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100097} Result: [19]
+2019-08-07 15:29:51,340 [http-bio-8080-exec-1] DEBUG Connection - {conn-100098} Connection
+2019-08-07 15:29:51,340 [http-bio-8080-exec-1] DEBUG Connection - {conn-100098} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:29:51,340 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100099} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:29:51,340 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100099} Parameters: []
+2019-08-07 15:29:51,340 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100099} Types: []
+2019-08-07 15:29:51,348 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100100} ResultSet
+2019-08-07 15:29:51,348 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100100} Header: [count(*)]
+2019-08-07 15:29:51,348 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100100} Result: [15]
+2019-08-07 15:29:51,352 [http-bio-8080-exec-1] DEBUG Connection - {conn-100101} Connection
+2019-08-07 15:29:51,352 [http-bio-8080-exec-1] DEBUG Connection - {conn-100101} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:29:51,353 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100102} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:29:51,353 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100102} Parameters: []
+2019-08-07 15:29:51,353 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100102} Types: []
+2019-08-07 15:29:51,354 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} ResultSet
+2019-08-07 15:29:51,355 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:29:51,355 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:29:51,355 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:29:51,355 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:29:51,355 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:29:51,356 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:29:51,356 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:29:51,356 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:29:51,356 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:29:51,356 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:29:51,356 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100103} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:29:54,152 [http-bio-8080-exec-1] DEBUG Connection - {conn-100104} Connection
+2019-08-07 15:29:54,153 [http-bio-8080-exec-1] DEBUG Connection - {conn-100104} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:29:54,153 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100105} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:29:54,153 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100105} Parameters: []
+2019-08-07 15:29:54,153 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100105} Types: []
+2019-08-07 15:29:54,156 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100106} ResultSet
+2019-08-07 15:29:54,156 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100106} Header: [count(*)]
+2019-08-07 15:29:54,156 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100106} Result: [15]
+2019-08-07 15:29:54,160 [http-bio-8080-exec-1] DEBUG Connection - {conn-100107} Connection
+2019-08-07 15:29:54,161 [http-bio-8080-exec-1] DEBUG Connection - {conn-100107} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:29:54,162 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100108} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:29:54,162 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100108} Parameters: []
+2019-08-07 15:29:54,162 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100108} Types: []
+2019-08-07 15:29:54,164 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} ResultSet
+2019-08-07 15:29:54,165 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:29:54,165 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:29:54,165 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:29:54,165 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:29:54,166 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:29:54,166 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:29:54,166 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:29:54,167 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:29:54,167 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:29:54,167 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:29:54,167 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100109} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:30:11,325 [http-bio-8080-exec-1] DEBUG Connection - {conn-100110} Connection
+2019-08-07 15:30:11,325 [http-bio-8080-exec-1] DEBUG Connection - {conn-100110} Preparing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:30:11,326 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100111} Executing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:30:11,326 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100111} Parameters: [3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 0, null, null, 0]
+2019-08-07 15:30:11,326 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100111} Types: [java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer, null, null, java.lang.Integer]
+2019-08-07 15:30:11,329 [http-bio-8080-exec-1] DEBUG Connection - {conn-100110} Preparing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:30:11,330 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100112} Executing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:30:11,330 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100112} Parameters: []
+2019-08-07 15:30:11,330 [http-bio-8080-exec-1] DEBUG PreparedStatement - {pstm-100112} Types: []
+2019-08-07 15:30:11,331 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100113} ResultSet
+2019-08-07 15:30:11,331 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100113} Header: [LAST_INSERT_ID()]
+2019-08-07 15:30:11,331 [http-bio-8080-exec-1] DEBUG ResultSet - {rset-100113} Result: [20]
+2019-08-07 15:30:13,220 [http-bio-8080-exec-3] DEBUG Connection - {conn-100114} Connection
+2019-08-07 15:30:13,221 [http-bio-8080-exec-3] DEBUG Connection - {conn-100114} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:13,221 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100115} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:13,221 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100115} Parameters: []
+2019-08-07 15:30:13,221 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100115} Types: []
+2019-08-07 15:30:13,223 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100116} ResultSet
+2019-08-07 15:30:13,223 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100116} Header: [count(*)]
+2019-08-07 15:30:13,223 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100116} Result: [16]
+2019-08-07 15:30:13,227 [http-bio-8080-exec-3] DEBUG Connection - {conn-100117} Connection
+2019-08-07 15:30:13,227 [http-bio-8080-exec-3] DEBUG Connection - {conn-100117} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:30:13,227 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100118} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:30:13,228 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100118} Parameters: []
+2019-08-07 15:30:13,228 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100118} Types: []
+2019-08-07 15:30:13,228 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} ResultSet
+2019-08-07 15:30:13,229 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:30:13,229 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:30:13,229 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:30:13,229 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:30:13,229 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:30:13,229 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:30:13,229 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:30:13,229 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:30:13,229 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:30:13,229 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:30:13,229 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100119} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:30:26,332 [http-bio-8080-exec-3] DEBUG Connection - {conn-100120} Connection
+2019-08-07 15:30:26,333 [http-bio-8080-exec-3] DEBUG Connection - {conn-100120} Preparing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:30:26,335 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100121} Executing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:30:26,335 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100121} Parameters: [1, 병원소식, <p>병원소식&nbsp;</p>, 0, null, null, 0]
+2019-08-07 15:30:26,335 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100121} Types: [java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer, null, null, java.lang.Integer]
+2019-08-07 15:30:26,339 [http-bio-8080-exec-3] DEBUG Connection - {conn-100120} Preparing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:30:26,340 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100122} Executing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:30:26,340 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100122} Parameters: []
+2019-08-07 15:30:26,340 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100122} Types: []
+2019-08-07 15:30:26,342 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100123} ResultSet
+2019-08-07 15:30:26,342 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100123} Header: [LAST_INSERT_ID()]
+2019-08-07 15:30:26,342 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100123} Result: [21]
+2019-08-07 15:30:27,585 [http-bio-8080-exec-3] DEBUG Connection - {conn-100124} Connection
+2019-08-07 15:30:27,585 [http-bio-8080-exec-3] DEBUG Connection - {conn-100124} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:27,585 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100125} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:27,585 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100125} Parameters: []
+2019-08-07 15:30:27,585 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100125} Types: []
+2019-08-07 15:30:27,587 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100126} ResultSet
+2019-08-07 15:30:27,588 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100126} Header: [count(*)]
+2019-08-07 15:30:27,588 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100126} Result: [17]
+2019-08-07 15:30:27,593 [http-bio-8080-exec-3] DEBUG Connection - {conn-100127} Connection
+2019-08-07 15:30:27,593 [http-bio-8080-exec-3] DEBUG Connection - {conn-100127} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:30:27,594 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100128} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:30:27,594 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100128} Parameters: []
+2019-08-07 15:30:27,594 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100128} Types: []
+2019-08-07 15:30:27,595 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} ResultSet
+2019-08-07 15:30:27,595 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:30:27,595 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:30:27,596 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:30:27,596 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:30:27,596 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:30:27,596 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:30:27,596 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:30:27,596 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:30:27,597 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:30:27,597 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:30:27,597 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100129} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:30:40,955 [http-bio-8080-exec-3] DEBUG Connection - {conn-100130} Connection
+2019-08-07 15:30:40,955 [http-bio-8080-exec-3] DEBUG Connection - {conn-100130} Preparing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:30:40,955 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100131} Executing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:30:40,955 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100131} Parameters: [4, 증례증례소개소개, <p>증례증례소개소개&nbsp;</p>, 0, null, null, 0]
+2019-08-07 15:30:40,955 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100131} Types: [java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer, null, null, java.lang.Integer]
+2019-08-07 15:30:40,957 [http-bio-8080-exec-3] DEBUG Connection - {conn-100130} Preparing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:30:40,957 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100132} Executing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:30:40,957 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100132} Parameters: []
+2019-08-07 15:30:40,957 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100132} Types: []
+2019-08-07 15:30:40,958 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100133} ResultSet
+2019-08-07 15:30:40,958 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100133} Header: [LAST_INSERT_ID()]
+2019-08-07 15:30:40,958 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100133} Result: [22]
+2019-08-07 15:30:42,192 [http-bio-8080-exec-3] DEBUG Connection - {conn-100134} Connection
+2019-08-07 15:30:42,192 [http-bio-8080-exec-3] DEBUG Connection - {conn-100134} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:42,192 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100135} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:42,192 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100135} Parameters: []
+2019-08-07 15:30:42,192 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100135} Types: []
+2019-08-07 15:30:42,194 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100136} ResultSet
+2019-08-07 15:30:42,194 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100136} Header: [count(*)]
+2019-08-07 15:30:42,194 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100136} Result: [18]
+2019-08-07 15:30:42,196 [http-bio-8080-exec-3] DEBUG Connection - {conn-100137} Connection
+2019-08-07 15:30:42,197 [http-bio-8080-exec-3] DEBUG Connection - {conn-100137} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:30:42,198 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100138} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:30:42,198 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100138} Parameters: []
+2019-08-07 15:30:42,198 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100138} Types: []
+2019-08-07 15:30:42,199 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} ResultSet
+2019-08-07 15:30:42,199 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:30:42,199 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} Result: [22, 4, 증례증례소개소개, <p>증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:40.0, 0, null, null, 0]
+2019-08-07 15:30:42,199 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:30:42,199 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:30:42,200 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:30:42,200 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:30:42,200 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:30:42,200 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:30:42,200 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:30:42,200 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:30:42,200 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100139} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:30:45,166 [http-bio-8080-exec-3] DEBUG Connection - {conn-100140} Connection
+2019-08-07 15:30:45,167 [http-bio-8080-exec-3] DEBUG Connection - {conn-100140} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:45,167 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100141} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:45,168 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100141} Parameters: []
+2019-08-07 15:30:45,168 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100141} Types: []
+2019-08-07 15:30:45,170 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100142} ResultSet
+2019-08-07 15:30:45,170 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100142} Header: [count(*)]
+2019-08-07 15:30:45,171 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100142} Result: [18]
+2019-08-07 15:30:45,176 [http-bio-8080-exec-3] DEBUG Connection - {conn-100143} Connection
+2019-08-07 15:30:45,176 [http-bio-8080-exec-3] DEBUG Connection - {conn-100143} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 10, 10     
+2019-08-07 15:30:45,177 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100144} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 10, 10     
+2019-08-07 15:30:45,177 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100144} Parameters: []
+2019-08-07 15:30:45,177 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100144} Types: []
+2019-08-07 15:30:45,179 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100145} ResultSet
+2019-08-07 15:30:45,180 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100145} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:30:45,180 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100145} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:30:45,180 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100145} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:30:45,181 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100145} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:30:45,181 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100145} Result: [9, 1, 공지사항 다섯번째, <p>ㅇ</p>, 2019-08-05 10:45:49.0, 0, null, null, 0]
+2019-08-07 15:30:45,181 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100145} Result: [8, 1, 공지사항 네번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:38.0, 0, null, null, 0]
+2019-08-07 15:30:45,182 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100145} Result: [7, 1, 공지사항 세번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:27.0, 0, null, null, 0]
+2019-08-07 15:30:45,182 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100145} Result: [6, 1, 공지사항 두번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:19.0, 0, null, null, 0]
+2019-08-07 15:30:45,183 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100145} Result: [5, 1, 공지사항 첫번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:45:08.0, 0, null, null, 0]
+2019-08-07 15:30:46,318 [http-bio-8080-exec-3] DEBUG Connection - {conn-100146} Connection
+2019-08-07 15:30:46,318 [http-bio-8080-exec-3] DEBUG Connection - {conn-100146} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:46,319 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100147} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:46,319 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100147} Parameters: []
+2019-08-07 15:30:46,319 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100147} Types: []
+2019-08-07 15:30:46,322 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100148} ResultSet
+2019-08-07 15:30:46,323 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100148} Header: [count(*)]
+2019-08-07 15:30:46,323 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100148} Result: [18]
+2019-08-07 15:30:46,327 [http-bio-8080-exec-3] DEBUG Connection - {conn-100149} Connection
+2019-08-07 15:30:46,327 [http-bio-8080-exec-3] DEBUG Connection - {conn-100149} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:30:46,328 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100150} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:30:46,328 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100150} Parameters: []
+2019-08-07 15:30:46,328 [http-bio-8080-exec-3] DEBUG PreparedStatement - {pstm-100150} Types: []
+2019-08-07 15:30:46,329 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} ResultSet
+2019-08-07 15:30:46,329 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:30:46,329 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} Result: [22, 4, 증례증례소개소개, <p>증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:40.0, 0, null, null, 0]
+2019-08-07 15:30:46,330 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:30:46,330 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:30:46,330 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:30:46,330 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:30:46,330 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:30:46,330 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:30:46,331 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:30:46,331 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:30:46,331 [http-bio-8080-exec-3] DEBUG ResultSet - {rset-100151} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:30:57,870 [http-bio-8080-exec-10] DEBUG Connection - {conn-100152} Connection
+2019-08-07 15:30:57,871 [http-bio-8080-exec-10] DEBUG Connection - {conn-100152} Preparing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:30:57,874 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100153} Executing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:30:57,874 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100153} Parameters: [3, 보도자료자료자료, <p>증례증례소개소개증례증례소개소개&nbsp;</p>, 0, null, null, 0]
+2019-08-07 15:30:57,874 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100153} Types: [java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer, null, null, java.lang.Integer]
+2019-08-07 15:30:57,878 [http-bio-8080-exec-10] DEBUG Connection - {conn-100152} Preparing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:30:57,878 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100154} Executing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:30:57,878 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100154} Parameters: []
+2019-08-07 15:30:57,878 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100154} Types: []
+2019-08-07 15:30:57,879 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100155} ResultSet
+2019-08-07 15:30:57,879 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100155} Header: [LAST_INSERT_ID()]
+2019-08-07 15:30:57,879 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100155} Result: [23]
+2019-08-07 15:30:58,445 [http-bio-8080-exec-10] DEBUG Connection - {conn-100156} Connection
+2019-08-07 15:30:58,446 [http-bio-8080-exec-10] DEBUG Connection - {conn-100156} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:58,446 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100157} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:30:58,446 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100157} Parameters: []
+2019-08-07 15:30:58,446 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100157} Types: []
+2019-08-07 15:30:58,448 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100158} ResultSet
+2019-08-07 15:30:58,448 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100158} Header: [count(*)]
+2019-08-07 15:30:58,448 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100158} Result: [19]
+2019-08-07 15:30:58,450 [http-bio-8080-exec-10] DEBUG Connection - {conn-100159} Connection
+2019-08-07 15:30:58,450 [http-bio-8080-exec-10] DEBUG Connection - {conn-100159} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:30:58,450 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100160} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:30:58,450 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100160} Parameters: []
+2019-08-07 15:30:58,450 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100160} Types: []
+2019-08-07 15:30:58,451 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} ResultSet
+2019-08-07 15:30:58,452 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:30:58,452 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} Result: [23, 3, 보도자료자료자료, <p>증례증례소개소개증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:57.0, 0, null, null, 0]
+2019-08-07 15:30:58,452 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} Result: [22, 4, 증례증례소개소개, <p>증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:40.0, 0, null, null, 0]
+2019-08-07 15:30:58,452 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:30:58,452 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:30:58,453 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:30:58,453 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:30:58,453 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:30:58,453 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:30:58,453 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:30:58,453 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100161} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:31:10,026 [http-bio-8080-exec-10] DEBUG Connection - {conn-100162} Connection
+2019-08-07 15:31:10,027 [http-bio-8080-exec-10] DEBUG Connection - {conn-100162} Preparing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:31:10,028 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100163} Executing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:31:10,028 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100163} Parameters: [1, 병원소식소식소식, <p>병원소식소식소식&nbsp;</p>, 0, null, null, 0]
+2019-08-07 15:31:10,028 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100163} Types: [java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer, null, null, java.lang.Integer]
+2019-08-07 15:31:10,030 [http-bio-8080-exec-10] DEBUG Connection - {conn-100162} Preparing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:31:10,031 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100164} Executing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:31:10,031 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100164} Parameters: []
+2019-08-07 15:31:10,031 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100164} Types: []
+2019-08-07 15:31:10,031 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100165} ResultSet
+2019-08-07 15:31:10,031 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100165} Header: [LAST_INSERT_ID()]
+2019-08-07 15:31:10,031 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100165} Result: [24]
+2019-08-07 15:31:11,324 [http-bio-8080-exec-10] DEBUG Connection - {conn-100166} Connection
+2019-08-07 15:31:11,324 [http-bio-8080-exec-10] DEBUG Connection - {conn-100166} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:31:11,324 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100167} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:31:11,324 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100167} Parameters: []
+2019-08-07 15:31:11,324 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100167} Types: []
+2019-08-07 15:31:11,325 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100168} ResultSet
+2019-08-07 15:31:11,326 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100168} Header: [count(*)]
+2019-08-07 15:31:11,326 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100168} Result: [20]
+2019-08-07 15:31:11,327 [http-bio-8080-exec-10] DEBUG Connection - {conn-100169} Connection
+2019-08-07 15:31:11,328 [http-bio-8080-exec-10] DEBUG Connection - {conn-100169} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:31:11,328 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100170} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:31:11,328 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100170} Parameters: []
+2019-08-07 15:31:11,328 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100170} Types: []
+2019-08-07 15:31:11,329 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} ResultSet
+2019-08-07 15:31:11,329 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:31:11,329 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} Result: [24, 1, 병원소식소식소식, <p>병원소식소식소식&nbsp;</p>, 2019-08-07 15:31:10.0, 0, null, null, 0]
+2019-08-07 15:31:11,330 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} Result: [23, 3, 보도자료자료자료, <p>증례증례소개소개증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:57.0, 0, null, null, 0]
+2019-08-07 15:31:11,330 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} Result: [22, 4, 증례증례소개소개, <p>증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:40.0, 0, null, null, 0]
+2019-08-07 15:31:11,330 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:31:11,330 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:31:11,330 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:31:11,330 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:31:11,330 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:31:11,330 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:31:11,330 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100171} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:31:24,670 [http-bio-8080-exec-10] DEBUG Connection - {conn-100172} Connection
+2019-08-07 15:31:24,670 [http-bio-8080-exec-10] DEBUG Connection - {conn-100172} Preparing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:31:24,671 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100173} Executing Statement:          INSERT INTO notice (          type, title, contents, cre_date, readno,          filename_org, filename, display         ) VALUES (          ?, ?, ?, now(), ?,          ?, ?, ?         )              
+2019-08-07 15:31:24,671 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100173} Parameters: [2, 칼럼 칼럼 칼럼 칼럼 , <p>칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;&nbsp;</p>, 0, null, null, 0]
+2019-08-07 15:31:24,671 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100173} Types: [java.lang.Integer, java.lang.String, java.lang.String, java.lang.Integer, null, null, java.lang.Integer]
+2019-08-07 15:31:24,672 [http-bio-8080-exec-10] DEBUG Connection - {conn-100172} Preparing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:31:24,673 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100174} Executing Statement:           SELECT LAST_INSERT_ID()         
+2019-08-07 15:31:24,673 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100174} Parameters: []
+2019-08-07 15:31:24,673 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100174} Types: []
+2019-08-07 15:31:24,673 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100175} ResultSet
+2019-08-07 15:31:24,673 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100175} Header: [LAST_INSERT_ID()]
+2019-08-07 15:31:24,673 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100175} Result: [25]
+2019-08-07 15:31:25,878 [http-bio-8080-exec-10] DEBUG Connection - {conn-100176} Connection
+2019-08-07 15:31:25,879 [http-bio-8080-exec-10] DEBUG Connection - {conn-100176} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:31:25,879 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100177} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:31:25,879 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100177} Parameters: []
+2019-08-07 15:31:25,879 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100177} Types: []
+2019-08-07 15:31:25,880 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100178} ResultSet
+2019-08-07 15:31:25,881 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100178} Header: [count(*)]
+2019-08-07 15:31:25,881 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100178} Result: [21]
+2019-08-07 15:31:25,884 [http-bio-8080-exec-10] DEBUG Connection - {conn-100179} Connection
+2019-08-07 15:31:25,884 [http-bio-8080-exec-10] DEBUG Connection - {conn-100179} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:31:25,884 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100180} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:31:25,884 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100180} Parameters: []
+2019-08-07 15:31:25,884 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100180} Types: []
+2019-08-07 15:31:25,885 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} ResultSet
+2019-08-07 15:31:25,886 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:31:25,886 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} Result: [25, 2, 칼럼 칼럼 칼럼 칼럼 , <p>칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;&nbsp;</p>, 2019-08-07 15:31:24.0, 0, null, null, 0]
+2019-08-07 15:31:25,886 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} Result: [24, 1, 병원소식소식소식, <p>병원소식소식소식&nbsp;</p>, 2019-08-07 15:31:10.0, 0, null, null, 0]
+2019-08-07 15:31:25,886 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} Result: [23, 3, 보도자료자료자료, <p>증례증례소개소개증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:57.0, 0, null, null, 0]
+2019-08-07 15:31:25,886 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} Result: [22, 4, 증례증례소개소개, <p>증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:40.0, 0, null, null, 0]
+2019-08-07 15:31:25,886 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:31:25,886 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:31:25,886 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:31:25,887 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:31:25,887 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:31:25,887 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100181} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:31:29,027 [http-bio-8080-exec-10] DEBUG Connection - {conn-100182} Connection
+2019-08-07 15:31:29,028 [http-bio-8080-exec-10] DEBUG Connection - {conn-100182} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:31:29,028 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100183} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:31:29,028 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100183} Parameters: []
+2019-08-07 15:31:29,028 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100183} Types: []
+2019-08-07 15:31:29,029 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100184} ResultSet
+2019-08-07 15:31:29,029 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100184} Header: [count(*)]
+2019-08-07 15:31:29,029 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100184} Result: [21]
+2019-08-07 15:31:29,032 [http-bio-8080-exec-10] DEBUG Connection - {conn-100185} Connection
+2019-08-07 15:31:29,032 [http-bio-8080-exec-10] DEBUG Connection - {conn-100185} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:31:29,032 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100186} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:31:29,033 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100186} Parameters: []
+2019-08-07 15:31:29,033 [http-bio-8080-exec-10] DEBUG PreparedStatement - {pstm-100186} Types: []
+2019-08-07 15:31:29,034 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} ResultSet
+2019-08-07 15:31:29,035 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:31:29,035 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} Result: [25, 2, 칼럼 칼럼 칼럼 칼럼 , <p>칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;&nbsp;</p>, 2019-08-07 15:31:24.0, 0, null, null, 0]
+2019-08-07 15:31:29,035 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} Result: [24, 1, 병원소식소식소식, <p>병원소식소식소식&nbsp;</p>, 2019-08-07 15:31:10.0, 0, null, null, 0]
+2019-08-07 15:31:29,035 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} Result: [23, 3, 보도자료자료자료, <p>증례증례소개소개증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:57.0, 0, null, null, 0]
+2019-08-07 15:31:29,035 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} Result: [22, 4, 증례증례소개소개, <p>증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:40.0, 0, null, null, 0]
+2019-08-07 15:31:29,035 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:31:29,035 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:31:29,035 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:31:29,036 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:31:29,036 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:31:29,036 [http-bio-8080-exec-10] DEBUG ResultSet - {rset-100187} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:40:44,077 [http-bio-8080-exec-7] DEBUG Connection - {conn-100188} Connection
+2019-08-07 15:40:44,078 [http-bio-8080-exec-7] DEBUG Connection - {conn-100188} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:40:44,078 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100189} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:40:44,078 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100189} Parameters: []
+2019-08-07 15:40:44,078 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100189} Types: []
+2019-08-07 15:40:44,080 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100190} ResultSet
+2019-08-07 15:40:44,080 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100190} Header: [count(*)]
+2019-08-07 15:40:44,080 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100190} Result: [21]
+2019-08-07 15:40:44,083 [http-bio-8080-exec-7] DEBUG Connection - {conn-100191} Connection
+2019-08-07 15:40:44,083 [http-bio-8080-exec-7] DEBUG Connection - {conn-100191} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 10, 10     
+2019-08-07 15:40:44,083 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100192} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 10, 10     
+2019-08-07 15:40:44,083 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100192} Parameters: []
+2019-08-07 15:40:44,083 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100192} Types: []
+2019-08-07 15:40:44,084 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} ResultSet
+2019-08-07 15:40:44,085 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:40:44,085 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} Result: [15, 1, 공지사항 열한개째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:46:59.0, 0, null, null, 0]
+2019-08-07 15:40:44,085 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} Result: [14, 1, 공지사항 열번째, <p>ㅋㅋㅋㅋ</p>, 2019-08-05 10:46:47.0, 0, null, null, 0]
+2019-08-07 15:40:44,085 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} Result: [13, 1, 공지사항 아홉번째, <p>999</p>, 2019-08-05 10:46:38.0, 0, null, null, 0]
+2019-08-07 15:40:44,085 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} Result: [12, 1, 공지사항 여덟번째, <p>ㅋㅋ</p>, 2019-08-05 10:46:27.0, 0, null, null, 0]
+2019-08-07 15:40:44,085 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} Result: [11, 1, 공지사항 일곱번째, <p>ㅋㅋㅋ</p>, 2019-08-05 10:46:16.0, 0, null, null, 0]
+2019-08-07 15:40:44,086 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} Result: [10, 1, 공지사항 여섯번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:46:06.0, 0, null, null, 0]
+2019-08-07 15:40:44,086 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} Result: [9, 1, 공지사항 다섯번째, <p>ㅇ</p>, 2019-08-05 10:45:49.0, 0, null, null, 0]
+2019-08-07 15:40:44,086 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} Result: [8, 1, 공지사항 네번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:38.0, 0, null, null, 0]
+2019-08-07 15:40:44,086 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} Result: [7, 1, 공지사항 세번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:27.0, 0, null, null, 0]
+2019-08-07 15:40:44,086 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100193} Result: [6, 1, 공지사항 두번째, <p>공지사항 첫번째&nbsp;</p>, 2019-08-05 10:45:19.0, 0, null, null, 0]
+2019-08-07 15:40:46,273 [http-bio-8080-exec-7] DEBUG Connection - {conn-100194} Connection
+2019-08-07 15:40:46,274 [http-bio-8080-exec-7] DEBUG Connection - {conn-100194} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:40:46,275 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100195} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:40:46,275 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100195} Parameters: []
+2019-08-07 15:40:46,275 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100195} Types: []
+2019-08-07 15:40:46,277 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100196} ResultSet
+2019-08-07 15:40:46,278 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100196} Header: [count(*)]
+2019-08-07 15:40:46,278 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100196} Result: [21]
+2019-08-07 15:40:46,282 [http-bio-8080-exec-7] DEBUG Connection - {conn-100197} Connection
+2019-08-07 15:40:46,283 [http-bio-8080-exec-7] DEBUG Connection - {conn-100197} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 20, 10     
+2019-08-07 15:40:46,283 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100198} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 20, 10     
+2019-08-07 15:40:46,283 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100198} Parameters: []
+2019-08-07 15:40:46,283 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100198} Types: []
+2019-08-07 15:40:46,285 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100199} ResultSet
+2019-08-07 15:40:46,286 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100199} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:40:46,286 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100199} Result: [5, 1, 공지사항 첫번째, <p>ㅎㅎㅎ</p>, 2019-08-05 10:45:08.0, 0, null, null, 0]
+2019-08-07 15:40:49,047 [http-bio-8080-exec-7] DEBUG Connection - {conn-100200} Connection
+2019-08-07 15:40:49,048 [http-bio-8080-exec-7] DEBUG Connection - {conn-100200} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:40:49,048 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100201} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:40:49,048 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100201} Parameters: []
+2019-08-07 15:40:49,048 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100201} Types: []
+2019-08-07 15:40:49,050 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100202} ResultSet
+2019-08-07 15:40:49,051 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100202} Header: [count(*)]
+2019-08-07 15:40:49,051 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100202} Result: [21]
+2019-08-07 15:40:49,055 [http-bio-8080-exec-7] DEBUG Connection - {conn-100203} Connection
+2019-08-07 15:40:49,056 [http-bio-8080-exec-7] DEBUG Connection - {conn-100203} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:40:49,056 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100204} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:40:49,056 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100204} Parameters: []
+2019-08-07 15:40:49,057 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100204} Types: []
+2019-08-07 15:40:49,058 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} ResultSet
+2019-08-07 15:40:49,058 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:40:49,058 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} Result: [25, 2, 칼럼 칼럼 칼럼 칼럼 , <p>칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;&nbsp;</p>, 2019-08-07 15:31:24.0, 0, null, null, 0]
+2019-08-07 15:40:49,059 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} Result: [24, 1, 병원소식소식소식, <p>병원소식소식소식&nbsp;</p>, 2019-08-07 15:31:10.0, 0, null, null, 0]
+2019-08-07 15:40:49,059 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} Result: [23, 3, 보도자료자료자료, <p>증례증례소개소개증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:57.0, 0, null, null, 0]
+2019-08-07 15:40:49,059 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} Result: [22, 4, 증례증례소개소개, <p>증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:40.0, 0, null, null, 0]
+2019-08-07 15:40:49,059 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:40:49,059 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:40:49,059 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:40:49,060 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:40:49,060 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:40:49,060 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100205} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:40:55,387 [http-bio-8080-exec-7] DEBUG Connection - {conn-100206} Connection
+2019-08-07 15:40:55,387 [http-bio-8080-exec-7] DEBUG Connection - {conn-100206} Preparing Statement:          SELECT           *         FROM notice         where no = ?     
+2019-08-07 15:40:55,387 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100207} Executing Statement:          SELECT           *         FROM notice         where no = ?     
+2019-08-07 15:40:55,387 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100207} Parameters: [21]
+2019-08-07 15:40:55,387 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100207} Types: [java.lang.Integer]
+2019-08-07 15:40:55,388 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100208} ResultSet
+2019-08-07 15:40:55,389 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100208} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:40:55,389 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100208} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:40:57,587 [http-bio-8080-exec-7] DEBUG Connection - {conn-100209} Connection
+2019-08-07 15:40:57,588 [http-bio-8080-exec-7] DEBUG Connection - {conn-100209} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:40:57,588 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100210} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:40:57,588 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100210} Parameters: []
+2019-08-07 15:40:57,588 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100210} Types: []
+2019-08-07 15:40:57,590 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100211} ResultSet
+2019-08-07 15:40:57,590 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100211} Header: [count(*)]
+2019-08-07 15:40:57,590 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100211} Result: [21]
+2019-08-07 15:40:57,593 [http-bio-8080-exec-7] DEBUG Connection - {conn-100212} Connection
+2019-08-07 15:40:57,593 [http-bio-8080-exec-7] DEBUG Connection - {conn-100212} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:40:57,593 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100213} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:40:57,593 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100213} Parameters: []
+2019-08-07 15:40:57,594 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100213} Types: []
+2019-08-07 15:40:57,595 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} ResultSet
+2019-08-07 15:40:57,596 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:40:57,596 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} Result: [25, 2, 칼럼 칼럼 칼럼 칼럼 , <p>칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;&nbsp;</p>, 2019-08-07 15:31:24.0, 0, null, null, 0]
+2019-08-07 15:40:57,596 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} Result: [24, 1, 병원소식소식소식, <p>병원소식소식소식&nbsp;</p>, 2019-08-07 15:31:10.0, 0, null, null, 0]
+2019-08-07 15:40:57,596 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} Result: [23, 3, 보도자료자료자료, <p>증례증례소개소개증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:57.0, 0, null, null, 0]
+2019-08-07 15:40:57,596 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} Result: [22, 4, 증례증례소개소개, <p>증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:40.0, 0, null, null, 0]
+2019-08-07 15:40:57,596 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:40:57,597 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:40:57,597 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:40:57,597 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:40:57,597 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:40:57,597 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100214} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:41:13,441 [http-bio-8080-exec-7] DEBUG Connection - {conn-100215} Connection
+2019-08-07 15:41:13,441 [http-bio-8080-exec-7] DEBUG Connection - {conn-100215} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:41:13,441 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100216} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:41:13,441 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100216} Parameters: []
+2019-08-07 15:41:13,441 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100216} Types: []
+2019-08-07 15:41:13,442 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100217} ResultSet
+2019-08-07 15:41:13,442 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100217} Header: [count(*)]
+2019-08-07 15:41:13,442 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100217} Result: [21]
+2019-08-07 15:41:13,443 [http-bio-8080-exec-7] DEBUG Connection - {conn-100218} Connection
+2019-08-07 15:41:13,443 [http-bio-8080-exec-7] DEBUG Connection - {conn-100218} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:41:13,443 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100219} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:41:13,443 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100219} Parameters: []
+2019-08-07 15:41:13,443 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100219} Types: []
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} ResultSet
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} Result: [25, 2, 칼럼 칼럼 칼럼 칼럼 , <p>칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;&nbsp;</p>, 2019-08-07 15:31:24.0, 0, null, null, 0]
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} Result: [24, 1, 병원소식소식소식, <p>병원소식소식소식&nbsp;</p>, 2019-08-07 15:31:10.0, 0, null, null, 0]
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} Result: [23, 3, 보도자료자료자료, <p>증례증례소개소개증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:57.0, 0, null, null, 0]
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} Result: [22, 4, 증례증례소개소개, <p>증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:40.0, 0, null, null, 0]
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:41:13,444 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100220} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
+2019-08-07 15:41:14,524 [http-bio-8080-exec-7] DEBUG Connection - {conn-100221} Connection
+2019-08-07 15:41:14,524 [http-bio-8080-exec-7] DEBUG Connection - {conn-100221} Preparing Statement:          SELECT           *         FROM notice         where no = ?     
+2019-08-07 15:41:14,525 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100222} Executing Statement:          SELECT           *         FROM notice         where no = ?     
+2019-08-07 15:41:14,525 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100222} Parameters: [23]
+2019-08-07 15:41:14,525 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100222} Types: [java.lang.Integer]
+2019-08-07 15:41:14,525 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100223} ResultSet
+2019-08-07 15:41:14,525 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100223} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:41:14,526 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100223} Result: [23, 3, 보도자료자료자료, <p>증례증례소개소개증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:57.0, 0, null, null, 0]
+2019-08-07 15:41:20,476 [http-bio-8080-exec-7] DEBUG Connection - {conn-100224} Connection
+2019-08-07 15:41:20,476 [http-bio-8080-exec-7] DEBUG Connection - {conn-100224} Preparing Statement:          select count(*) from notice                                        
+2019-08-07 15:41:20,477 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100225} Executing Statement:          select count(*) from notice                                        
+2019-08-07 15:41:20,477 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100225} Parameters: []
+2019-08-07 15:41:20,477 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100225} Types: []
+2019-08-07 15:41:20,477 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100226} ResultSet
+2019-08-07 15:41:20,478 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100226} Header: [count(*)]
+2019-08-07 15:41:20,478 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100226} Result: [21]
+2019-08-07 15:41:20,478 [http-bio-8080-exec-7] DEBUG Connection - {conn-100227} Connection
+2019-08-07 15:41:20,479 [http-bio-8080-exec-7] DEBUG Connection - {conn-100227} Preparing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:41:20,479 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100228} Executing Statement:          select *         from notice                                     ORDER BY cre_date DESC LIMIT 0, 10     
+2019-08-07 15:41:20,479 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100228} Parameters: []
+2019-08-07 15:41:20,479 [http-bio-8080-exec-7] DEBUG PreparedStatement - {pstm-100228} Types: []
+2019-08-07 15:41:20,479 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} ResultSet
+2019-08-07 15:41:20,479 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} Header: [no, type, title, contents, cre_date, display, filename, filename_org, readno]
+2019-08-07 15:41:20,479 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} Result: [25, 2, 칼럼 칼럼 칼럼 칼럼 , <p>칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;칼럼 칼럼&nbsp;&nbsp;</p>, 2019-08-07 15:31:24.0, 0, null, null, 0]
+2019-08-07 15:41:20,480 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} Result: [24, 1, 병원소식소식소식, <p>병원소식소식소식&nbsp;</p>, 2019-08-07 15:31:10.0, 0, null, null, 0]
+2019-08-07 15:41:20,480 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} Result: [23, 3, 보도자료자료자료, <p>증례증례소개소개증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:57.0, 0, null, null, 0]
+2019-08-07 15:41:20,480 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} Result: [22, 4, 증례증례소개소개, <p>증례증례소개소개&nbsp;</p>, 2019-08-07 15:30:40.0, 0, null, null, 0]
+2019-08-07 15:41:20,480 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} Result: [21, 1, 병원소식, <p>병원소식&nbsp;</p>, 2019-08-07 15:30:26.0, 0, null, null, 0]
+2019-08-07 15:41:20,480 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} Result: [20, 3, 보도보도보도자료자료자료, <p>보도보도보도자료자료자료&nbsp;</p>, 2019-08-07 15:30:11.0, 0, null, null, 0]
+2019-08-07 15:41:20,480 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} Result: [19, 2, 칼럼칼럼, <p>칼럼칼럼&nbsp;</p>, 2019-08-07 15:29:49.0, 0, null, null, 0]
+2019-08-07 15:41:20,480 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} Result: [18, 4, 증례소개 증례소개 증례소개 , <p>증례소개&nbsp;&nbsp;</p>, 2019-08-07 15:29:37.0, 0, null, null, 0]
+2019-08-07 15:41:20,480 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} Result: [17, 3, 보도자료, <p>ㅎ</p>, 2019-08-07 15:29:24.0, 0, null, null, 0]
+2019-08-07 15:41:20,480 [http-bio-8080-exec-7] DEBUG ResultSet - {rset-100229} Result: [16, 2, 공지사항 제목입니다, <p>칼럼</p>, 2019-08-07 15:08:19.0, 0, null, null, 0]
