@@ -148,8 +148,8 @@
 
 	<insert id="reserveInsert" parameterClass="reservevo">
 		INSERT INTO reserve
-			(name, tel1, tel2, tel3, res_date, res_hour, member_pk, doctor_pk, res_contents, route)
+			(name, res_date, res_hour, member_pk, doctor_pk, res_contents, route, tel1, tel2, tel3)
 		VALUES
-			(#name#, #tel1#, #tel2#, #tel3#, #res_date#, #res_hour#, #member_pk#, #doctor_pk#, #res_contents#, 1)
+			(#name#, #res_date#, #res_hour#, #member_pk#, #doctor_pk#, #res_contents#, 1, #tel1#, #tel2#, #tel3#)
 	</insert>
 </sqlMap>

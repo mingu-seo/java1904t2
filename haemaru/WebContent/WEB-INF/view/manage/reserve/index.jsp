@@ -102,7 +102,7 @@
 												</td>
 													<td><%=list.get(i).getNo()%></td>
 													<td <%=targetUrl%>><%=list.get(i).getName()%></td>
-													<td><%=list.get(i).getTel1()%> - <%=list.get(i).getTel2()%> - <%=list.get(i).getTel3()%></td>
+													<td><%=list.get(i).getTel1()%>-<%=list.get(i).getTel2()%>-<%=list.get(i).getTel3()%></td>
 													<td><%=CodeUtil.getDoctorDepartmentName(list.get(i).getDoctor_department())%></td>
 													<td><%=list.get(i).getDoctor_name()%></td>
 													<td><%=list.get(i).getRes_date()%></td> 

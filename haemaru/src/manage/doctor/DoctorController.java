@@ -1,22 +1,19 @@
 package manage.doctor;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import manage.doctor.DoctorVO;
 import manage.doctor.sched.SchedVO;
 import manage.reserve.ReserveService;
 import manage.reserve.ReserveVO;
-import member.MemberVO;
-import mypet.MypetVO;
+import util.DateUtil;
 import util.Function;
 
 @Controller
@@ -41,20 +38,22 @@ public class DoctorController {
 	}
 	
 	@RequestMapping("/reservation/reservationDoctorList.do")
-	public String doctorList(Model model, DoctorVO param, SchedVO svo) throws Exception {
+	public String doctorList(Model model, DoctorVO param, SchedVO svo, @RequestParam(value="date", required = false)String date) throws Exception {
 		param.setPageRows(99999);
 		param.setIsDoctor(1);
 		ArrayList<DoctorVO> list = doctorService.list(param);
-		model.addAttribute("list", list);
+		
 		
 		// 예약시간
 		for (int i=0; i<list.size(); i++) {
 			svo.setDoctor_pk(list.get(i).getNo());
+			svo.setYoil(DateUtil.getYoil(date));
 			SchedVO slist = reserveService.schedList(svo);
 			ArrayList<ReserveVO> tlist = reserveService.reservedTime(svo.getDate(), svo.getDoctor_pk());
 			list.get(i).setSlist(slist);
 			list.get(i).setTlist(tlist);
 		}
+		model.addAttribute("list", list);
 		return "reservation/reservationDoctorList";
 	}
 

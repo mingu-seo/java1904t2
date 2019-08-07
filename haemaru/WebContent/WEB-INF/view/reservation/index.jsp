@@ -113,7 +113,7 @@ $(function() {
 					success : function(data) {
 						//alert("정상적으로 예약되었습니다.");
 						getReservationDoctorList();
-						getSchedList();
+						//getSchedList();
 						$('.reservation-page').stop().fadeIn(500);
 						
 					}
@@ -164,7 +164,7 @@ $(function() {
 				</div>
 				<div class="re-page-text">
 					<img src="/img/con2-4.png">
-					<h2>Reservation</h2>s
+					<h2>Reservation</h2>
 					<p>
 						<span id="result_res_date"></span> <span id="result_res_time"></span><br/>
 						<span><%=loginInfo.getName()%> </span>님의 예약이 확정 되었습니다.

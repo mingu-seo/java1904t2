@@ -891,6 +891,7 @@ public class CodeUtil {
 						res_hour[i] = timeList.get(i).getRes_hour();
 						res_date[i] = timeList.get(i).getRes_date();
 					}
+					Arrays.parallelSort(res_hour);
 			        StringBuffer result = new StringBuffer();
 			        for (int i=start; i<=end; i++) {
 			        	if (Arrays.binarySearch(res_hour, i) < 0 || arg == i ) {
@@ -900,6 +901,33 @@ public class CodeUtil {
 			        }
 			        return result.toString();
 			    }
+				
+				public static void main(String[] args) throws Exception {
+					ArrayList<ReserveVO> tlist = new ArrayList<ReserveVO>();
+					ReserveVO vo = new ReserveVO();
+					vo.setRes_hour(14);
+					vo.setRes_date("2019-08-06");
+					tlist.add(vo);
+					vo = new ReserveVO();
+					vo.setRes_hour(9);
+					vo.setRes_date("2019-08-06");
+					tlist.add(vo);
+					vo = new ReserveVO();
+					vo.setRes_hour(1);
+					vo.setRes_date("2019-08-06");
+					tlist.add(vo);
+					
+					int[] res_hour = new int[tlist.size()];
+					for (int i=0; i<tlist.size(); i++) {
+						res_hour[i] = tlist.get(i).getRes_hour();
+					}
+					for (int i=0; i<tlist.size(); i++) {
+						System.out.println(res_hour[i]);
+					}
+					Arrays.sort(res_hour);
+					System.out.println(Arrays.binarySearch(res_hour, 1));
+					System.out.println(getDoctorScheduleOptionForReserve(0, 1, 25, tlist));
+				}
 				
 				public static String getReserveRouteOption(int arg){
 			        StringBuffer result = new StringBuffer();
