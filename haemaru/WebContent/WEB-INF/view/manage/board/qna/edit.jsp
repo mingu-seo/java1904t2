@@ -14,15 +14,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <%@ include file="/WEB-INF/view/manage/include/headHtml.jsp"%>
 <script>
-function goSave() {
-	if ($("#title").val() == "") {
-		alert("제목을 입력해주세요.");
-		$("#title").focus();
-		return false;
+var oEditors; // 에디터 객체 담을 곳
+jQuery(window).load(function(){
+	oEditors = setEditor("contents"); // 에디터 셋팅
+	initCal({id:"registdate",type:"day",today:"y",timeYN:"y"});
+});
+
+	
+	function goSave() {
+		if ($("#title").val() == "") {
+			alert('제목을 입력하세요.');
+			$("#title").focus();
+			return false;
+		}
+		
+		var sHTML = oEditors.getById["contents"].getIR();
+		if (sHTML == "" || sHTML == "<p><br></p>") {
+			alert('내용을 입력하세요.');
+			$("#contents").focus();
+			return false;
+		} else {
+			oEditors.getById["contents"].exec("UPDATE_CONTENTS_FIELD", []);	// 에디터의 내용이 textarea에 적용됩니다.
+		}
+		return true;
+
 	}
-}
-
-
+	
+	
 </script>
 </head>
 <body>
@@ -56,39 +74,19 @@ function goSave() {
 											<col width="35%" />
 										</colgroup>
 										<tbody>
-											<tr>
-												<th scope="row"><label for="">카테고리</label></th>
-												<td><select name="category">
-														<option value='1'>일반</option>
-														<option value='2'>입양</option>
-														<option value='3'>진료</option>
-												</select></td>
-												<th scope="row"><label for="">첨부파일</label></th>
-												<td>
-													<%
-														if (data.getFilename() == null || "".equals(data.getFilename())) {
-													%>
-													<input type="file" name="filename_tmp" id="filename_tmp"
-													title="첨부파일" /> <%
- 													} else {
-																		 %>
-													<div class="weidtFile">
-														<p>
-															기존파일 : <a
-																href="<%=Function.downloadUrl(SiteProperty.QNA_UPLOAD_PATH, java.net.URLEncoder.encode(data.getFilename_org(), "UTF-8"), data.getFilename())%>"
-																target="_blank"><%=Function.checkNull(data.getFilename_org())%></a><br />
-															<input type="checkbox" id="filename_chk"
-																name="filename_chk" value="1"
-																title="첨부파일을 삭제하시려면 체크해주세요" /> <label
-																for="filename_chk">기존파일삭제</label>
-														</p>
-														<input type="file" name="filename_tmp" id="filename_tmp"
-															title="첨부파일을 업로드 해주세요." />
-													</div> <%
- 																	}
- 																%>
-												</td>
-												</tr>
+									<tr>
+									<th scope="row"><label for="">카테고리</label></th>
+										<td>
+						                    <select class="sub_select" name="category">
+                        				         <option value="1">외과</option>
+                                   				 <option value="2">내과</option>
+        			                          	 <option value="3">영상의학과</option>
+                    			             	 <option value="4">응급의료센터</option>
+                              		      		 <option value="5">예약</option>
+                                    			 <option value="6">입양</option>
+                                			</select>
+										</td>
+									</tr>
 												<tr>
 												<th scope="row"><label for="">제목</label></th>
 												<td colspan="2"><input type="text" id="title"

@@ -85,8 +85,8 @@ function groupDelete() {
 										<td class="first"><input type="checkbox" name="no" id="no" value="<%=list.get(i).getNo()%>"/></td>
 										<td <%=targetUrl%>><%=list.get(i).getNo()%></td>
 										<td <%=targetUrl%>><%=list.get(i).getName()%></td>
-										<td <%=targetUrl%>><%=Function.checkNull(list.get(i).getEmail1())%><%=Function.checkNull(list.get(i).getEmail2())%></td>
-										<td <%=targetUrl%>><%=list.get(i).getTel1()%> <%=list.get(i).getTel2()%> <%=list.get(i).getTel3()%></td>
+										<td <%=targetUrl%>><%=Function.checkNull(list.get(i).getEmail())%></td>
+										<td <%=targetUrl%>><%=list.get(i).getTel()%></td>
 										<td <%=targetUrl%>><%=list.get(i).getBirth()%></td>
 										<td <%=targetUrl%>><%=list.get(i).getMemo()%></td>
 										<td <%=targetUrl%>><%=DateUtil.getDateTimeFormat(list.get(i).getRegistdate())%></td>

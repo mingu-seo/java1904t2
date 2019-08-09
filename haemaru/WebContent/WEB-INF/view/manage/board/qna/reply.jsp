@@ -3,8 +3,8 @@
 <%@ page import="board.qna.*" %>
 <%@ page import="util.*" %>
 <%
-	QnaVO param = (QnaVO) request.getAttribute("param");
-	QnaVO data = (QnaVO) request.getAttribute("data");
+QnaVO param = (QnaVO)request.getAttribute("param");
+QnaVO data = (QnaVO)request.getAttribute("data");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
@@ -18,24 +18,27 @@ jQuery(window).load(function(){
 	initCal({id:"registdate",type:"day",today:"y",timeYN:"y"});
 });
 
-function goSave() {
-	if ($("#title").val() == "") {
-		alert('제목을 입력하세요.');
-		$("#title").focus();
-		return false;
-	}
-	var sHTML = oEditors.getById["contents"].getIR();
-	if (sHTML == "" || sHTML == "<p><br></p>") {
-		alert('내용을 입력하세요.');
-		$("#contents").focus();
-		return false;
-	} else {
-		oEditors.getById["contents"].exec("UPDATE_CONTENTS_FIELD", []);	// 에디터의 내용이 textarea에 적용됩니다.
-	}
-	return true;
-}
+	
+	function goSave() {
+		if ($("#title").val() == "") {
+			alert('제목을 입력하세요.');
+			$("#title").focus();
+			return false;
+		}
+		
+		var sHTML = oEditors.getById["contents"].getIR();
+		if (sHTML == "" || sHTML == "<p><br></p>") {
+			alert('내용을 입력하세요.');
+			$("#contents").focus();
+			return false;
+		} else {
+			oEditors.getById["contents"].exec("UPDATE_CONTENTS_FIELD", []);	// 에디터의 내용이 textarea에 적용됩니다.
+		}
+		return true;
 
-
+	}
+	
+	
 </script>
 </head>
 <body> 
@@ -51,7 +54,7 @@ function goSave() {
 		<div id="container">
 			<div id="content">
 				<div class="con_tit">
-					<h2>QnA - [등록하기]</h2>
+					<h2>문의하기 답변- [쓰기]</h2>
 				</div>
 				<!-- //con_tit -->
 				<div class="con">
@@ -59,7 +62,7 @@ function goSave() {
 					<div id="bbs">
 						<div id="bread">
 							<form method="post" name="frm" id="frm" action="<%=Function.getSslCheckUrl(request.getRequestURL())%>/process.do" enctype="multipart/form-data" onsubmit="return goSave();">
-							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" summary="관리자 관리 기본내용입니다.">
 								<colgroup>
 									<col width="15%" />
 									<col width="35%" />
@@ -68,7 +71,7 @@ function goSave() {
 								</colgroup>
 								<tbody>
 									<tr>
-										<th scope="row"><label for="">카테고리</label></th>
+									<th scope="row"><label for="">카테고리</label></th>
 										<td>
 						                    <select class="sub_select" name="category">
                         				         <option value="1">외과</option>
@@ -79,38 +82,37 @@ function goSave() {
                                     			 <option value="6">입양</option>
                                 			</select>
 										</td>
-										<th scope="row"><label for="">이메일</label></th>
-										<td>
-											<input type="text" id="email" name="email" value="" class="w50" title="이메일을 입력해주세요" />
-										</td>
 									</tr>
-									<tr>
-										<th scope="row"><label for="">첨부파일</label></th>
-										<td><input type="file" id="filename_tmp" name="filename_tmp" class="w50" title="첨부파일을 업로드 해주세요." />	
-										</td>
 									<tr>
 										<th scope="row"><label for="">*제목</label></th>
 										<td colspan="3">
-											<input type="text" id="title" name="title" class="w50" title="제목을 입력해주세요" />	
+											<input type="text" id="title" name="title" class="w50" title="제목을 입력해주세요" value="답변: <%=data.getTitle() %>" />	
 										</td>
 									</tr>
 									<tr>
 										<td colspan="4">
-											<textarea id="contents" name="contents" title="내용을 입력해주세요" style="width:100%;"></textarea>	
+											<textarea id="contents" name="contents" title="내용을 입력해주세요" style="width:100%; height:500px;">
+											=========================================================<br/>
+											<%=data.getContents()%>
+											</textarea>	
 										</td>
 									</tr>
 									
 								</tbody>
 							</table>
-							<input type="hidden" name="cmd" value="write" />
+							<input type="hidden" name="cmd" value="reply" />
+							<input type="hidden" name="gno" value="<%=data.getGno()%>" />							
+							<input type="hidden" name="ono" value="<%=data.getOno()%>" />							
+							<input type="hidden" name="nested" value="<%=data.getNested()%>" />							
 							</form>
 							<div class="btn">
 								<div class="btnLeft">
-									<a class="btns" href="index.do"><strong>목록</strong></a>
+									<a class="btns" href="<%=param.getTargetURLParam("index", param, 0)%>"><strong>목록</strong></a>
 								</div>
 								<div class="btnRight">
 									<a class="btns" href="javascript:$('#frm').submit();"><strong>저장</strong></a>
-								</div>
+									</div>
+							</div>
 							<!--//btn-->
 						</div>
 						<!-- //bread -->

@@ -65,10 +65,6 @@ NoticeVO data = (NoticeVO)request.getAttribute("data");
                         <li><a href="/cscenter/notice/notice.do">목록으로</a></li>
                        
                     </ul>
-                    <ul class="sub5-6-page">
-                        <li><a href="/cscenter/qna/qna.do"><span>이전글</span><span>진료예약 문의 드립니다.</span><span>윤미연(mail***)</span><span>2019-05-04</span></a></li>
-                        <li><a href="/cscenter/qna/qna.do"><span>다음글</span><span>고양이 중성화수술 문의드립니다.</span><span>이윤(mail***)</span><span>2019-05-01</span></a></li>
-                    </ul>
                 </div>
             </div>
         </div>

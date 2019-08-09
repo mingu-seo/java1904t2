@@ -34,7 +34,8 @@
 	<select id="list" parameterClass="reservevo" resultClass="reservevo">
 		SELECT *, 
 			IFNULL((SELECT department FROM doctor WHERE no=reserve.doctor_pk),0) AS doctor_department,
-			IFNULL((SELECT name FROM doctor WHERE no=reserve.doctor_pk AND department=doctor_department),0) AS doctor_name
+			IFNULL((SELECT name FROM doctor WHERE no=reserve.doctor_pk AND department=doctor_department),0) AS doctor_name,
+			IFNULL((SELECT position FROM doctor WHERE no=reserve.doctor_pk),0) AS doctor_position
 		FROM reserve
 		<include refid="searchSql" />
 		ORDER BY no DESC LIMIT $startPageNo$, $pageRows$
@@ -69,7 +70,8 @@
 	<select id="read" parameterClass="Integer" resultClass="reservevo">
 		SELECT *, 
 			IFNULL((SELECT department FROM doctor WHERE no=reserve.doctor_pk),0) AS doctor_department,
-			IFNULL((SELECT name FROM doctor WHERE no=reserve.doctor_pk AND department=doctor_department),0) AS doctor_name
+			IFNULL((SELECT name FROM doctor WHERE no=reserve.doctor_pk AND department=doctor_department),0) AS doctor_name,
+			IFNULL((SELECT position FROM doctor WHERE no=reserve.doctor_pk),0) AS doctor_position
 		FROM reserve 
 		WHERE no>1 and no=#no#
 	</select>
@@ -148,8 +150,8 @@
 
 	<insert id="reserveInsert" parameterClass="reservevo">
 		INSERT INTO reserve
-			(name, tel1, tel2, tel3, res_date, res_hour, member_pk, doctor_pk, res_contents, route)
+			(name, res_date, res_hour, member_pk, doctor_pk, res_contents, route, tel1, tel2, tel3)
 		VALUES
-			(#name#, #tel1#, #tel2#, #tel3#, #res_date#, #res_hour#, #member_pk#, #doctor_pk#, #res_contents#, 1)
+			(#name#, #res_date#, #res_hour#, #member_pk#, #doctor_pk#, #res_contents#, 1, #tel1#, #tel2#, #tel3#)
 	</insert>
 </sqlMap>

@@ -89,4 +89,16 @@
     <update id="findPw" parameterClass="membervo">
 		update member set pw=md5(#pw#) where concat(email1, email2) = #email1# and name=#name# and concat(tel1, tel2, tel3) = #tel1# and birth=#birth#
 	</update>
+    <select id = "reservationSchedule" parameterClass="java.util.HashMap" resultClass="manage.reserve.ReserveVO">
+    	SELECT *
+		FROM reserve 
+		WHERE member_pk = #member_pk# AND res_date >= CURDATE()
+		ORDER BY res_date, res_hour LIMIT 1 
+    </select>
+    
+     <select id = "memberReservationList" parameterClass="manage.reserve.ReserveVO" resultClass="manage.reserve.ReserveVO">
+    	SELECT *
+		FROM reserve 
+		ORDER BY res_date, res_hour DESC
+    </select>
 </sqlMap>

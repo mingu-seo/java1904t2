@@ -4,25 +4,26 @@
 <%@ page import="java.util.*" %>
 <%@ page import="util.*" %>
 <%
-QnaVO param = (QnaVO)request.getAttribute("vo");
+QnaVO param = (QnaVO)request.getAttribute("param");
+QnaVO data = (QnaVO)request.getAttribute("data");
 %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <script>
 function goSave() {
-	if ($("#title").val() == "") {
+	if ($("#sub_title").val() == "") {
 		alert("제목을 입력해주세요.");
-		$("#title").focus();
+		$("#sub_title").focus();
 		return false;
 	}
 	
-	if ($("#contents").val() == "") {
+	if ($("#sub5-4-textarea").val() == "") {
 		alert("내용을 입력해주세요.");
-		$("#contents").focus();
+		$("#sub5-4-textarea").focus();
 		return false;
 	}
-	
+	$("#frm").submit();
 }
 </script>
     <meta charset="UTF-8">
@@ -74,25 +75,28 @@ function goSave() {
                             </div>
                             <div class="sub5-4-write">
                                 <label for="sub_select">카테고리</label>
-                                <select class="sub_select">
-                                    <option>외과</option>
-                                    <option>내과</option>
-                                    <option>영상의학과</option>
-                                    <option>응급의료센터</option>
-                                    <option>예약</option>
-                                    <option>입양</option>
+                                <select class="sub_select" name="category">
+                                    <option value="1">외과</option>
+                                    <option value="2">내과</option>
+                                    <option value="3">영상의학과</option>
+                                    <option value="4">응급의료센터</option>
+                                    <option value="5">예약</option>
+                                    <option value="6">입양</option>
                                 </select>
                                 <label for="sub_title">제목</label>
-                                <input type="text" id="sub_title">
+                                <input type="text" id="sub_title" name="title">
                             </div>
                             <div class="sub5-4-text">
-                                <textarea id="sub5-4-textarea" placeholder="문의하실 내용을 적어주세요."></textarea>
+                                <textarea id="sub5-4-textarea" name="contents" placeholder="문의하실 내용을 적어주세요."></textarea>
                             </div>
+                            <input type="hidden" name="cmd" value="write" />
+							</form>
                             <div class="sub5-4-btn">
-                            <input type="submit" value="등록하기" id="sub5_btn_submit" onclick="return goSave();">
+                            <input type="button" value="등록하기" id="sub5_btn_submit" onclick="goSave();">
                             <input type="reset" value="취소하기" id="sub5_btn_reset">
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </div>

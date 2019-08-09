@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import manage.doctor.DoctorVO;
+import manage.reserve.ReserveVO;
 import member.MemberVO;
 import member.MypettVO;
 import mypet.MypetVO;
@@ -125,11 +127,18 @@ public class MemberController {
 	}
 	
 	@RequestMapping("/my/my-infor.do")
-	public String myInfor(Model model, MemberVO param, HttpSession session) throws Exception {
-		MemberVO m = (MemberVO)session.getAttribute("memberInfo");
+	public String myInfor(Model model, MemberVO param, HttpSession session, HttpServletRequest req) throws Exception {
+		//MemberVO m = (MemberVO)session.getAttribute("memberInfo");
+		MemberVO m = (MemberVO)req.getSession().getAttribute("memberInfo");
 		MemberVO data = memberService.read(m.getNo());//세션에서 가져와야됨
 		model.addAttribute("data", data);
 		model.addAttribute("vo", param);
+		
+//		String res_date = req.getParameter("res_date");
+//		int res_hour = Integer.parseInt(req.getParameter("res_hour"));
+		ReserveVO rdata = memberService.reservationSchedule(m.getNo());
+		model.addAttribute("rdata", rdata);
+
 		
 		return "my/my-infor";
 	}
@@ -151,6 +160,12 @@ public class MemberController {
 		
 		return "redirect:my-infor.do";
 	}
+
+	@RequestMapping("my/my-res.do")
+	public String memberReservationList(Model model, ReserveVO rvo) throws Exception {
+		ArrayList<ReserveVO> rlist = memberService.memberReservationList(rvo);
+		model.addAttribute("rlist", rlist);
+		return "my/my-res";
 	
-	
+	}
 }

@@ -72,20 +72,36 @@ public class QnaDAO extends SqlMapClientDAOSupport {
 		return getSqlMapClient().delete("qna.delete", vo);
 	}
 	
-	public ArrayList<QnaReplyVO> replylist(int qna_no) throws SQLException {
-		return (ArrayList<QnaReplyVO>)getSqlMapClient().queryForList("qna.replylist", qna_no);
+	public ArrayList<QnaVO> replylist(int qna_no) throws SQLException {
+		return (ArrayList<QnaVO>)getSqlMapClient().queryForList("qna.replylist", qna_no);
 	}
 	
-	public void replyInsert(QnaReplyVO vo) throws Exception{
-		getSqlMapClient().insert("qna.replyInsert", vo);
+	public int getMaxGno() throws SQLException {
+		int maxgno = (Integer)getSqlMapClient().queryForObject("qna.getMaxGno");
+		return maxgno;
 	}
 	
-	public void replyDelete(int no) throws SQLException {
-		getSqlMapClient().delete("qna.replyDelete", no);
+	public int getMaxOno(QnaVO vo) throws SQLException {
+		return (Integer)getSqlMapClient().queryForObject("qna.getMaxOno", vo);
+	}
+		
+	public int getMinOno(QnaVO vo) throws SQLException {
+		return (Integer)getSqlMapClient().queryForObject("qna.getMinOno", vo);
 	}
 	
+	public void updateOno(HashMap hm) throws SQLException{
+		getSqlMapClient().update("qna.updateOno",hm);
+	}
 	
-
+	public static void main(String[] args) throws SQLException {
+		QnaDAO dao = new QnaDAO();
+		QnaVO vo = new QnaVO();
+//		vo.setStype("title");
+//		vo.setSval("테스트");
+//		dao.count(vo);
+		vo.setGno(15);
+		System.out.println(dao.getMaxOno(vo));
+	}
 	
 	/**
 	 * 메인목록 조회
@@ -97,10 +113,5 @@ public class QnaDAO extends SqlMapClientDAOSupport {
 	public ArrayList mainList(QnaVO vo) throws SQLException {
 		return (ArrayList)getSqlMapClient().queryForList("qna.mainList", vo);
 	}
-	
-	public static void main(String[] args) throws SQLException {
-		QnaDAO dao = new QnaDAO();
-		QnaVO vo = new QnaVO();
-		
-	}
+
 }

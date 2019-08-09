@@ -59,22 +59,22 @@ public class QnaController {
 			int r = qnaService.insert(param, request);
 			model.addAttribute("code", "alertMessageUrl");
 			model.addAttribute("message", Function.message(r, "정상적으로 등록되었습니다.", "등록실패"));
-			model.addAttribute("url", "index");
+			model.addAttribute("url", "qna");
 		} else if ("edit".equals(param.getCmd())) {
 			int r = qnaService.update(param);
 			model.addAttribute("code", "alertMessageUrl");
 			model.addAttribute("message", Function.message(r, "정상적으로 수정되었습니다.", "수정실패"));
-			model.addAttribute("url", param.getTargetURLParam("index", param, 0));
+			model.addAttribute("url", param.getTargetURLParam("qna", param, 0));
 		} else if ("groupDelete".equals(param.getCmd())) {
 			int r = qnaService.groupDelete(param, request);
 			model.addAttribute("code", "alertMessageUrl");
 			model.addAttribute("message", Function.message(r, "총 "+r+"건이 삭제되었습니다.", "삭제실패"));
-			model.addAttribute("url", param.getTargetURLParam("index", param, 0));
+			model.addAttribute("url", param.getTargetURLParam("qna", param, 0));
 		} else if ("delete".equals(param.getCmd())) {
 			int r = qnaService.delete(param);
 			model.addAttribute("code", "alertMessageUrl");
 			model.addAttribute("message", Function.message(r, "정상적으로 삭제되었습니다.", "삭제실패"));
-			model.addAttribute("url", param.getTargetURLParam("index", param, 0));
+			model.addAttribute("url", param.getTargetURLParam("qna", param, 0));
 		}
 		
 	
@@ -125,11 +125,13 @@ public class QnaController {
 		return "manage/board/qna/edit";
 	}
 	
-	@RequestMapping("/manage/board/qna/replylist")
-	public String replyList(Model model, QnaVO param) throws Exception {
-		ArrayList<QnaReplyVO> list = qnaService.replylist(param.getNo());
-		model.addAttribute("list", list);		
-		return "manage/board/qna/replylist";
+	@RequestMapping("/manage/board/qna/reply.do")
+	public String reply(Model model, QnaVO param) throws Exception {
+		QnaVO data = qnaService.read(param);
+		model.addAttribute("data", data);
+		model.addAttribute("param", param);
+		
+		return "manage/board/qna/reply";
 	}
 	
 	/**
@@ -166,21 +168,15 @@ public class QnaController {
 			model.addAttribute("code", "alertMessageUrl");
 			model.addAttribute("message", Function.message(r, "정상적으로 삭제되었습니다.", "삭제실패"));
 			model.addAttribute("url", param.getTargetURLParam("index", param, 0));
-		}
+		} else if ("reply".equals(param.getCmd())) {
+			int r = qnaService.reply(param);
+			model.addAttribute("code", "alertMessageUrl");
+			model.addAttribute("message", Function.message(r, "정상적으로 답변이 등록되었습니다.", "답변등록실패"));
+			model.addAttribute("url", param.getTargetURLParam("index", param, 0));
 		
+		}
 	
 		return "include/alert";
 	}
 	
-	@RequestMapping("/reply/insert.do")
-	public String insertReply(Model model, QnaReplyVO param) throws Exception {
-		qnaService.replyInsert(param);
-		return "include/return";
-	}
-	
-	@RequestMapping("/reply/delete.do")
-	public String deleteReply(Model model, QnaReplyVO param) throws Exception {
-		qnaService.replyDelete(param.getNo());
-		return "include/return";
-	}
 }

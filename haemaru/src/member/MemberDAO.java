@@ -2,12 +2,14 @@ package member;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import db.SqlMapClientDAOSupport;
 import manage.admin.AdminVO;
+import manage.reserve.ReserveVO;
 import member.MypettVO;
 
 @Repository
@@ -110,6 +112,15 @@ public class MemberDAO extends SqlMapClientDAOSupport {
 	
 	public int findPw(MemberVO vo) throws SQLException{
 		return getSqlMapClient().update("member.findPw", vo);
+
+	}
+	
+	public ReserveVO reservationSchedule(HashMap hm) throws SQLException {
+		return (ReserveVO) getSqlMapClient().queryForObject("member.reservationSchedule", hm);
+	}
+	
+	public ArrayList memberReservationList(ReserveVO rvo) throws SQLException {
+		return (ArrayList)getSqlMapClient().queryForList("member.memberReservationList", rvo);
 	}
 	
 	public static void main(String[] args) throws Exception {

@@ -78,7 +78,7 @@
 										</tr>
 										<tr>
 											<th scope="row"><label for="">연락처</label></th>
-											<td colspan="2"><%=data.getTel1()%>-<%=data.getTel2()%>-<%=data.getTel3()%></td>
+											<td colspan="2"><%=data.getTel()%></td>
 										</tr>
 										
 										<tr>

@@ -25,6 +25,12 @@ function groupDelete() {
 	}
 }
 
+function goReply(v) {	
+	if (confirm ('답변을 작성하시겠습니까?')) {
+		document.location.href = "reply.do?no="+v;
+	}
+}
+
 function goDelete(v) {	
 	if (confirm ('삭제하시겠습니까?')) {
 		document.location.href = "process.do?no="+v+"&cmd=delete";
@@ -50,7 +56,7 @@ function goSearch() {
 		<div id="container">
 			<div id="content">
 				<div class="con_tit">
-					<h2>상품 - [목록]</h2>
+					<h2>문의 - [목록]</h2>
 				</div>
 				<!-- //con_tit -->
 				<div class="con">
@@ -69,7 +75,6 @@ function goSearch() {
 									<col class="w15" />
 									<col class="w5" />
 									<col class="w5" />
-									<col class="w5" />
 								</colgroup>
 								<thead>
 									<tr>
@@ -78,16 +83,14 @@ function goSearch() {
 										<th scope="col">카테고리</th>
 										<th scope="col">회원이메일</th> 
 										<th scope="col">제목</th>
-										<th scope="col">첨부파일</th>
-										<th scope="col">노출여부</th>
 										<th scope="col">등록일</th>
-										<th scope="col" class="last">삭제</th>
+										<th scope="col" class="last">댓글</th>
 									</tr>
 								</thead>
 								<tbody>
 								<% if (totCount == 0) { %>
 									<tr>
-										<td class="first" colspan="9">등록된 질문이 없습니다.</td>
+										<td class="first" colspan="8">등록된 질문이 없습니다.</td>
 									</tr>
 								<%
 									 } else {
@@ -98,16 +101,22 @@ function goSearch() {
 											data = list.get(i);
 											targetUrl = "style='cursor:pointer;' onclick=\"location.href='"+param.getTargetURLParam("read", param, data.getNo())+"'\"";
 								%>
-									<tr <%=topClass%>>
+										<tr <%=topClass%>>
 										<td class="first"><input type="checkbox" name="no" id="no" value="<%=data.getNo()%>"/></td>
-										<td <%=targetUrl%>><%=data.getNo()%></td>
-										<td <%=targetUrl%>><%=data.getCategory()%></td>
-										<td <%=targetUrl%>><%=data.getEmail()%></td>
-										<td <%=targetUrl%>><%=data.getTitle()%></td>
-										<td <%=targetUrl%>><%=data.getFilename() %></a></td>
-										<td <%=targetUrl%>><%=data.getDisplay()%></td>
+										<td <%=targetUrl%>><%=totCount - ((param.getReqPageNo()-1)*param.getPageRows()) - i%></td>
+										<td <%=targetUrl%>><%=CodeUtil.getCategoryName(data.getCategory())%></td>
+										<td <%=targetUrl%>><%=data.getMember_pk()%></td>
+										<td <%=targetUrl%> class="title">
+											<%for(int j=0; j<data.getNested(); j++){ %>
+											&nbsp;&nbsp;&nbsp;&nbsp;
+											<%}%>
+											<%if(data.getNested()>0){ %>
+											<img src="/icon/icon-reply.png" width="18px" height="18px"/>
+											<% } %>
+											<%=data.getTitle()%>
+										</td>
 										<td <%=targetUrl%>><%=DateUtil.getDateFormat(data.getRegistdate())%></td>
-										<td class="last"><input type="button" value="삭제" onclick="goDelete(<%=data.getNo()%>);"/></td>
+										<td class="last"><input type="button" value="댓글" onclick="goReply(<%=data.getNo()%>);"/></td>
 									</tr>
 								<%
 										}

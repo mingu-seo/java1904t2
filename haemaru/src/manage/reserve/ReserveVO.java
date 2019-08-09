@@ -18,6 +18,7 @@ public class ReserveVO extends Parameter {
 	private String tel2;
 	private String tel3;
 	private String res_contents;
+	private int doctor_position;
 	
 	public ReserveVO() {
 		super.setPageRows(10);
@@ -102,15 +103,15 @@ public class ReserveVO extends Parameter {
 		return tel1;
 	}
 
-	public void setTel1(String tel) {
+	public void setTel1(String tel1) {
 		this.tel1 = tel1;
 	}
 
 	public String getTel2() {
-		return tel1;
+		return tel2;
 	}
 
-	public void setTel2(String tel) {
+	public void setTel2(String tel2) {
 		this.tel2 = tel2;
 	}
 
@@ -118,7 +119,7 @@ public class ReserveVO extends Parameter {
 		return tel3;
 	}
 
-	public void setTel3(String tel) {
+	public void setTel3(String tel3) {
 		this.tel3 = tel3;
 	}
 
@@ -129,6 +130,14 @@ public class ReserveVO extends Parameter {
 
 	public void setRes_contents(String res_contents) {
 		this.res_contents = res_contents;
+	}
+
+	public int getDoctor_position() {
+		return doctor_position;
+	}
+
+	public void setDoctor_position(int doctor_position) {
+		this.doctor_position = doctor_position;
 	}
 	
 }
