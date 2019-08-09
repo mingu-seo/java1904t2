@@ -109,7 +109,7 @@ function groupDelete() {
 								</div>
 							</div>
 							<!--//btn-->
-							<!-- 페이징 처리 -->
+							<!-- 페이징 처리 -->  
 							<%=Page.indexList(param.getReqPageNo(), totPage, request)%>
 							<!-- //페이징 처리 -->
 							<form name="searchForm" id="searchForm" action="index" method="post">

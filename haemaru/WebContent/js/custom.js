@@ -102,10 +102,10 @@ $(function(){
     });
     
     // 입양후기등록 확인창
-    $('.review-last-box').click(function(e){
-        e.preventDefault();
-        $('.abopt-page').stop().fadeIn(500);
-    });
+//    $('.review-last-box').click(function(e){
+//        e.preventDefault();
+//        $('.abopt-page').stop().fadeIn(500);
+//    });
     $('.headline > img').click(function(e){
         e.preventDefault();
         $('.abopt-page').stop().fadeOut(500);

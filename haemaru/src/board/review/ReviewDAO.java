@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Repository;
 
+import board.notice.NoticeVO;
 import db.SqlMapClientDAOSupport;
 
 @Repository
@@ -13,6 +14,10 @@ public class ReviewDAO extends SqlMapClientDAOSupport {
 	
 	public ArrayList list(ReviewVO param) throws SQLException {
 		return (ArrayList)getSqlMapClient().queryForList("review.list", param);
+	}
+	
+	public int count(ReviewVO vo) throws SQLException {
+		return (Integer)getSqlMapClient().queryForObject("review.count", vo);
 	}
 
 	/**

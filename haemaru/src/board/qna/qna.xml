@@ -14,11 +14,11 @@
 			<!-- 검색어 검색 -->
 			<isNotEqual property="sval" compareValue="">
 				<!-- 검색 타입이 all일 때 -->
-				<isEqual property="stype" compareValue="all" prepend="and">
-					( (name like '%$sval$%' ) or (title like '%$sval$%' )  ) 					
+				<isEqual property="stype" compareValue="0" prepend="and">
+					( (contents like '%$sval$%' ) or (title like '%$sval$%' )  ) 					
 				</isEqual>
 				<!-- 검색 타입이 all이 아닐때 해당 stype으로 검색 -->
-				<isNotEqual property="stype" compareValue="all" prepend="and">
+				<isNotEqual property="stype" compareValue="0" prepend="and">
 					($stype$ like '%$sval$%' )
 				</isNotEqual>
 			</isNotEqual>
@@ -32,7 +32,9 @@
     </select>
     
 	<select id="list" parameterClass="qnavo" resultClass="qnavo">
-        select * from qna
+        select *,
+       		IFNULL((SELECT name FROM member WHERE no=qna.member_pk), "해마루동물병원") AS member_name
+		FROM qna
         <include refid="searchSql" />
 		ORDER BY gno DESC, ono ASC LIMIT $startPageNo$, $pageRows$
     </select>
@@ -40,9 +42,9 @@
 	<!-- 해당 테이블에 게시글 작성 -->
     <insert id="insert" parameterClass="qnavo">
         INSERT INTO qna (
-        	gno, ono, nested, email, category, title, contents, member_pk, registdate
+        	gno, ono, nested, category, title, contents, member_pk, emailid, emailac, registdate
         ) VALUES (
-        	#gno#, #ono#, #nested#, #email#, #category#, #title#, #contents#, #member_pk#, now())
+        	#gno#, #ono#, #nested#, #category#, #title#, #contents#, #member_pk#, #emailid#, #emailac#, now())
         <selectKey keyProperty="no" resultClass="Integer">
         	SELECT LAST_INSERT_ID()
         </selectKey>
@@ -80,8 +82,10 @@
     </update>
      
     <select id="read" parameterClass="qnavo" resultClass="qnavo">
-        SELECT 
-        	*
+        SELECT *,
+        IFNULL((SELECT name FROM member WHERE no=qna.member_pk), "비회원") AS member_name,
+        IFNULL((SELECT email1 FROM member WHERE no=qna.member_pk), 0) AS emailid,
+        IFNULL((SELECT email2 FROM member WHERE no=qna.member_pk), 0) AS emailac
         FROM qna
         where no = #no#
     </select>

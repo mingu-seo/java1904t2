@@ -49,14 +49,15 @@ int totPage = (Integer)request.getAttribute("totPage");
                 <h3>공지사항</h3>
                 <p>Notice</p>
                 <div class="notice-area">
-                    <form class="search-btn" method="GET" action="text.php">
+                    <form class="search-btn"  name="searchForm" id="searchForm" action="notice.do" method="post">
                         <select>
+                            <option value="0">전체</option>
                             <option value="1">소식</option>
                             <option value="2">칼럼</option>
                             <option value="3">보도자료</option>
                             <option value="4">증례소개</option>
                         </select>
-                        <input type="text" id="search_input" placeholder="검색어를 입력하세요.">
+                        <input type="text" id="search_input" name="sval" value="<%=param.getSval()%>" placeholder="검색어를 입력하세요.">
                         <input type="submit" value="검색"  id="btn_submit_search">
                     </form>
                     <div class="notice-table">
@@ -94,72 +95,12 @@ int totPage = (Integer)request.getAttribute("totPage");
                             %>
                         </table>
                         <!-- 페이징 처리 -->
-						
-                       <div class="notice-number-all clear">
-                            <p class="notice-number-arrow"><a href="#"></a></p>
-                            <ul class="notice-number clear">
-                               <li><%=Page.indexList(param.getReqPageNo(), totPage, request)%></li>
-                            </ul>
-                            <p class="notice-number-arrow2"><a href="#"></a></p>
-                        </div>
+                       <%=Page.userIndexList(param.getReqPageNo(), totPage, request)%>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- footer -->
-    <div id="footer">
-        <div class="footer-direction-area">
-        <div class="footer-direction-center clear">
-            <div  style="float:left;">
-                <h3>Direction</h3>
-                <p>오시는 길</p>
-            </div>
-            <!-- 맵 연동은 맨 마지막 -->
-            <!-- <div id="map" style="width:837px;height:428px; float:left; margin-left:50px;"></div>
-            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b39455382198dd3c3860a5e9a81fdcc3"></script>
-            <script>
-                var container = document.getElementById('map');
-                var options = {
-                    center: new kakao.maps.LatLng(37.38563310000001,127.12113090000003),
-                    level: 3
-                };
-        
-                var map = new kakao.maps.Map(container, options);
-            </script> -->
-        </div>
-    </div>
-    <div class="footer-basic">
-        <div class="footer-center clear">
-            <div class="fot-left">
-                <h1 class="fot-logo"><a href="#"><img src="/icon/logo_lightgreen.png"></a></h1>
-                <p>© 2016 HAEMARU Referral Animal Hospital All rights Reserved.</p>
-            </div>
-            <div class="fot-right clear">
-                <div class="right-1">
-                    <p>Address</p>
-                    <p>경기도 성남시 분당구 황새울로 319번길 수의과학회관 1~4층</p>
-                    <div class="fot-phone">
-                        <p>Tel.</p>
-                        <p> 031 ) 781 - 2992</p>
-                    </div>
-                    <div class="fot-fax">
-                        <p>Fax.</p>
-                        <p>031 ) 781 - 2993</p>
-                    </div>
-                </div>
-                <div class="right-2">
-                    <p>E-mail</p>
-                    <p>help@haemaru.co.kr</p>
-                    <ul class="fot-info clear">
-                        <li><a href="#">개인정보취급방침</a></li>
-                        <li><a href="#">이메일무단수집거부</a></li>
-                    </ul>
-                </div>
-            </div>
-            <img class="fot-icon" src="/icon/footer-icon.png">
-        </div>
-    </div>
-    </div>
+  <%@ include file="/WEB-INF/view/include/footer.jsp" %>
 </body>
 </html>

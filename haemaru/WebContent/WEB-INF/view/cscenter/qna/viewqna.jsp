@@ -64,7 +64,7 @@ QnaVO data = (QnaVO)request.getAttribute("data");
                         <div class="sub5-5-writer clear">
                             <div class="sub5-5-img"></div>
                             <div class="sub5-5-day">
-                                <p><%=data.getEmail()%></p>
+                                <p><%=data.getMember_name()%></p>
                                 <p><%=DateUtil.getDateFormat(data.getRegistdate())%></p>
                             </div>
                         </div>
