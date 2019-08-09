@@ -53,15 +53,16 @@ public class SiteProperty {
 	/**
 	 * 메일서버
 	 */
-	public static final String 	SMTP_HOST				= "mail.";
+	public static final String 	SMTP_HOST				= "smtp.naver.com";
+	public static final String 	SMTP_PORT				= "465";
 	/**
 	 * 메일계정 아이디
 	 */
-	public static final String 	SMTP_USER				= "";
+	public static final String 	SMTP_USER				= "eungi-8";
 	/**
 	 * 메일계정 패스워드
 	 */
-	public static final String 	SMTP_PASSWORD			= "";
+	public static final String 	SMTP_PASSWORD			= "zxzxzxzx12";
 	/**
 	 * 이메일 기본 폼
 	 */

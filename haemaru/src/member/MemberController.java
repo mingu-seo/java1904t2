@@ -88,6 +88,16 @@ public class MemberController {
 		return "include/return";
 	}
 	
+	@RequestMapping("/member/idcheck")
+	public String webidcheck(Model model, MemberVO param, HttpServletRequest request) throws Exception {
+		model.addAttribute("vo", param);
+		int value = memberService.idcheck(request.getParameter("email1")+request.getParameter("email2"));
+
+		model.addAttribute("value", value);
+		
+		return "include/return";
+	}
+	
 	@RequestMapping("/manage/member/process")
 	public String process(Model model, MemberVO param, HttpServletRequest request) throws Exception {
 		model.addAttribute("vo", param);
@@ -151,7 +161,7 @@ public class MemberController {
 		
 		return "redirect:my-infor.do";
 	}
-	
+
 	@RequestMapping("my/my-res.do")
 	public String memberReservationList(Model model, ReserveVO rvo, HttpServletRequest req) throws Exception {
 		MemberVO mvo = (MemberVO)req.getSession().getAttribute("memberInfo");
@@ -175,3 +185,5 @@ public class MemberController {
 		
 	}
 }
+
+

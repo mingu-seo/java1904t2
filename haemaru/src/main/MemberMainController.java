@@ -75,4 +75,11 @@ public class MemberMainController {
 		
 		return "include/alert";		
 	}
+	
+	@RequestMapping("/member/findPw")
+	public String findPw(Model model, MemberVO vo) throws Exception{
+		memberService.findPw(vo);
+		
+		return "include/return";
+	}
 }

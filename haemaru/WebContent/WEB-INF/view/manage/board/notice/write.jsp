@@ -67,9 +67,10 @@ function goSave() {
 										<th scope="row"><label for="">유형</label></th>
 										<td>
 											<select name="type">
-												<option value="1">병원소식</option>
-												<option value="2">일반공지</option>
-												<option value="3">기타공지</option>
+												<option value="1">소식</option>
+												<option value="2">칼럼</option>
+												<option value="3">보도자료</option>
+												<option value="4">증례소개</option>
 											</select>
 										</td>
 										<th scope="row"><label for="">노출여부</label></th>
