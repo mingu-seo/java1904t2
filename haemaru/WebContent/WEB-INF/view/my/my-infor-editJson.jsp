@@ -7,7 +7,6 @@
 		"no":"<%=mdata.getNo() %>",
 		"email1":"<%=mdata.getEmail1() %>",
 		"email2":"<%=mdata.getEmail2() %>",
-		"pw":"<%=mdata.getPw() %>",
 		"name":"<%=mdata.getName() %>",
 		"birth":"<%=mdata.getBirth() %>",
 		"tel1":"<%=mdata.getTel1() %>",

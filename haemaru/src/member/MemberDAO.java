@@ -108,9 +108,8 @@ public class MemberDAO extends SqlMapClientDAOSupport {
 		return (ArrayList<MypettVO>)getSqlMapClient().queryForList("member.mypetList", member_pk);
 	}
 	
-	@Transactional
-	public int update_pw(MemberVO vo) throws Exception{
-		return getSqlMapClient().update("member.update_pw", vo);
+	public int findPw(MemberVO vo) throws SQLException{
+		return getSqlMapClient().update("member.findPw", vo);
 	}
 	
 	public static void main(String[] args) throws Exception {
