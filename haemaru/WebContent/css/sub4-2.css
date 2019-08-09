@@ -20,7 +20,7 @@
 
 /* main : 여기다가 하면 됨 */
 /* .main {margin-left:300px;} */
-.main {width:1200px; margin-left:400px; height:1800px;}
+.main {width:1200px; margin-left:400px; height:auto; margin-bottom:100px;}
 .main > h3 {font-size:30px; color:#666; text-align:center; padding-top:80px;}
 .main > p {font-size:14px; color:#4d6877; text-align: center; padding-top:10px;}
 
@@ -35,9 +35,10 @@
 
 .review-box-group {width:970px; margin:0 auto; margin-top:80px;}
 .review-box-area {height:350px; width:100%; margin-bottom:40px;}
-.review-img {float:left;  box-shadow: 0 3px 5px rgba(0,0,0,0.2); width:300px; background-position: center; height:100%; margin-right:50px; border-radius: 10px; background-size:100% 100%; transition: all 0.3s;}
+.review-img {float:left;  box-shadow: 0 3px 5px rgba(0,0,0,0.2); width:300px; background-position:center; height:100%; margin-right:50px; border-radius: 10px; background-size:100% 100%; transition: all 0.3s;}
 .review-img:hover {transform: translateY(5px); }
 .review-img a {display:block; height:100%;}
+.review-img img {max-width:300px; max-height:350px; border-radius:10px; background-size:200% 200%; transition: all 0.3s; float:left;  box-shadow: 0 3px 5px rgba(0,0,0,0.2); background-position:center;}
 /*
 .review-box-area:nth-child(1) .review-img {background-image: url("../img/con4-2/con4-2-1.jpg");}
 .review-box-area:nth-child(2) .review-img {background-image: url("../img/con4-2/con4-2-2.jpg");}
@@ -71,10 +72,11 @@
 .review-more a {display:block; height:100%; text-align: center; line-height:49px; font-size:16px; color:#fff; font-weight: 500;}
 
 /* 하단 번호 */
-.notice-number {width:350px; margin:0 auto; margin-top:100px;}
-.notice-number li {float:left; width:50px; height:50px;}
-.notice-number li a {display:block; font-weight: 400;  height:100%; color:#666; text-align: center; line-height:50px; font-size:12px;}
-.notice-number li:nth-child(1) {background-image: url("../icon/sub-table-arrow2.png"); background-size: 12px; background-repeat: no-repeat; background-position:center center;}
-.notice-number li:nth-child(7) {background-image: url("../icon/sub-table-arrow.png"); background-size: 12px; background-repeat: no-repeat; background-position:center center;}
-
-.notice-number li:nth-child(2)  a{font-weight: bold;}
+.notice-number-all {width:350px; margin:0 auto; margin-top:40px;}
+.notice-number {float:left; width:100%; text-align:center;}
+.notice-number li {width:50px; height:50px; display:inline-block;}
+.notice-number li a {display:block; height:100%; color:#666;  font-weight: 400; text-align: center; line-height:50px; font-size:12px;}
+.notice-number-arrow {float:left; width:50px; height:50px; line-height:50px; background-image: url("../icon/sub-table-arrow2.png"); background-size: 12px; background-repeat: no-repeat; background-position:center center;}
+.notice-number-arrow2 {float:left; width:50px; height:50px; line-height:50px; background-image: url("../icon/sub-table-arrow.png"); background-size: 12px; background-repeat: no-repeat; background-position:center center;}
+.notice-number-arrow a {display:block; height:100%;}
+.notice-number-arrow2 a {display:block; height:100%;}

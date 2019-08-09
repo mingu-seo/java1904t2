@@ -8,7 +8,9 @@ public class QnaVO extends Parameter {
 
 	private int no;
 	private int category;
-	private String email;
+	private String member_name;
+	private String emailid;
+	private String emailac;
 	private String title;
 	private String contents;
 	private int member_pk;
@@ -41,12 +43,20 @@ public class QnaVO extends Parameter {
 		this.category = category;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getEmailid() {
+		return emailid;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
+	}
+
+	public String getEmailac() {
+		return emailac;
+	}
+
+	public void setEmailac(String emailac) {
+		this.emailac = emailac;
 	}
 
 	public String getTitle() {
@@ -137,5 +147,15 @@ public class QnaVO extends Parameter {
 	public void setNested(int nested) {
 		this.nested = nested;
 	}
+
+	public String getMember_name() {
+		return member_name;
+	}
+
+	public void setMember_name(String member_name) {
+		this.member_name = member_name;
+	}
+	
+	
 		
 }

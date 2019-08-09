@@ -105,7 +105,7 @@ function goSearch() {
 										<td class="first"><input type="checkbox" name="no" id="no" value="<%=data.getNo()%>"/></td>
 										<td <%=targetUrl%>><%=totCount - ((param.getReqPageNo()-1)*param.getPageRows()) - i%></td>
 										<td <%=targetUrl%>><%=CodeUtil.getCategoryName(data.getCategory())%></td>
-										<td <%=targetUrl%>><%=data.getMember_pk()%></td>
+										<td <%=targetUrl%>><%=data.getEmailid()%><%=data.getEmailac()%></td>
 										<td <%=targetUrl%> class="title">
 											<%for(int j=0; j<data.getNested(); j++){ %>
 											&nbsp;&nbsp;&nbsp;&nbsp;
@@ -138,15 +138,15 @@ function goSearch() {
 							</div>
 							<!--//btn-->
 							<!-- 페이징 처리 -->
-							<%=Page.indexList(param.getReqPageNo(), totPage, request)%>
+							<%=Page.userIndexList(param.getReqPageNo(), totPage, request)%>
 							<!-- //페이징 처리 -->
 							<form name="searchForm" id="searchForm" action="index" method="post">
 								<div class="search">
 									<select name="category" onchange="$('#searchForm').submit();">
-										<option value="0" <%=Function.getSelected(param.getCategory(), 0)%>>전체</option>
-										<option value="1" <%=Function.getSelected(param.getCategory(), 1)%>>일반</option>
-										<option value="2" <%=Function.getSelected(param.getCategory(), 2)%>>입양</option>
-										<option value="3" <%=Function.getSelected(param.getCategory(), 3)%>>진료</option>
+										<option value="1" <%=Function.getSelected(param.getCategory(), 0)%>>소식</option>
+										<option value="2" <%=Function.getSelected(param.getCategory(), 1)%>>칼럼</option>
+										<option value="3" <%=Function.getSelected(param.getCategory(), 2)%>>보도자료</option>
+										<option value="43" <%=Function.getSelected(param.getCategory(), 3)%>>증례소개</option>
 									</select>
 									<select name="stype" title="검색을 선택해주세요">
 										<option value="all" <%=Function.getSelected(param.getStype(), "all") %>>전체</option>

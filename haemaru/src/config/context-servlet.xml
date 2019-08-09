@@ -59,6 +59,8 @@
 			<mvc:exclude-mapping path="/my/js/*" />
 			<mvc:exclude-mapping path="/my/img/*" />
 			<mvc:exclude-mapping path="/my/login.do" />
+			<mvc:exclude-mapping path="/adopt/review/addreview.do"/>
+			<mvc:exclude-mapping path="/cscenter/qna/addqna.do"/>
 			<bean class="interceptors.MemberLoginInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>

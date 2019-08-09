@@ -8,14 +8,8 @@
 	<sql id="searchSql">		
 		<!-- WHERE 절 검색 -->
 		<dynamic prepend="where">
-		    1=1
 			<isNotEqual property="sval" compareValue="" prepend="and">
-				<isEqual property="stype" compareValue="all" prepend="and">
 					( (question like '%$sval$%' ) or (answer like '%$sval$%') ) 					
-				</isEqual>
-				<isNotEqual property="stype" compareValue="all" prepend="and">
-					($stype$ like '%$sval$%' )
-				</isNotEqual>
 			</isNotEqual>
 		</dynamic>
 	</sql>

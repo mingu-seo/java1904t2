@@ -4,6 +4,7 @@
 <%@ page import="java.util.*" %>
 <%@ page import="util.*" %>
 <%
+
 QnaVO param = (QnaVO)request.getAttribute("vo");
 ArrayList<QnaVO> list = (ArrayList)request.getAttribute("list");
 int totCount = (Integer)request.getAttribute("totCount");
@@ -61,16 +62,17 @@ function goSearch() {
                 <h3>문의하기</h3>
                 <p>Ask for infomation</p>
                 <div class="reply-area">
-                    <form class="search-btn" method="GET" action="text.php">
-                        <select>
-                            <option>전체</option>
-                            <option>외과</option>
-                            <option>내과</option>
-                            <option>영상의학과</option>
-                            <option>응급의료센터</option>
-                            <option>예약</option>
+                    <form class="search-btn" name="searchForm" id="searchForm" action="qna.do" method="post">
+                        <select name="stype">
+                            <option value="0">전체</option>
+                            <option value="1">외과</option>
+                            <option value="2">내과</option>
+                            <option value="3">영상의학과</option>
+                            <option value="4">응급의료센터</option>
+                            <option value="5">예약</option>
+                            <option value="6">입양</option>
                         </select>
-                        <input type="text" id="search_input" placeholder="검색어를 입력하세요.">
+                        <input type="text" name="sval" value="<%=param.getSval()%>" id="search_input" placeholder="검색어를 입력하세요.">
                         <input type="submit" value="검색"  id="btn_submit_search">
                     </form>
                     <div class="reply-table">
@@ -108,7 +110,7 @@ function goSearch() {
 											<% } %>
 											<%=data.getTitle()%>
 										</td>
-										<td <%=targetUrl%>><%=data.getMember_pk()%></td>
+										<td <%=targetUrl%>><%=list.get(i).getMember_name()%></td>
 										<td <%=targetUrl%>><%=DateUtil.getDateFormat(data.getRegistdate())%></td>
 										</tr>
                            <%
@@ -123,9 +125,8 @@ function goSearch() {
                         <div class="reply-number-all clear">
                             <p class="reply-number-arrow"><a href="#"></a></p>
                             <ul class="reply-number clear">
-                                <li><%=Page.indexList(param.getReqPageNo(), totPage, request)%>
-							</li>
-                            </ul>
+                              <%=Page.userIndexList(param.getReqPageNo(), totPage, request)%>
+                             </ul>
                             <p class="reply-number-arrow2"><a href="#"></a></p>
                         </div>
                     </div>

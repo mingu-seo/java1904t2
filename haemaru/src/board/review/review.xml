@@ -19,26 +19,33 @@
 			</isNotEqual>
 		</dynamic>
 	</sql>
+	
+	<select id="count" parameterClass="reviewvo" resultClass="Integer">
+    	select count(*) from review
+        <include refid="searchSql" />	
+    </select>
 
 	
     <select id="list" parameterClass="reviewvo" resultClass="reviewvo">
-        select * from review
+        select *,
+        IFNULL((SELECT name FROM member WHERE no=review.member_pk), 0) AS member_name
+        from review
         <include refid="searchSql" />
 		ORDER BY no DESC LIMIT $startPageNo$, $pageRows$	
     </select>
     
     <insert id="insert" parameterClass="reviewvo" >
         insert into review
-        	(registdate)
+        	(member_pk, title, contents, filename, filename_org, registdate)
         values
-        	( now())
+        	(#member_pk#, #title#, #contents#, #filename#, #filename_org#, now())
         <selectKey keyProperty="no" resultClass="Integer">
 			SELECT  LAST_INSERT_ID()
 		</selectKey>
     </insert>
     
     <update id="update" parameterClass="reviewvo">
-        update animal_pro set
+        update review set
         	
         where no=#no#
     </update>

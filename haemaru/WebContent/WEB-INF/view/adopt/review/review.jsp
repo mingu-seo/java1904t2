@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ page import="board.review.*" %>
+<%@ page import="member.*" %>
+<%@ page import="property.SiteProperty" %>
 <%@ page import="util.*" %>
+<%@ page import="java.util.*" %>
 <%
+MemberVO mdata = (MemberVO)request.getAttribute("data");
 ReviewVO param = (ReviewVO)request.getAttribute("vo");
 ArrayList<ReviewVO> list = (ArrayList)request.getAttribute("list");
 int totCount = (Integer)request.getAttribute("totCount");
@@ -57,7 +61,7 @@ int totPage = (Integer)request.getAttribute("totPage");
 					%>
                 <div class="review-box-group">
 				   <div class="review-box-area clear">
-                        <div class="review-img"><a href="#"></a></div>
+                        <div class="review-img"><a href="#"><img src="<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=list.get(i).getFilename()%>"/></a></div>
                         <div class="review-info">
                             <ul class="review-icon clear">
                                 <li></li>
@@ -73,29 +77,20 @@ int totPage = (Integer)request.getAttribute("totPage");
                             </div>
                             <!-- 리뷰 작성자 부분 -->
                             <div class="review-writer clear">
-                                <div class="writer-1"></div>
+                             <!-- <div class="writer-1"></div>  -->   
                                 <div class="writer-2">
-                                    <h6><%=list.get(i).getMember_pk() %></h6>
+                                    <h6><%=list.get(i).getMember_name()%></h6>
                                     <p><%=DateUtil.getDateFormat(param.getRegistdate())%></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <%
+                <%	
 					}
                 %>
-                <!-- 하단 번호 -->
-                <ul class="notice-number clear">
-                        <li ><a href="#"></a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#"></a></li>
-                </ul>
+                <!-- 하단 페이징 -->
+                <%=Page.userIndexList(param.getReqPageNo(), totPage, request)%>
                 <!-- 리뷰 작성 박스 버튼 -->
                 <div class="review-box">
                     <div class="review-more"><a href="/adopt/review/addreview.do">후기 등록하기</a></div>
