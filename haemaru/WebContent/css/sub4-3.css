@@ -44,8 +44,11 @@
 
 /* 반려동물 사진 추가 부분 */
 .sub4-petplus-img {float:left; width:222px; height:222px; border-radius: 20px; border:3px solid #83c1aa; 
-              position: relative; text-align: center;}
-.sub4-petplus-img img:nth-child(1) {position: relative; padding-top:10px; width:209px;}
+              position: relative; text-align: center; background-image:url("/img/sub6-2-petimg.jpg"); background-size:cover;}
+.sub4-petplus-img img {position: relative; padding-top:10px; width:222px; height:222px;}
+#thumb_img {width:222px; height:222px;}
+.sub4-petplus-img h4 {font-size:20px; color:#4d6877; margin-top:28px;}
+.sub4-petplus-img p {color:#d7d7d7; font-size:12px; margin:12px 0;}
 
 /* 파일 찾기 부분 */
 .sub4-file {width:80px; height:20px; background-color: #4d6877; margin:0 auto; margin-top:250px;}
@@ -55,7 +58,7 @@
 #title_input {float:left; width:85%; height:50px; background-color: #f6f6f6; border:none; margin-bottom:22px; padding-left:34px; border-radius: 10px;}
 .sub4-3-list:nth-child(2) {width:654px; height:210px; background-color: #f6f6f6; margin-left:30px;}
 .sub4-3-list p {display:inline-block; vertical-align:baseline; top:6px;}
-#sub4-3-textarea {width:100%; height:250px; border:none; margin-top:0px; background-color:#f6f6f6; font-size:12px; padding:10px; resize:none; border-radius: 10px;}
+#sub4-3-textarea {float:left; width:100%; height:250px; border:none; margin-top:0px; background-color:#f6f6f6; font-size:12px; padding:10px; resize:none; border-radius: 10px;}
 input[type="textarea"]::placeholder {color:#4d6877; font-size:12px; margin-left:10px;}
 
 
