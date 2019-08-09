@@ -75,4 +75,9 @@ public class MemberMainController {
 		
 		return "include/alert";		
 	}
+	
+	@RequestMapping(value = "/find_pw_form.do")
+	public String find_pw_form() throws Exception{
+		return "/member/find_pw_form";
+	}
 }

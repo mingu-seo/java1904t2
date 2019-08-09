@@ -86,4 +86,7 @@
     <select id="loginSessionInfo" parameterClass="membervo" resultClass="membervo">
         select * from member where concat(email1, email2) = #email1# and pw=md5(#pw#)
     </select>
+    <update id="update_pw" parameterClass="membervo">
+		update member set pw=md5(#pw#) where concat(email1, email2) = #email1#
+	</update>
 </sqlMap>

@@ -23,6 +23,7 @@
                                 <option value="@daum.net">@daum.net</option>
                                 <option value="@gmail.com">@gmail.com</option>
                             </select>
+                            	<input type="button" value="중복확인" id="idCheckBtn" />
                         </div>
                         <div class="pass_box">
                             <span><label for="id_pass_join"  class="label">비밀번호</label></span>

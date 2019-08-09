@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import db.SqlMapClientDAOSupport;
 import manage.admin.AdminVO;
@@ -89,8 +90,8 @@ public class MemberDAO extends SqlMapClientDAOSupport {
 	 * @return
 	 * @throws SQLException
 	 */
-	public int idcheck(String email1) throws SQLException {
-		return (Integer) getSqlMapClient().queryForObject("member.idcheck", email1);
+	public int idcheck(String email) throws SQLException {
+		return (Integer) getSqlMapClient().queryForObject("member.idcheck", email);
 	}
 
 	
@@ -105,6 +106,11 @@ public class MemberDAO extends SqlMapClientDAOSupport {
 	
 	public ArrayList<MypettVO> mypetList(int member_pk) throws SQLException {
 		return (ArrayList<MypettVO>)getSqlMapClient().queryForList("member.mypetList", member_pk);
+	}
+	
+	@Transactional
+	public int update_pw(MemberVO vo) throws Exception{
+		return getSqlMapClient().update("member.update_pw", vo);
 	}
 	
 	public static void main(String[] args) throws Exception {

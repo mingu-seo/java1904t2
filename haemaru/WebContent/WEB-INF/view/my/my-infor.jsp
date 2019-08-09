@@ -21,6 +21,11 @@
 <script type="text/javascript" src='/js/sub6-1.js'></script>
 <script>
 function goSave() {
+	if ($("#user_password").val() != $("#user_password_chk").val()) {
+		alert("비밀번호가 다릅니다.");
+		$("#user_password_chk").focus();
+			return false;
+	}
 	$("#frm").submit();
 }
 </script>
@@ -52,9 +57,9 @@ function goSave() {
                                 <span><label for="user_id" class="label">이메일</label></span>
                                 <input type="text" maxlength="20" id="user_email1" name="email1" class="half-size">
                                 <select class="emial-select" id="user_email2" name="email2">
-                                    <option>@ naver.com</option>
-                                    <option>@ daum.net</option>
-                                    <option>@ gmail.com</option>
+                                    <option>@naver.com</option>
+                                    <option>@daum.net</option>
+                                    <option>@gmail.com</option>
                                 </select>
                             </div>
                             <div class="pass_box">
@@ -182,6 +187,9 @@ function getInforEditAjax(no) {
 			$("#user_no").val(data.no);
 			
 			$('#myinfo-area').stop().fadeIn(500);
+		},
+		error : function(err) {
+			console.log(err);
 		}
 	});
 }

@@ -31,7 +31,7 @@
 /* 나의 반려동물 타이틀 */
 .sub6-text > h3::before {content: ''; display: block; background-color:#e8eaec; width:70px; height:2px; margin-bottom:20px; margin-left:0px;}
 .sub6-text > h3 {float:left; padding-top:0; font-size:20px; color:#666; margin-left:20px; margin-top:5px;}
-.sub6-text > a {display:block; position: absolute; bottom:-50px; left:50%; transform: translateX(-50%);  float:right; width:140px; height:40px; text-align: center; line-height:40px; color:#4d6877; font-size:14px; font-weight: 700;
+.sub6-text > a {display:block; position: absolute; bottom:-20px; left:50%; transform: translateX(-50%);  float:right; width:140px; height:40px; text-align: center; line-height:40px; color:#4d6877; font-size:14px; font-weight: 700;
                 background-image: url("../icon/icon_plus.png"); background-position:right 2px center; background-size:20px; background-repeat: no-repeat;}
 
 /* 반려동물 박스 */
@@ -119,9 +119,10 @@ input[type='text']::placeholder {color:#4d6877; font-size:14px;}
 .petplus-logo {width:200px; margin:0 auto; margin-top:50px;}
 .petplus-logo a {display:block;}
 
+.image_tmp {color:#fff;}
+
 .pet-plus-box {margin-top:70px; margin-left:10px;}
-.petplus-img {float:left; width:222px; height:222px; border-radius: 20px; border:3px solid #83c1aa; 
-              position: relative; text-align: center; margin-left:150px;}
+.petplus-img {float:left; width:222px; height:222px; border-radius: 20px; border:3px solid #83c1aa; position: relative; text-align: center; margin-left:150px;}
 .petplus-img > div:nth-child(1) > img {width:200px; margin-top:10px;}
 
 .petplus-img > div:nth-child(2) {width:80px; height:20px; background-color: #4d6877; margin:0 auto; margin-top:50px;}

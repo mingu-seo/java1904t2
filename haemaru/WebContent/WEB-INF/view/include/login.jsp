@@ -26,7 +26,7 @@
                                     <input type="submit" value="LOGIN"  id="btn_submit1">
                                 </div>
                                 <ul class="login-sub-btn clear">
-                                    <li><a href="#">비밀번호 찿기</a></li>
+                                    <li><a href="#" id="find_pw_btn">비밀번호 찿기</a></li>
                                     <li><a href="#">회원가입</a></li>
                                 </ul>
                             </form>

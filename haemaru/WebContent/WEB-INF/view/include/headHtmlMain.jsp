@@ -6,9 +6,47 @@
   %>
   <script>
   function goJoin() {
-	  
-	  
-	  
+		if ($("#email1").val() == "") {
+			alert("이메일을 입력해주세요.");
+			$("#email1").focus();
+				return false;
+		}
+		if ($("#id_pass_join").val() == "") {
+			alert("비밀번호를 입력해주세요.");
+			$("#id_pass_join").focus();
+				return false;
+		}
+		if ($("#id_pass_check").val() == "") {
+			alert("비밀번호를 다시 입력해주세요.");
+			$("#id_pass_check").focus();
+				return false;
+		}
+		if ($("#id_pass_join").val() != $("#id_pass_check").val()) {
+			alert("비밀번호가 다릅니다.");
+			$("#id_pass_check").focus();
+				return false;
+		}
+		if ($("#id_input").val() == "") {
+			alert("이름을 입력해주세요.");
+			$("#id_input").focus();
+				return false;
+		}
+		if ($("#birth_input").val() == "") {
+			alert("생년월일을 입력해주세요.");
+			$("#birth_input").focus();
+				return false;
+		}
+		if ($("#tel2").val() == "") {
+			alert("연락처를 입력해주세요.");
+			$("#tel2").focus();
+				return false;
+		}
+		if ($("#tel3").val() == "") {
+			alert("연락처를 입력해주세요.");
+			$("#tel3").focus();
+				return false;
+		}
+
 		var tel1 = $("#tel1").val();
 		var tel2 = $("#tel2").val();
 		var tel3 = $("#tel3").val();
@@ -18,26 +56,40 @@
 		$("#tel").val(tel1+ tel2 +tel3);
 		return true;
 	}
-  <!--
-  $("#email").keyup(function(){
-		$.ajax({
-			type:'POST',
-			url:"/manage/member/idcheck",
-			data:$("#frm").serialize(),
-			async:false,
-			success:function(data) {
-				var val = data.trim();
-				if (val == "0") {
-					$("#idText").text("사용가능");
-					$("#idText").css("color","#68A7C7");
-				} else {
-					$("#idText").text("사용불가");
-					$("#idText").css("color","#E89393");
+  
+  $(function() {
+		$("#idCheckBtn").click(function(){
+			if ($("#email1").val()=="") {
+				alert("이메일 입력하세요.");
+				$("#email1").focus();
+			} else {
+			$.ajax({
+				type:'POST',
+				url:"/member/idcheck",
+				data:$("#joinFrm").serialize(),
+				async:false,
+				success:function(data) {
+					var val = data.trim();
+					if (val == "0") {
+						alert("사용가능한 아이디입니다.");
+						$("#idcheck").val("1");
+						$("#email1, #email2").attr("readonly","readonly")
+						$("#email1, #email2").css("background-color","#D5D5D5")
+					} else {
+						alert("존재하는 아이디입니다.");
+						$("#idcheck").val("0");
+						$("#email1"+"#email2").val("");
+						return false;
+					}
 				}
+			});
 			}
 		});
 	});
-  -->
+	
+  $("#find_pw_btn").click(function() {
+	  location.href='../member/find_pw/form.do';
+  });
   </script>
     <div id="header">
         <%@ include file="/WEB-INF/view/include/login.jsp" %>
