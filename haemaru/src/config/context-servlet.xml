@@ -53,14 +53,14 @@
 	   <mvc:interceptor>
 			<mvc:mapping path="/my/**" />
 			<mvc:mapping path="/reservation/**" />
+			<mvc:mapping path="/adopt/review/addreview.do"/>
+			<mvc:mapping path="/cscenter/qna/addqna.do"/>
 			<mvc:exclude-mapping path="/my" />
 			<mvc:exclude-mapping path="/my/" />
 			<mvc:exclude-mapping path="/my/css/*" />
 			<mvc:exclude-mapping path="/my/js/*" />
 			<mvc:exclude-mapping path="/my/img/*" />
 			<mvc:exclude-mapping path="/my/login.do" />
-			<mvc:exclude-mapping path="/adopt/review/addreview.do"/>
-			<mvc:exclude-mapping path="/cscenter/qna/addqna.do"/>
 			<bean class="interceptors.MemberLoginInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
