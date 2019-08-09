@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import mail.SendMail;
 import manage.admin.AdminVO;
 import manage.reserve.ReserveVO;
 import member.MypettVO;
@@ -91,6 +92,15 @@ public class MemberService {
 	
 	public void insertLoginHistory(MemberVO vo) throws SQLException {
 		memberDAO.insertLoginHistory(vo);
+	}
+	
+	public String findPw(MemberVO vo) throws Exception {
+		String pwd = util.Function.randomNumber("HAEMARU");
+		vo.setPw(pwd);
+		memberDAO.findPw(vo);
+		String contents = "임시비밀번호 : "+pwd;
+		SendMail.sendEmail("eungi-8@naver.com", vo.getEmail1(), "<해마루> 임시비밀번호입니다.", contents);
+		return pwd;
 	}
 	
 	public ReserveVO reservationSchedule(int member_pk) throws Exception {

@@ -6,9 +6,47 @@
   %>
   <script>
   function goJoin() {
-	  
-	  
-	  
+		if ($("#email1").val() == "") {
+			alert("이메일을 입력해주세요.");
+			$("#email1").focus();
+				return false;
+		}
+		if ($("#id_pass_join").val() == "") {
+			alert("비밀번호를 입력해주세요.");
+			$("#id_pass_join").focus();
+				return false;
+		}
+		if ($("#id_pass_check").val() == "") {
+			alert("비밀번호를 다시 입력해주세요.");
+			$("#id_pass_check").focus();
+				return false;
+		}
+		if ($("#id_pass_join").val() != $("#id_pass_check").val()) {
+			alert("비밀번호가 다릅니다.");
+			$("#id_pass_check").focus();
+				return false;
+		}
+		if ($("#id_input").val() == "") {
+			alert("이름을 입력해주세요.");
+			$("#id_input").focus();
+				return false;
+		}
+		if ($("#birth_input").val() == "") {
+			alert("생년월일을 입력해주세요.");
+			$("#birth_input").focus();
+				return false;
+		}
+		if ($("#tel2").val() == "") {
+			alert("연락처를 입력해주세요.");
+			$("#tel2").focus();
+				return false;
+		}
+		if ($("#tel3").val() == "") {
+			alert("연락처를 입력해주세요.");
+			$("#tel3").focus();
+				return false;
+		}
+
 		var tel1 = $("#tel1").val();
 		var tel2 = $("#tel2").val();
 		var tel3 = $("#tel3").val();
@@ -18,26 +56,76 @@
 		$("#tel").val(tel1+ tel2 +tel3);
 		return true;
 	}
-  <!--
-  $("#email").keyup(function(){
-		$.ajax({
-			type:'POST',
-			url:"/manage/member/idcheck",
-			data:$("#frm").serialize(),
-			async:false,
-			success:function(data) {
-				var val = data.trim();
-				if (val == "0") {
-					$("#idText").text("사용가능");
-					$("#idText").css("color","#68A7C7");
-				} else {
-					$("#idText").text("사용불가");
-					$("#idText").css("color","#E89393");
+  
+  $(function() {
+		$("#idCheckBtn").click(function(){
+			if ($("#email1").val()=="") {
+				alert("이메일 입력하세요.");
+				$("#email1").focus();
+			} else {
+			$.ajax({
+				type:'POST',
+				url:"/member/idcheck",
+				data:$("#joinFrm").serialize(),
+				async:false,
+				success:function(data) {
+					var val = data.trim();
+					if (val == "0") {
+						alert("사용가능한 아이디입니다.");
+						$("#idcheck").val("1");
+						$("#email1, #email2").attr("readonly","readonly")
+						$("#email1, #email2").css("background-color","#D5D5D5")
+					} else {
+						alert("존재하는 아이디입니다.");
+						$("#idcheck").val("0");
+						$("#email1"+"#email2").val("");
+						return false;
+					}
 				}
+			});
 			}
 		});
+		
+		
+		$("#pass-lost-submit").click(function() {
+			  if ($("#name_pass_input").val() == "") {
+					alert("이름을 입력해주세요.");
+					$("#name_pass_input").focus();
+						return false;
+				}
+				if ($("#birth_pass_input").val() == "") {
+					alert("생년월일을 입력해주세요.");
+					$("#birth_pass_input").focus();
+						return false;
+				}
+				if ($("#number_pass_input").val() == "") {
+					alert("연락처를 입력해주세요.");
+					$("#number_pass_input").focus();
+						return false;
+				}
+				if ($("#email_pass_input").val() == "") {
+					alert("이메일을 입력해주세요.");
+					$("#email_pass_input").focus();
+						return false;
+				}
+				$.ajax({
+					type:'POST',
+					url:"/member/findPw",
+					data:$("#findPwFrm").serialize(),
+					async:false,
+					success:function(data) {
+						var val = data.trim();
+						console.log(val);
+						//$('#pass-chk, #login-wrap').stop().fadeIn(500);
+						alert("임시비밀번호가 발송되었습니다. 이메일을 확인해주세요.")
+					}
+				});
+		  });
+		
 	});
-  -->
+	
+  
+  
   </script>
     <div id="header">
         <%@ include file="/WEB-INF/view/include/login.jsp" %>
@@ -145,24 +233,24 @@
                 <h1 class="pass-logo">
                     <a href="#"><img src="/icon/logo_lightgreen.png"></a>
                 </h1>
-                <form class="pass-form" method="GET" action="text.php">
+                <form class="pass-form" method="POST" action="/member/findPw" id="findPwFrm">
                     <div class="email-pass-box">
                         <span><label for="email_pass_input" class="label">어려움을 겪고 있는 해마루 계정</label></span>
                     </div>
                     <div>
-                        <input type="text" maxlength="5" id="name_pass_input" name="name_pass_input" class="pass-size" placeholder="이름을 입력하세요.">
+                        <input type="text" maxlength="5" id="name_pass_input" name="name" class="pass-size" placeholder="이름을 입력하세요.">
                     </div>
                     <div>
-                        <input type="text" maxlength="8" id="birth_pass_input" name="birth_pass_input" class="pass-size" placeholder="생년월일을 입력하세요.">
+                        <input type="text" maxlength="8" id="birth_pass_input" name="birth" class="pass-size" placeholder="생년월일을 입력하세요.">
                     </div>
                     <div>
-                        <input type="text" maxlength="11" id="number_pass_input" name="number_pass_input" class="pass-size" placeholder="전화번호를 입력하세요.">
+                        <input type="text" maxlength="11" id="number_pass_input" name="tel1" class="pass-size" placeholder="전화번호를 입력하세요.">
                     </div>
                     <div>
-                        <input type="text" maxlength="20" id="email_pass_input" name="email_pass_input" class="pass-size" placeholder="이메일을 입력하세요.">
+                        <input type="text" maxlength="20" id="email_pass_input" name="email1" class="pass-size" placeholder="이메일을 입력하세요.">
                     </div>
                     <div>
-                        <input type="submit" value="인증번호 보내기" id="pass-lost-submit">
+                        <input type="button" value="인증번호 보내기" id="pass-lost-submit">
                     </div>
                 </form>
                 <ul class="pass-bot clear">

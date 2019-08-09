@@ -41,10 +41,7 @@ $(function(){
         $('#pass-lost').stop().fadeOut(500);
     });
     //비밀번호 인증번호 확인창
-    $('#pass-lost-submit').click(function(e){
-        e.preventDefault();
-        $('#pass-chk, #login-wrap').stop().fadeIn(500);
-    });
+    
     $('.pass-chk-back-arrow').click(function(e){
         e.preventDefault();
         $('#pass-chk').stop().fadeOut(500);

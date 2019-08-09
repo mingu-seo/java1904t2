@@ -30,6 +30,19 @@
 function goSave() {
 	$("#frm").submit();
 }
+
+function getThumbnailPrivew(html, $target) {
+    if (html.files && html.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $target.css('display', '');
+            //$target.css('background-image', 'url(\"' + e.target.result + '\")'); // 배경으로 지정시
+            $target.html('<img src="' + e.target.result + '" alt="" />');
+        }
+        reader.readAsDataURL(html.files[0]);
+    }
+}
+
 </script>
 </head>
 <body>
@@ -109,10 +122,10 @@ function goSave() {
                     <form name="frm" id="frm" method="POST" action="/my/my-pet-add.do" enctype="multipart/form-data">
                     <div class="pet-plus-box clear">
                         <div class="petplus-img">
-                            <div>
+                            <div id="thumb_img">
                                 <img src="/img/sub6-2-petimg.jpg">
                             </div>
-                            <div><a href="#"><input type="file" id="image_tmp" name="image_tmp"/>파일찾기</a></div>
+                            <div id="image_tmp"><a href="#"><input type="file" id="image_tmp" name="image_tmp" onchange="getThumbnailPrivew(this,$('#thumb_img'))"/>파일찾기</a></div>
                         </div>
                         <div class="petplus-text">
                             <div class="petplus-form">
