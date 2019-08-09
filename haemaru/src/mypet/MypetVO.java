@@ -10,7 +10,7 @@ public class MypetVO extends Parameter{
 	private int member_pk;
 	private String name;
 	private int gender;
-	private int age;
+	private String age;
 	private String breed;
 	private String vac;
 	private String mypet_image;
@@ -76,11 +76,11 @@ public class MypetVO extends Parameter{
 		this.gender = gender;
 	}
 
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 
