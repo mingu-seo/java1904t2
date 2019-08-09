@@ -115,4 +115,14 @@ public class MemberService {
 		return rlist;
 	}
 	
+	public int reservationDelete(int no) throws SQLException {
+		int cnt = memberDAO.reservationDelete(no);
+		return cnt;
+	}
+	
+//	public ReserveVO reservationRead(int member_pk) throws SQLException {
+//		ReserveVO reservedata = memberDAO.reservationRead(member_pk);
+//		return reservedata;
+//	}
+//	
 }

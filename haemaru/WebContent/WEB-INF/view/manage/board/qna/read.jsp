@@ -65,11 +65,9 @@ width: 15%;
 										<th scope="row"><label for="">카테고리</label></th>
 										<td><%=data.getCategory()%></td>
 										<th scope="row"><label for="">이메일</label></th>
-										<td><%=data.getEmail()%></td>
+										<td><%=data.getEmailid()%><%=data.getEmailac()%></td>
 									</tr>
 									<tr>
-										<th scope="row"><label for="">첨부파일</label></th>
-										<td><a href="/upload/qna/<%=data.getFilename()%>"></a></td>
 										<th scope="row"><label for="">등록일</label></th>
 										<td><%=data.getRegistdate()%></td>
 									</tr>
@@ -79,7 +77,7 @@ width: 15%;
 									</tr>
 									<tr>
 										<th scope="row">내용</th>
-										<td colspan="3"><%=data.getContents()%></td>
+										<td colspan="3" height="200px"><%=data.getContents()%></td>
 									</tr>
 									</table>
 							<div class="btn">

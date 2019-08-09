@@ -46,8 +46,7 @@ public class CodeUtil {
 		}	
 		return result;
 	}
-	
-	
+
 	
 	/**
 	 * 관리자 등급

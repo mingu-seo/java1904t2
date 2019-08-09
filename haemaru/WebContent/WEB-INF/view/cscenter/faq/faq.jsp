@@ -47,8 +47,8 @@ ArrayList<FaqVO> list = (ArrayList)request.getAttribute("list");
                 <h3>F A Q</h3>
                 <p>해마루 이차진료 동물병원에서 여러분이 자주 궁금해 하시는 사항들을 안내 드립니다.</p>
                 <div class="faq-area">
-                    <form class="faq-search-btn" method="GET" action="text.php">
-                        <input type="text" id="faq_search_input" placeholder="검색어를 입력하세요.">
+                    <form class="faq-search-btn" name="searchForm" id="searchForm" method="post">
+                        <input type="text" name="sval" value="<%=param.getSval()%>" id="faq_search_input" placeholder="검색어를 입력하세요.">
                         <input type="submit" value="검색"  id="btn_submit_faq">
                     </form>
                     <div class="faq-box-group">
@@ -70,15 +70,6 @@ ArrayList<FaqVO> list = (ArrayList)request.getAttribute("list");
                             <%
 							}
                             %>
-                        </ul>
-                        <ul class="faq-number clear">
-                            <li><a href="#"></a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#"></a></li>
                         </ul>
                     </div>
                 </div>

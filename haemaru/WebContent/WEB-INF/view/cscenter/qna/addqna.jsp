@@ -4,6 +4,8 @@
 <%@ page import="java.util.*" %>
 <%@ page import="util.*" %>
 <%
+MemberVO loginInfo = (MemberVO)session.getAttribute("memberInfo");
+MemberVO mdata = (MemberVO)request.getAttribute("data");
 QnaVO param = (QnaVO)request.getAttribute("param");
 QnaVO data = (QnaVO)request.getAttribute("data");
 %>
@@ -69,10 +71,6 @@ function goSave() {
                     </div>
                     <div class="sub5-4-box">
                         <form  name="frm" id="frm" action="<%=Function.getSslCheckUrl(request.getRequestURL())%>/process.do" method="post" enctype="multipart/form-data">
-                            <div class="sub5-4-email">
-                                <label for="sub_email">e-mail</label>
-                                <input type="text" maxlength="20" id="sub_email">
-                            </div>
                             <div class="sub5-4-write">
                                 <label for="sub_select">카테고리</label>
                                 <select class="sub_select" name="category">
@@ -90,10 +88,13 @@ function goSave() {
                                 <textarea id="sub5-4-textarea" name="contents" placeholder="문의하실 내용을 적어주세요."></textarea>
                             </div>
                             <input type="hidden" name="cmd" value="write" />
+                            <input type="hidden" name="member_pk" value="<%=memberInfo.getNo()%>" />
+                            <input type="hidden" name="emailid" value="<%=memberInfo.getEmail1()%>" />
+                            <input type="hidden" name="emailac" value="<%=memberInfo.getEmail2()%>" />
 							</form>
                             <div class="sub5-4-btn">
                             <input type="button" value="등록하기" id="sub5_btn_submit" onclick="goSave();">
-                            <input type="reset" value="취소하기" id="sub5_btn_reset">
+                            <input type="reset" value="취소하기" id="sub5_btn_reset" onclick="reset"/>
                             </div>
                         </form>
                         

@@ -51,13 +51,10 @@ input[type='text']::placeholder {font-size:12px;}
 
 /* 번호 */
 .notice-number-all {width:350px; margin:0 auto; margin-top:40px;}
-.notice-number {float:left; }
-.notice-number li {float:left; width:50px; height:50px;}
+.notice-number {float:left; width:100%; text-align:center;}
+.notice-number li {width:50px; height:50px; display:inline-block;}
 .notice-number li a {display:block; height:100%; color:#666;  font-weight: 400; text-align: center; line-height:50px; font-size:12px;}
 .notice-number-arrow {float:left; width:50px; height:50px; line-height:50px; background-image: url("../icon/sub-table-arrow2.png"); background-size: 12px; background-repeat: no-repeat; background-position:center center;}
 .notice-number-arrow2 {float:left; width:50px; height:50px; line-height:50px; background-image: url("../icon/sub-table-arrow.png"); background-size: 12px; background-repeat: no-repeat; background-position:center center;}
 .notice-number-arrow a {display:block; height:100%;}
 .notice-number-arrow2 a {display:block; height:100%;}
-
-.notice-number li:nth-child(2)  a{font-weight: bold;}
-

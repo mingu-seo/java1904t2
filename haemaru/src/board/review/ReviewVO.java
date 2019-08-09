@@ -9,6 +9,7 @@ public class ReviewVO extends Parameter  {
 
 	private int no;
 	private int member_pk;
+	private String member_name;
 	private String title;
 	private String contents;
 	private String filename;
@@ -53,6 +54,7 @@ public class ReviewVO extends Parameter  {
 		}
 		return strList.toString();
 	}
+	
 	public int getNo() {
 		return no;
 	}
@@ -102,8 +104,13 @@ public class ReviewVO extends Parameter  {
 	public void setRegistdate(Timestamp registdate) {
 		this.registdate = registdate;
 	}
-	
-	
+	public String getMember_name() {
+		return member_name;
+	}
+	public void setMember_name(String member_name) {
+		this.member_name = member_name;
+	}
+
 		
 	
 }

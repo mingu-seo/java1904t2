@@ -4,7 +4,7 @@
 .con1 {height:500px; background-image: url("../img/sub-banner05.jpg"); background-repeat:no-repeat; background-size:cover; background-position:top 20px center;}
 
 /* fixed sub */
-.con2 {position: relative; height:1300px;}
+.con2 {position: relative; margin-bottom:100px;}
 .fixed-sub {width:300px; background-color: #fff;
             position: absolute; left:0; top:0;}
 .title-area {width:100%; text-align: center; margin-bottom:86px;}

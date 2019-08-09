@@ -1,9 +1,11 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ page import="java.util.*" %>
 <%@ page import="manage.admin.*" %>
+<%@ page import="member.*" %>
 <%@ page import="util.*" %>
 <%@ page import="java.util.*" %>
 <%
+MemberVO mdata = (MemberVO)request.getAttribute("data");
 AdminVO param = (AdminVO)request.getAttribute("vo");
 ArrayList<AdminVO> list = (ArrayList)request.getAttribute("list");
 int totCount = (Integer)request.getAttribute("totCount");

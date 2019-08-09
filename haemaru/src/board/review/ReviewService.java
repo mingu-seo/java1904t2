@@ -22,6 +22,14 @@ public class ReviewService {
 	private ReviewDAO reviewDao;
 	
 
+	public int[] count(ReviewVO vo) throws Exception {
+		int rowCount = reviewDao.count(vo);
+		int[] rowPageCount = new int[2];
+		int pageCount = Page.getPageCount(vo.getPageRows(), rowCount);
+		rowPageCount[0] = rowCount;
+		rowPageCount[1] = pageCount;
+		return rowPageCount;
+	}
 
 	public ArrayList list(ReviewVO param) throws SQLException {
 		ArrayList list = reviewDao.list(param);
@@ -32,9 +40,9 @@ public class ReviewService {
 
 		FileUtil fu = new FileUtil();
 		Map fileMap = fu.getFileMap(request);
-		MultipartFile file = (MultipartFile) fileMap.get("imagename_tmp");
+		MultipartFile file = (MultipartFile) fileMap.get("filename_tmp");
 		if (!file.isEmpty()) {
-			fu.upload(file, SiteProperty.ANIMAL_UPLOAD_PATH, SiteProperty.REAL_PATH, "review");
+			fu.upload(file, SiteProperty.REVIEW_UPLOAD_PATH, SiteProperty.REAL_PATH, "review");
 			vo.setFilename(fu.getName());
 			vo.setFilename_org(fu.getSrcName());
 
@@ -46,9 +54,9 @@ public class ReviewService {
 	public int update(ReviewVO vo, HttpServletRequest request) throws Exception {
 		FileUtil fu = new FileUtil();
 		Map fileMap = fu.getFileMap(request);
-		MultipartFile file = (MultipartFile) fileMap.get("imagename_tmp");
+		MultipartFile file = (MultipartFile) fileMap.get("filename_tmp");
 		if (!file.isEmpty()) {
-			fu.upload(file, SiteProperty.ANIMAL_UPLOAD_PATH, SiteProperty.REAL_PATH, "review");
+			fu.upload(file, SiteProperty.REVIEW_UPLOAD_PATH, SiteProperty.REAL_PATH, "review");
 			vo.setFilename(fu.getName());
 			vo.setFilename_org(fu.getSrcName());
 

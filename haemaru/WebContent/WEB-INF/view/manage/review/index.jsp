@@ -1,11 +1,14 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ page import="java.util.*" %>
-<%@ page import="manage.adopt.*" %>
+<%@ page import="board.review.*" %>
+<%@ page import="member.*" %>
 <%@ page import="util.*" %>
 <%@ page import="java.util.*" %>
 <%
-AdoptVO param = (AdoptVO)request.getAttribute("vo");
-ArrayList<AdoptVO> list = (ArrayList)request.getAttribute("list");
+MemberVO loginInfo = (MemberVO)session.getAttribute("memberInfo");
+MemberVO mdata = (MemberVO)request.getAttribute("data");
+ReviewVO param = (ReviewVO)request.getAttribute("vo");
+ArrayList<ReviewVO> list = (ArrayList)request.getAttribute("list");
 int totCount = (Integer)request.getAttribute("totCount");
 int totPage = (Integer)request.getAttribute("totPage");
 %>
@@ -39,7 +42,7 @@ function groupDelete() {
 		<div id="container">
 			<div id="content">
 				<div class="con_tit">
-					<h2>입양동물관리 - [목록]</h2>
+					<h2>입양후기관리 - [목록]</h2>
 				</div>
 				<!-- //con_tit -->
 				<div class="con">
@@ -52,30 +55,20 @@ function groupDelete() {
 								<colgroup>
 									<col class="w3" /> 
 									<col class="w3" />
-									<col class="w5" />
 									<col class="w10" />
-									<col class="w10" />
-									<col class="w3" />
-									<col class="w3" />
+									<col class="w15" />
+									<col class="w20" />
 									<col class="" />
-									<col class="w10" />
-									<col class="w10" />
-									<col class="w10" />
 									<col class="w10" />
 								</colgroup>
 								<thead>
 									<tr>
 										<th scope="col" class="first"><input type="checkbox" name="allChk" id="allChk" onClick="check(this, document.frm.no)"/></th>
 										<th scope="col">번호</th>
-										<th scope="col">카테고리</th>
-										<th scope="col">이미지</th>
-										<th scope="col">이름</th>
-										<th scope="col">성별</th>
-										<th scope="col">나이</th>
-										<th scope="col">성격</th>
-										<th scope="col">품종</th>
-										<th scope="col">접종현황</th>
-										<th scope="col">상태</th>
+										<th scope="col">작성자</th>
+										<th scope="col">사진</th>
+										<th scope="col">후기제목</th>
+										<th scope="col">내용</th>
 										<th scope="col" class="last">등록일</th>
 									</tr>
 								</thead>
@@ -92,17 +85,12 @@ function groupDelete() {
 								%>
 									<tr>
 										<td class="first"><input type="checkbox" name="no" id="no" value="<%=list.get(i).getNo()%>"/></td>
-										<td <%=targetUrl%>><%=list.get(i).getNo()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getAnimal_category()%></td>
-										<td <%=targetUrl%>><img src="/upload/adopt/<%=list.get(i).getAnimal_image()%>" width="100px" height="100px"/></td>
-										<td <%=targetUrl%>><%=list.get(i).getName()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getGender()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getAge()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getCharr()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getBreed()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getVac()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getState()%></td>
-										<td <%=targetUrl%>><%=DateUtil.getDateTimeFormat(list.get(i).getRegistdate())%></td>
+										<td><%=list.get(i).getNo()%></td>
+										<td><%=list.get(i).getMember_name()%></td>
+										<td><img src="/upload/review/<%=list.get(i).getFilename()%>" width="100px" height="100px"/></td>
+										<td><%=list.get(i).getTitle()%></td>
+										<td><%=list.get(i).getContents()%></td>
+										<td><%=DateUtil.getDateTimeFormat(list.get(i).getRegistdate())%></td>
 									</tr>
 								<%
 										}

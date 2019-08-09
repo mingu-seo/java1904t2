@@ -56,9 +56,8 @@
 	<update id="update" parameterClass="reservevo">
 		UPDATE reserve 
 		SET
-			name=#name#, tel1=#tel1#, tel2=#tel2#, tel3=#tel3# res_date=#res_date#, member_pk=#member_pk#,
-			doctor_pk=#doctor_pk#, route=#route#, res_contents=#res_contents#,
-			res_hour=#res_hour#
+			name=#name#, tel1=#tel1#, tel2=#tel2#, tel3=#tel3#, res_date=#res_date#, member_pk=#member_pk#,
+			doctor_pk=#doctor_pk#, route=#route#, res_contents=#res_contents#, res_hour=#res_hour#
 		WHERE no = #no#
 	</update>
 
