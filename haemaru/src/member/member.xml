@@ -87,6 +87,7 @@
         select * from member where concat(email1, email2) = #email1# and pw=md5(#pw#)
     </select>
     
+    <!-- 예약예정날짜 표시 -->
     <select id = "reservationSchedule" parameterClass="java.util.HashMap" resultClass="manage.reserve.ReserveVO">
     	SELECT *
 		FROM reserve 
@@ -95,8 +96,16 @@
     </select>
     
      <select id = "memberReservationList" parameterClass="manage.reserve.ReserveVO" resultClass="manage.reserve.ReserveVO">
-    	SELECT *
-		FROM reserve 
-		ORDER BY res_date, res_hour DESC
+    	SELECT *,
+    		IFNULL((SELECT department FROM doctor WHERE no=reserve.doctor_pk),0) AS doctor_department,
+			IFNULL((SELECT name FROM doctor WHERE no=reserve.doctor_pk AND department=doctor_department),0) AS doctor_name,
+			IFNULL((SELECT position FROM doctor WHERE no=reserve.doctor_pk),0) AS doctor_position
+		FROM reserve WHERE member_pk=#member_pk#
+		ORDER BY res_date DESC , res_hour DESC
     </select>
+    
+	<delete id="reservationDelete" parameterClass="Integer">
+		DELETE FROM reserve
+		WHERE no=#no#
+	</delete>
 </sqlMap>

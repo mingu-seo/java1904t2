@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import manage.doctor.DoctorVO;
+import manage.reserve.ReserveService;
 import manage.reserve.ReserveVO;
 import member.MemberVO;
 import member.MypettVO;
@@ -152,10 +153,25 @@ public class MemberController {
 	}
 	
 	@RequestMapping("my/my-res.do")
-	public String memberReservationList(Model model, ReserveVO rvo) throws Exception {
+	public String memberReservationList(Model model, ReserveVO rvo, HttpServletRequest req) throws Exception {
+		MemberVO mvo = (MemberVO)req.getSession().getAttribute("memberInfo");
+		rvo.setMember_pk(mvo.getNo());
 		ArrayList<ReserveVO> rlist = memberService.memberReservationList(rvo);
 		model.addAttribute("rlist", rlist);
+		
+		/*
+		 * ReserveVO reservedata = memberService.reservationRead(rvo.getMember_pk());
+		 * model.addAttribute("reservedata", reservedata);
+		 */
+		
 		return "my/my-res";
 	
+	}
+	
+	@RequestMapping("/my/reservationdelete")
+	public String reservationDelete(Model model, ReserveVO param) throws Exception {
+		int r = memberService.reservationDelete(param.getNo());
+		return "include/return";
+		
 	}
 }

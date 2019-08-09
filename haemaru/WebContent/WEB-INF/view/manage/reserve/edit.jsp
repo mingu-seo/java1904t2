@@ -130,8 +130,11 @@
 												</tr>
 												<tr>
 													<th scope="row"><label for="">연락처</label></th>
-													<td colspan="3"><input type="text" id="tel" name="tel"
-														class="w50" title="전화번호를 입력해주세요" value="<%=data.getTel()%>"/></td>
+													<td colspan="3">
+														<input type="text" id="tel1" name="tel1" title="전화번호를 입력해주세요" value="<%=data.getTel1()%>">
+														<input type="text" id="tel2" name="tel2" title="전화번호를 입력해주세요" value="<%=data.getTel2()%>">
+														<input type="text" id="tel3" name="tel3" title="전화번호를 입력해주세요" value="<%=data.getTel3()%>">
+													</td>
 												</tr>
 
 												<tr>
@@ -161,12 +164,13 @@
 												<td ><div class="schedListArea" >
 												<%=data.getRes_hour()%>
 												</div></td>
-
 												<tr>
 
-													<td colspan="4"><textarea id="info"
-															name="res_contents" title="내용을 입력해주세요"
-															style="width: 100%;"><%=data.getRes_contents()%></textarea></td>
+													<td colspan="4">
+													<textarea id="info" name="res_contents" title="내용을 입력해주세요" style="width: 100%;">
+													<%=data.getRes_contents()%>
+													</textarea>
+													</td>
 												</tr>
 										</tbody>
 									</table>

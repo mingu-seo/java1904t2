@@ -117,7 +117,7 @@ public class DateUtil {
 			smonth = month + "";
 		}
 
-		// 일수가 10보다 작을 경우 앞에 '0'을 붙인다.
+		// 일수가 10보다 작을 경우 앞에 '0'을 붙인다. 이제 시작함 
 		if (day < 10) {
 			sday = "0" + day;
 		} else {

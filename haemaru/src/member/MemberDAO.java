@@ -117,6 +117,14 @@ public class MemberDAO extends SqlMapClientDAOSupport {
 		return (ArrayList)getSqlMapClient().queryForList("member.memberReservationList", rvo);
 	}
 	
+//	public ReserveVO reservationRead(int member_pk) throws SQLException {
+//		return (ReserveVO)getSqlMapClient().queryForList("member.reservationRead", member_pk);
+//	}
+	
+	public int reservationDelete(int no) throws SQLException {
+		return getSqlMapClient().delete("member.reservationDelete", no);
+	}
+	
 	public static void main(String[] args) throws Exception {
 		MemberDAO ad = new MemberDAO();
 		MemberVO av = new MemberVO();
