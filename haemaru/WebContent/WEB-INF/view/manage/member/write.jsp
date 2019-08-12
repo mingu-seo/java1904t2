@@ -93,7 +93,8 @@ function goSave() {
 										</td>
 										<th scope="row"><label for="">이메일</label></th>
 										<td>
-											<input type="text" id="email" name="email" value="" />
+											<input type="text" id="email" name="email1" value="" size="10px";/>
+											<input type="text" id="email" name="email2" value="" size="15px";/>
 										</td>
 									</tr>
 									<tr>
@@ -103,13 +104,15 @@ function goSave() {
 										</td>
 										<th scope="row"><label for="">연락처</label></th>
 										<td>
-											<input type="text" id="tel" name="tel" value="" />
+											<input type="text" id="tel" name="tel1" value="" size="7px";/> -
+											<input type="text" id="tel" name="tel2" value="" size="7px";/> -
+											<input type="text" id="tel" name="tel3" value="" size="7px";/>
 										</td>
 									</tr>
 									<tr>
 										<th scope="row"><label for="">비밀번호</label></th>
 										<td>
-											<input type="pw" id="pw" name="pw" value="" />
+											<input type="password" id="pw" name="pw" value=""/>
 										</td>
 									</tr>
 									<tr>
