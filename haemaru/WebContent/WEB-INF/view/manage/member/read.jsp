@@ -65,7 +65,7 @@ MemberVO data = (MemberVO)request.getAttribute("data");
 										<th scope="row"><label for="">생년월일</label></th>
 										<td><%=data.getBirth()%></td>
 										<th scope="row"><label for="">연락처</label></th>
-										<td><%=data.getTel1()%> <%=data.getTel2()%> <%=data.getTel3()%></td>
+										<td><%=data.getTel1()%> - <%=data.getTel2()%> - <%=data.getTel3()%></td>
 									</tr>
 									<tr>
 										<th scope="row"><label for="">내용</label></th>

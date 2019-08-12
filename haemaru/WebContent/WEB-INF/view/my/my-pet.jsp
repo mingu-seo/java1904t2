@@ -189,9 +189,6 @@ function getThumbnailPrivew(html, $target) {
 				<p>My Pet</p>
 				<!-- 펫 -->
 				<div class="sub6-pet clear">
-					<div class="sub6-text clear">
-						<a class="pet-plus-more" href="#">반려동물추가</a>
-					</div>
 					<%
 						for (int i = 0; i < mlist.size(); i++) {
 					%>
@@ -218,11 +215,14 @@ function getThumbnailPrivew(html, $target) {
 						}
 					%>
 				</div>
-			<%-- 	<div class="sub6-botbox">
+				<div class="sub6-text clear">
+						<a class="pet-plus-more" href="#">반려동물추가</a>
+					</div>
+				<div class="sub6-botbox">
 					<p>
 						<span><%=memberInfo.getName()%></span> 님의 다음 진료 / 접종 예정일은 2019 년 06 월 20 일 입니다.
 					</p>
-				</div> --%>
+				</div> 
 			</div>
 		</div>
 	</div>
