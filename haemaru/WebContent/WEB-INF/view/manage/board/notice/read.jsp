@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ page import="java.util.*" %>
 <%@ page import="board.notice.*" %>
-<%@ page import="util.*" %>\
+<%@ page import="util.*" %>
 <%
 NoticeVO param = (NoticeVO)request.getAttribute("param");
 NoticeVO data = (NoticeVO)request.getAttribute("data");
@@ -35,7 +35,7 @@ NoticeVO data = (NoticeVO)request.getAttribute("data");
 		<div id="container">
 			<div id="content">
 				<div class="con_tit">
-					<h2>동물관리 - [상세]</h2>
+					<h2>공지사항 - [상세]</h2>
 				</div>
 				<!-- //con_tit -->
 				<div class="con">
@@ -46,54 +46,27 @@ NoticeVO data = (NoticeVO)request.getAttribute("data");
 							<table width="100%" border="0" cellspacing="0" cellpadding="0" summary="동물 관리 기본내용입니다.">
 								<colgroup>
 									<col width="15%" />
-									<col width="35%" />
+									<col width="35%" />	
 									<col width="15%" />
-									<col width="35%" />
-									<col width="15%" />
-									<col width="35%" />
-									<col width="15%" />
-									<col width="35%" />
+									<col width="35%" />	
 								</colgroup>
 								<tbody>
 									<tr>
-										<th><label for="">번호</label></th>
-										<td>
-											<%=data.getNo()%>
-										</td>
-										<th><label for="">유형</label></th>
-										<td>
-											<%=data.getType()%>
-										</td>
+										<th scope="row"><label for="">번호</label></th>
+										<td><%=data.getNo()%></td>
+										<th scope="row"><label for="">유형</label></th>
+										<td><%=CodeUtil.getNoticeCategory(data.getType())%></td>
 									</tr>
-									<tr>
+									<tr>						
 										<th><label for="">등록일</label></th>
-										<td>
-											<%=data.getCre_date()%>
-										</td>
-										<th><label for="">노출여부</label></th>
-										<td>
-											<%=data.getDisplay()%>
-										</td>
+										<td colspan="3"><%=data.getCre_date()%></td>
 									</tr>
 									<tr>
-										<th><label for="">첨부파일</label></th>
-										<td>
-											<a href="upload/notice/<%=data.getFilename()%>"><%=data.getFilename_org()%></a>	
-										</td>
-										<th><label for="">조회수</label></th>
-										<td>
-											<%=data.getReadno()%>
-										</td>
+										<th scope="row">제목</th>
+										<td colspan="3"><%=data.getTitle()%></td>
 									</tr>
 									<tr>
-										<td colspan="4">
-											<%=data.getTitle()%>
-										</td>
-									</tr>
-									<tr>
-										<td colspan="4">
-											<%=data.getContents()%>
-										</td>
+										<td colspan="4"><%=data.getContents()%></td>
 									</tr>
 								</tbody>
 							</table>

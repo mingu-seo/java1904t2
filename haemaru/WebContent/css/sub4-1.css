@@ -56,6 +56,7 @@
 
 .box2 {margin-top:80px;}
 .box-img2 {float:left; width:320px; height:320px; background-size:cover; background-position:bottom -100px center; background-repeat:no-repeat; border-radius: 10px; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
+.box-img2 img {width:320px; height:320px; background-size:cover; border-radius: 10px; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
 .box2 > .box {margin-left:0; margin-right:80px;}
 
 .box3 {margin-top:80px;}
@@ -69,6 +70,7 @@
 .box5 {margin-top:60px;}
 .box {float:left;}
 .box-img5 {float:left; width:320px; height:320px; background-size:cover; background-position:center center; background-repeat:no-repeat; border-radius: 10px; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
+.box-img5 img {width:320px; height:320px; border-radius: 10px; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
 .box {position:relative; width:700px; height:320px; padding-top:60px; border-top:1px solid #d7d7d7; margin-left:80px;}
 .box > p {margin-left:20px; font-size:14px; color:#4d6877; margin-bottom:26px;}
 .info-text {color:#666; width:80px; display:inline-block;}
@@ -76,6 +78,7 @@
 
 .box6 {margin-top:80px;}
 .box-img6 {float:left; width:320px; height:320px; background-size:cover; background-position:bottom -100px center; background-repeat:no-repeat; border-radius: 10px; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
+.box-img6 img {width:320px; height:320px; border-radius: 10px; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
 .box6 > .box {margin-left:0; margin-right:80px;}
 
 .box7 {margin-top:80px;}
@@ -89,6 +92,7 @@
 .box9 {margin-top:60px;}
 .box {float:left;}
 .box-img9 {float:left; width:320px; height:320px; background-size:cover; background-position:left -110px center; background-repeat:no-repeat; border-radius: 10px; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
+.box-img9 img {width:320px; height:320px; border-radius: 10px; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
 .box {position:relative; width:700px; height:320px; padding-top:60px; border-top:1px solid #d7d7d7; margin-left:80px;}
 .box > p {margin-left:20px; font-size:14px; color:#4d6877; margin-bottom:26px;}
 .info-text {color:#666; width:80px; display:inline-block;}
@@ -96,6 +100,7 @@
 
 .box10 {margin-top:80px;}
 .box-img10 {float:left; width:320px; height:320px; background-size:cover; background-position:center center; background-repeat:no-repeat; border-radius: 10px; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
+.box-img10 img {width:320px; height:320px; border-radius: 10px; box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
 .box10 > .box {margin-left:0; margin-right:80px;}
 
 .box11 {margin-top:80px;}

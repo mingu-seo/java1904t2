@@ -106,9 +106,9 @@ function groupDelete() {
 								<div class="btnLeft">
 									<a class="btns" href="#" onclick="groupDelete();"><strong>삭제</strong> </a>
 								</div>
-								<div class="btnRight">
+								<!-- <div class="btnRight">
 									<a class="wbtn" href="write"><strong>글쓰기</strong> </a>
-								</div>
+								</div> --> 
 							</div>
 							<!--//btn-->
 							<!-- 페이징 처리 -->
