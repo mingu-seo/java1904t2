@@ -22,7 +22,6 @@ public class SchedVO extends Parameter {
 	private int sat_end;
 	private int sun_start;
 	private int sun_end;
-	private int time; // 시간 선택
 	private int mon_res;
 	private int tue_res;
 	private int wed_res;
@@ -178,14 +177,6 @@ public class SchedVO extends Parameter {
 
 	public void setSun_end(int sun_end) {
 		this.sun_end = sun_end;
-	}
-	
-	public int getTime() {
-		return time;
-	}
-
-	public void setTime(int time) {
-		this.time = time;
 	}
 
 	public int getMon_res() {

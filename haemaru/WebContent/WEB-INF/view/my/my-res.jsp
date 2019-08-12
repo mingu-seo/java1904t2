@@ -25,6 +25,38 @@
     <link rel="stylesheet" href="/css/footer.css">
     <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="/js/custom.js"></script>
+    <script>
+    function goEdit(no) {
+    	$.ajax({
+    		url : "my-res-edit.do?no="+no,
+    		async:false,
+    		dataType:"HTML",
+    		success:function(data) {
+    			$(".reservation-cancel2-page").html(data);
+    			$('.headline > img').click(function(e){
+    		        e.preventDefault();
+    		        $('.reservation-cancel2-page').stop().fadeOut(500);
+    		    });
+    			$('.re-cancel2-check-out').click(function(e){
+    		        e.preventDefault();
+    		        $('.reservation-cancel2-page').stop().fadeOut(500);
+    		    });
+    			$('.reservation-cancel2-page').stop().fadeIn(500);
+    		}
+    	});
+    }
+    function goCancel(no) {
+    	$.ajax({
+			url:"/my/reservationdelete?no="+no,
+			async:false,
+			success:function(data) {
+				$('.reservation-cancel2-page').stop().fadeOut(500);
+				$("#reserRow"+no).remove();
+				$('.reservation-cancel-page').stop().fadeIn(500);
+			}
+		});
+    }
+    </script>
 </head>
 <body>
     <%@ include file="/WEB-INF/view/include/headHtml.jsp" %>
@@ -33,68 +65,22 @@
         <div class="con1"></div>
         <!-- con2 : 메인 부분 -->
         <div class="con2">
-        <!-- 예약변경 창 -->
-            <div class="reservation-cancel2-page">
-                <div class="headline">
-                    <p>예약변경</p>
-                    <img src="/icon/footer-icon.png">
-                </div>
-                <div class="re-cancel2-page-text">
-                </div>
-                <div class="cancel2-checkbox-page clear">
-                    <a class="re-cancel2-check-in" id="reservationDeleteBtn"" href="#">예</a>
-                    <a class="re-cancel2-check-out" href="#">아니요</a>
-                </div>
-            </div>
-            <!-- 예약취소 마지막 창 -->
-            <div class="reservation-cancel-page">
-                <div class="headline">
-                    <p>예약취소</p>
-                    <img src="icon/footer-icon.png">
-                </div>
-                <div class="re-cancel-page-text">
-                    <img src="img/con2-4.png">
-                    <h2>Reservation</h2>
-                    <p>2019년 06월 21일 13:18분<br/><span>남정우 </span>님의 예약이 취소 되었습니다.</p>
-                </div>
-                <div class="cancel-checkbox-page">
-                    <a class="re-cancel-check-in" href="#">확인</a>
-                </div>
-            </div>
-            
+
             <!-- 예약취소 창 -->
             <div class="reservation-cancel2-page">
-                <div class="headline">
-                    <p>예약취소</p>
-                    <img src="/icon/footer-icon.png">
-                </div>
-                <div class="re-cancel2-page-text">
-                    <img src="/img/con2-4.png">
-                    <h2>Reservation</h2>
-                    <p> 2019년 06월 20일 오전 10:00분<br/><span>남정우 </span>님의 예약을 취소하시겠습니까?
-                    <%-- <%=reservedata.getRes_date()%>
-                    <%if(reservedata.getRes_hour() < 7) { %>
-                          	오전
-                    <% }else { %>
-                          	오후
-                    <%} %> 
-                    <%=CodeUtil.getDoctorScheduleName(reservedata.getRes_hour()) %><br/><span><%=loginInfo.getName()%></span>님의 예약을 취소하시겠습니까? --%></p>
-                </div>
-                <div class="cancel2-checkbox-page clear">
-                    <a class="re-cancel2-check-in" id="reservationDeleteBtn"" href="#">예</a>
-                    <a class="re-cancel2-check-out" href="#">아니요</a>
-                </div>
+                
             </div>
             <!-- 예약취소 마지막 창 -->
             <div class="reservation-cancel-page">
-                <div class="headline">
+               <div class="headline">
                     <p>예약취소</p>
-                    <img src="icon/footer-icon.png">
+                    <img src="/icon/footer-icon.png">
                 </div>
                 <div class="re-cancel-page-text">
-                    <img src="img/con2-4.png">
+                    <img src="/img/con2-4.png">
                     <h2>Reservation</h2>
-                    <p>2019년 06월 21일 13:18분<br/><span>남정우 </span>님의 예약이 취소 되었습니다.</p>
+                    <br>
+                    <span><%=loginInfo.getName() %></span>님의 예약이 취소 되었습니다.</p>
                 </div>
                 <div class="cancel-checkbox-page">
                     <a class="re-cancel-check-in" href="#">확인</a>
@@ -124,11 +110,11 @@
                     </div>
                     <div class="sub6-3-boxgroup">
                     <%for(int i = 0; i < rlist.size(); i++) { %>
-                        <div class="sub6-3-box">
+                        <div class="sub6-3-box" id="reserRow<%=rlist.get(i).getNo()%>">
                             <h2>예약내역</h2>
                             <p><span>담당의사</span><%=rlist.get(i).getDoctor_name() %> / <%=CodeUtil.getDoctorPositionName(rlist.get(i).getDoctor_position()) %></p>
                             <p><span>진료과목</span><%=CodeUtil.getDoctorDepartmentName(rlist.get(i).getDoctor_department()) %></p>
-                            <p><span>참고사항*</span><%= rlist.get(i).getRes_contents() %></p>
+                            <p><span>참고사항</span><%= rlist.get(i).getRes_contents() %></p>
                             <p><span>예약시간</span><%=rlist.get(i).getRes_date() %> &nbsp; 
                             <%if(rlist.get(i).getRes_hour() < 7) { %>
                            		오전
@@ -137,9 +123,8 @@
                           	<%} %>
                              &nbsp;<%=CodeUtil.getDoctorScheduleName(rlist.get(i).getRes_hour()) %>  &nbsp;예약</p>
                             <div class="sub6-3-btn clear">
-                             <% if (DateUtil.getDiff(DateUtil.getToday(),rlist.get(i).getRes_date()) <= 0) {%>
-                                <div><a href="sub3-1.html">예약변경</a></div>
-                                <div class="cancel-btn"><a href="#">취소하기</a></div>
+                             <% if (DateUtil.getDiff(DateUtil.getToday(),rlist.get(i).getRes_date()) < 0) {%>
+                                <div class="cancel-btn"><a href="#;" onclick="goEdit(<%=rlist.get(i).getNo()%>)">취소하기</a></div>
                                 <% } %> 
                             </div>
                         </div>

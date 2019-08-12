@@ -38,7 +38,7 @@
 			IFNULL((SELECT position FROM doctor WHERE no=reserve.doctor_pk),0) AS doctor_position
 		FROM reserve
 		<include refid="searchSql" />
-		ORDER BY no DESC LIMIT $startPageNo$, $pageRows$
+		ORDER BY res_date DESC, res_hour DESC LIMIT $startPageNo$, $pageRows$
 	</select>
 
 

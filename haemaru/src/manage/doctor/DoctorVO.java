@@ -15,7 +15,9 @@ public class DoctorVO extends Parameter {
 	private int department; //의료진 부서 외과, 내과, 영상의학과, 응급중환자센터
 	private int position; //원장, 수의사, 테크니션, 리셉션리스트
 	private String addr; //의료진 주소
-	private String tel; //의료진연락처
+	private String tel1; //의료진연락처
+	private String tel2; //의료진연락처
+	private String tel3; //의료진연락처
 	private int category; //의료진 검색 카테고리, 이름, 연락처
 	private String doc_image; //의료진 이미지 이름
 	private String doc_image_org; //의료진 이미지 원본이름
@@ -105,12 +107,27 @@ public class DoctorVO extends Parameter {
 		this.addr = addr;
 	}
 	
-	public String getTel() {
-		return tel;
+	public String getTel1() {
+		return tel1;
 	}
 	
-	public void setTel(String tel) {
-		this.tel = tel;
+	public void setTel1(String tel1) {
+		this.tel1 = tel1;
+	}
+	
+	public String getTel2() {
+		return tel2;
+	}
+	
+	public void setTel2(String tel2) {
+		this.tel2 = tel2;
+	}
+	public String getTel3() {
+		return tel3;
+	}
+	
+	public void setTel3(String tel3) {
+		this.tel3 = tel3;
 	}
 	
 	public int getCategory() {

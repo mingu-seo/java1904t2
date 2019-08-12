@@ -97,7 +97,7 @@
 													id="no" value="<%=list.get(i).getNo()%>" /></td>
 												<td <%=targetUrl%>><%=list.get(i).getNo()%></td>
 												<td <%=targetUrl%>><%=list.get(i).getName()%></td>
-												<td <%=targetUrl%>><%=list.get(i).getTel()%></td>
+												<td <%=targetUrl%>><%=list.get(i).getTel1()%>-<%=list.get(i).getTel2()%>-<%=list.get(i).getTel3()%></td>
 												<td <%=targetUrl%>><%=CodeUtil.getDoctorDepartmentName(list.get(i).getDepartment())%>
 												</td>
 												<td <%=targetUrl%>><%=CodeUtil.getDoctorPositionName(list.get(i).getPosition())%>

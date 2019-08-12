@@ -28,6 +28,21 @@
 			$("#name").focus();
 			return false;
 		}
+		if ($("#tel1").val() == "") {
+			alert('연락처를 입력하세요.');
+			$("#tel1").focus();
+			return false;
+		}
+		if ($("#tel2").val() == "") {
+			alert('연락처를 입력하세요.');
+			$("#tel2").focus();
+			return false;
+		}
+		if ($("#tel3").val() == "") {
+			alert('연락처를 입력하세요.');
+			$("#tel3").focus();
+			return false;
+		}
 		var sHTML = oEditors.getById["info"].getIR();
 		if (sHTML == "" || sHTML == "<p><br></p>") {
 			alert('내용을 입력하세요.');
@@ -61,7 +76,7 @@
 	function getDoctorList(){
 		$.ajax({
 			type :"GET",
-			url : "/manage/reserve/doctorList?date="+$("#res_date").val()+"&department="+$("#doctor_department").val(),
+			url : "/manage/reserve/doctorList?date="+$("#res_date").val()+"&department="+$("#doctor_department").val()+"&doctor_pk=<%=data.getDoctor_pk()%>",
 			async : false,
 			success : function(data) {
 				$(".doctorListArea").html(data);
@@ -75,7 +90,7 @@
 	function getSchedList(){
 		$.ajax({
 			type :"GET",
-			url : "/manage/reserve/schedList?date="+$("#res_date").val()+"&doctor_pk="+$("#doctor_pk").val(),
+			url : "/manage/reserve/schedList?date="+$("#res_date").val()+"&doctor_pk="+$("#doctor_pk").val()+"&arg=<%=data.getRes_hour()%>",
 			async : false,
 			success : function(data) {
 				$(".schedListArea").html(data);
@@ -99,7 +114,7 @@
 			<div id="container">
 				<div id="content">
 					<div class="con_tit">
-						<h2>예약등록 - [쓰기]</h2>
+						<h2>예약등록 - [수정]</h2>
 					</div>
 					<!-- //con_tit -->
 					<div class="con">
@@ -165,7 +180,6 @@
 												<%=data.getRes_hour()%>
 												</div></td>
 												<tr>
-
 													<td colspan="4">
 													<textarea id="info" name="res_contents" title="내용을 입력해주세요" style="width: 100%;">
 													<%=data.getRes_contents()%>

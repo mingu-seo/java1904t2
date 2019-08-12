@@ -70,7 +70,7 @@ public class DoctorDAO extends SqlMapClientDAOSupport {
 	}
 	
 	public static void main(String[] args) throws SQLException {
-		DoctorDAO dd = new DoctorDAO();
-		DoctorVO dv = new DoctorVO();
+		DoctorDAO dao = new DoctorDAO();
+		DoctorVO vo = new DoctorVO();
 	}
 }

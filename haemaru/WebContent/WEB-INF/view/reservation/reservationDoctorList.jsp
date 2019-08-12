@@ -9,7 +9,6 @@
 <%
 	ArrayList<DoctorVO> list = (ArrayList<DoctorVO>) request.getAttribute("list");
 %>
-
 	<%
 		for (int i = 0; i < list.size(); i++) {
 			SchedVO sched = list.get(i).getSlist();

@@ -23,6 +23,8 @@ public class MemberController {
 
 	@Autowired
 	private MemberService memberService;
+	@Autowired
+	private ReserveService reserveService;
 	
 	@RequestMapping("/manage/member/index")
 	public String index(Model model, MemberVO param) throws Exception {
@@ -162,7 +164,7 @@ public class MemberController {
 		return "redirect:my-infor.do";
 	}
 
-	@RequestMapping("my/my-res.do")
+	@RequestMapping("/my/my-res.do")
 	public String memberReservationList(Model model, ReserveVO rvo, HttpServletRequest req) throws Exception {
 		MemberVO mvo = (MemberVO)req.getSession().getAttribute("memberInfo");
 		rvo.setMember_pk(mvo.getNo());
@@ -176,6 +178,22 @@ public class MemberController {
 		
 		return "my/my-res";
 	
+	}
+	
+	@RequestMapping("/my/my-res-edit.do")
+	public String myResEditJson(Model model, ReserveVO param, HttpSession session) throws Exception {
+		ReserveVO data = reserveService.read(param.getNo());
+		model.addAttribute("data", data);
+		
+		return "my/my-res-edit";
+	}
+	
+	@RequestMapping("/my/my-res-edit2.do")
+	public String myResEditJson2(Model model, ReserveVO param, HttpSession session) throws Exception {
+		ReserveVO data = reserveService.read(param.getNo());
+		model.addAttribute("data", data);
+		
+		return "my/my-res-edit2";
 	}
 	
 	@RequestMapping("/my/reservationdelete")

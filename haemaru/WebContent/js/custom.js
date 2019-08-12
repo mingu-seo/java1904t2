@@ -147,10 +147,12 @@ $(function(){
         $('.reservation-cancel2-page').stop().fadeOut(500);
     });
     //예약 취소 확인 창
+    /*
     $('.cancel-btn > a').click(function(e){
         e.preventDefault();
         $('.reservation-cancel2-page').stop().fadeIn(500);
     });
+    */
     $('.headline > img').click(function(e){
         e.preventDefault();
         $('.reservation-cancel2-page').stop().fadeOut(500);

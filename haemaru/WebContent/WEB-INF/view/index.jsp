@@ -1,4 +1,10 @@
+<%@page import="util.CodeUtil"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="manage.doctor.*"%>
+<%@ page import="java.util.*"%>
+<%
+	ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -67,7 +73,7 @@
                             </div>
                             <div class="view2-bot clear">
                                 <div class="view2-bot-img"></div>
-                                <h6><a href='sub4-1.html'>View Propile</a></h6>
+                                <h6><a href='/adopt/animalprofile/animalprofile.do'>View Propile</a></h6>
                             </div>
                         </div>
                         <!-- 베너 세번째 화면 -->
@@ -80,7 +86,7 @@
                                         <div class="section-text">
                                             <div class="hours">
                                             <h3>24시간 응급의료센터</h3>
-                                            <a href="sub2-4.html">view more</a>
+                                            <a href="/department/emergency.do">view more</a>
                                             </div>
                                         </div>
                                     </div>
@@ -127,14 +133,14 @@
         <div class="con2">
             <div class="con2-box clear">
                 <div class="con2-info1">
-                    <a href="sub2-4.html">
+                    <a href="/department/emergency.do">
                     <h3>24 HOURS 응급 의료센터</h3>
                     <h4>Emergency MedicalCare</h4>
                     <p>풍부한 경험과 체계적인 진료를 바탕으로<br/>응급진료가 필요한 모든 동물들에게<br/>치료를 제공해드릴 수 있습니다.</p>
                     </a>
                 </div>
                 <div class="con2-info2">
-                    <a href="sub1-3.html">
+                    <a href="/intro/intro-map.do">
                         <h3>찿아 오시는 길</h3>
                         <h4>How to Find</h4>
                         <img src="/img/mapbg.png">
@@ -144,18 +150,18 @@
                     <h3>진료안내</h3>
                     <h4>Medical Information</h4>
                     <div class="con2-time">
-                        <p><span>평일</span><span>토요일</span>: <span>10 : 00 - 6 : 00</span></p>
-                        <p><span>일요일</span><span>공휴일</span>: <b>휴무</b></p>
+                        <p><span>평일</span><span>주말</span>: <span>09 : 00 - 21 : 00</span></p>
+                        <p><b>연중무휴 </b></p>
                         <p>tel. 031 781 2992</p>
                     </div>
                 </div>
                 <div class="con2-info4">
                     <h3>Reservation</h3>
                     <div class="reser-btn">
-                        <a href="sub3-1.html">진료예약</a>
+                        <a href="/reservation/index">진료예약</a>
                     </div>
                     <div class="reser-btn">
-                        <a href="sub6-3.html">예약확인</a>
+                        <a href="/my/my-res.do">예약확인</a>
                     </div>
                    
                 </div>
@@ -181,7 +187,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="con2-info6">
+                  <div class="con2-info6">
                     <h3>의료진소개</h3>
                     <h6>Medical Staff</h6>
                     <div class="con2-tab">
@@ -194,32 +200,32 @@
                         <div class="con2-tab-box-group">
                             <div class="con2-tab-box clear">
                                 <div class="con2-tab-box-area clear">
-                                    <div class="con2-tab-img"><img src="/img/kimhyunone.png"></div>
+                                    <div class="con2-tab-img"><img src="img/kimhyunone.png"></div>
                                     <div class="con2-tab-img">
                                         <h4>김현욱</h4>
                                         <h5>Director of Hospital</h5>
                                         <h5>원장/대표이사</h5>
                                         <h6>Profile</h6>
-                                        <a href="sub1-2.html"><p>View All</p></a>
+                                        <a href="/intro/intro-staff.do"><p>View All</p></a>
                                     </div>
-                                    <div class="con2-tab-img"><img src="/img/kimjinone.png"></div>
+                                    <div class="con2-tab-img"><img src="img/kimjinone.png"></div>
                                     <div class="con2-tab-img">
                                         <h4>김진경</h4>
                                         <h5>Director of Hospital</h5>
                                         <h5>원장/내과부장</h5>
                                         <h6>Profile</h6>
-                                        <a href="sub1-2.html"><p>View All</p></a>
+                                        <a href="/intro/intro-staff.do"><p>View All</p></a>
                                     </div>
                                 </div>
                                 <div class="con2-tab-box-area clear">
                                         <div class="con2-tab-img2 clear">
-                                            <img src="/img/cho.png">
+                                            <img src="img/cho.png">
                                             <div class="con2-tab-img-text">
                                                 <h4>최새롬</h4>
                                                 <h5>Veterinarian</h5>
                                                 <h5>내과/팀장</h5>
                                                 <h6>Profile</h6>
-                                                <a href="sub1-2.html"><p>View All</p></a>
+                                                <a href="/intro/intro-staff.do"><p>View All</p></a>
                                             </div>
                                         </div>
                                         <div class="con2-tab-img2 clear">
@@ -229,29 +235,29 @@
                                                 <h5>Veterinarian</h5>
                                                 <h5>내과/팀장</h5>
                                                 <h6>Profile</h6>
-                                                <a href="sub1-2.html"><p>View All</p></a>
+                                                <a href="/intro/intro-staff.do"><p>View All</p></a>
                                             </div>
                                         </div>
                                         <div class="con2-tab-img2 clear">
-                                            <img src="/img/lee.png">
+                                            <img src="img/lee.png">
                                             <div class="con2-tab-img-text">
                                                 <h4>이승현</h4>
                                                 <h5>Veterinarian</h5>
                                                 <h5>내과/진료수의사</h5>
                                                 <h6>Profile</h6>
-                                                <a href="sub1-2.html"><p>View All</p></a>
+                                                <a href="/intro/intro-staff.do"><p>View All</p></a>
                                             </div>
                                         </div>
                                 </div>
                                 <div class="con2-tab-box-area clear">
                                         <div class="con2-tab-img2 clear">
-                                            <img src="/img/tec_01.png">
+                                            <img src="img/tec_01.png">
                                             <div class="con2-tab-img-text">
                                                 <h4>박혜란</h4>
                                                 <h5>Technician</h5>
                                                 <h5>내과/파트장</h5>
                                                 <h6>Profile</h6>
-                                                <a href="sub1-2.html"><p>View All</p></a>
+                                                <a href="/intro/intro-staff.do"><p>View All</p></a>
                                             </div>
                                         </div>
                                         <div class="con2-tab-img2 clear">
@@ -261,29 +267,29 @@
                                                 <h5>Technician</h5>
                                                 <h5>내과/테크니션</h5>
                                                 <h6>Profile</h6>
-                                                <a href="sub1-2.html"><p>View All</p></a>
+                                                <a href="/intro/intro-staff.do"><p>View All</p></a>
                                             </div>
                                         </div>
                                         <div class="con2-tab-img2 clear">
-                                            <img src="/img/tec_03.png">
+                                            <img src="img/tec_03.png">
                                             <div class="con2-tab-img-text">
                                                 <h4>이승현</h4>
                                                 <h5>Technician</h5>
                                                 <h5>내과/테크니션</h5>
                                                 <h6>Profile</h6>
-                                                <a href="sub1-2.html"><p>View All</p></a>
+                                                <a href="/intro/intro-staff.do"><p>View All</p></a>
                                             </div>
                                         </div>
                                 </div>
                                 <div class="con2-tab-box-area clear">
                                         <div class="con2-tab-img2 clear">
-                                            <img src="/img/rec_01.png">
+                                            <img src="img/rec_01.png">
                                             <div class="con2-tab-img-text">
                                                 <h4>국선영</h4>
                                                 <h5>Receptionist</h5>
                                                 <h5>원무과/과장</h5>
                                                 <h6>Profile</h6>
-                                                <a href="sub1-2.html"><p>View All</p></a>
+                                                <a href="/intro/intro-staff.do"><p>View All</p></a>
                                             </div>
                                         </div>
                                         <div class="con2-tab-img2 clear">
@@ -293,7 +299,7 @@
                                                 <h5>Receptionist</h5>
                                                 <h5>원무과/매니저</h5>
                                                 <h6>Profile</h6>
-                                                <a href="sub1-2.html"><p>View All</p></a>
+                                                <a href="/intro/intro-staff.do"><p>View All</p></a>
                                             </div>
                                         </div>
                                         <div class="con2-tab-img2 clear">
@@ -303,7 +309,7 @@
                                                 <h5>Receptionist</h5>
                                                 <h5>원무과/매니저</h5>
                                                 <h6>Profile</h6>
-                                                <a href="sub1-2.html"><p>View All</p></a>
+                                                <a href="/intro/intro-staff.do"><p>View All</p></a>
                                             </div>
                                         </div>
                                 </div>

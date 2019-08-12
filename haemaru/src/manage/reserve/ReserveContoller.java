@@ -99,9 +99,6 @@ public class ReserveContoller {
 	public String reser_process(Model model, ReserveVO param) throws Exception {
 		model.addAttribute("reservevo", param);
 		reserveService.reserveInsert(param);
-//		model.addAttribute("code", "alertMessageUrl");
-//		model.addAttribute("message", Function.message(r, "정상적으로 예약되었습니다.", "예약실패"));
-//		model.addAttribute("url", "index");
 		return "include/return";
 	}
 	

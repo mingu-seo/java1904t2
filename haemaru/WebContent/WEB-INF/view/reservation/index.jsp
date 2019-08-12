@@ -6,7 +6,6 @@
 <%@ page import="java.util.*"%>
 <%
 	MemberVO loginInfo = (MemberVO)session.getAttribute("memberInfo");
-	ReserveVO data = (ReserveVO) request.getAttribute("data");
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -37,17 +36,14 @@ function goSave() {
 
 $(function() {
 	getReservationDoctorList();
-	//getSchedList();
 	
 	$("#doctor_department").change(function() {
 		getReservationDoctorList();
-		//getSchedList();
 	});
 	
 	$("#res_date").change(function() {
 		console.log(0);
 		getReservationDoctorList();
-		//getSchedList();
 	});
 });
 
@@ -76,16 +72,6 @@ function getReservationDoctorList(){
 	});
 }
 
-function getSchedList(){
-	$.ajax({
-		type :"GET",
-		url : "/manage/reserve/schedList?date="+$("#res_date").val()+"&doctor_pk="+$("#doctor_pk").val(),
-		async : false,
-		success : function(data) {
-			$(".schedListArea").html(data);
-		}
-	});
-}
 $(function() {
     $( "#res_date" ).datepicker({
          dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
@@ -111,9 +97,7 @@ $(function() {
 					data : data,
 					async : false,
 					success : function(data) {
-						//alert("정상적으로 예약되었습니다.");
 						getReservationDoctorList();
-						getSchedList();
 						$('.reservation-page').stop().fadeIn(500);
 						
 					}

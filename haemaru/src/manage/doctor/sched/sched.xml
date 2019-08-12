@@ -69,15 +69,13 @@
 		WHERE doctor_pk=#no#
 	</delete>
 
-	<select id="read" parameterClass="Integer"
-		resultClass="schedvo">
+	<select id="read" parameterClass="Integer" resultClass="schedvo">
 		SELECT *
 		FROM doc_schedule 
 		WHERE no=#no#
 	</select>
 	
-	<select id="readByDoctor" parameterClass="Integer"
-		resultClass="schedvo">
+	<select id="readByDoctor" parameterClass="Integer" resultClass="schedvo">
 		SELECT *
 		FROM doc_schedule 
 		WHERE doctor_pk=#doctor_pk#

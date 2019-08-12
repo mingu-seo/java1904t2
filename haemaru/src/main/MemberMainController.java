@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import manage.doctor.DoctorService;
+import manage.doctor.DoctorVO;
 import member.MemberService;
 import member.MemberVO;
 import property.SiteProperty;
@@ -19,9 +21,13 @@ import property.SiteProperty;
 public class MemberMainController {
 	@Autowired
 	private MemberService memberService;
+	@Autowired
+	private DoctorService doctorService;
 	
 	@RequestMapping("/index.do")
-	public String read(Model model) throws Exception {
+	public String read(Model model, DoctorVO param) throws Exception {
+		ArrayList list = doctorService.Intro(param);
+		model.addAttribute("list", list);
 
 		return "index";
 	}

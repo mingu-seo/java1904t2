@@ -12,14 +12,38 @@
 <%@ include file="/WEB-INF/view/manage/include/headHtml.jsp"%>
 <script>
 
-	function goSave() {
-		if ($("#name").val() == "") {
-			alert('제목을 입력하세요.');
-			$("#name").focus();
-			return false;
-		}
-		return true;
+function goSave() {
+
+	if ($("#name").val() == "") {
+		alert('이름을 입력하세요.');
+		$("#name").focus();
+		return false;
 	}
+	if ($("#addr").val() == "") {
+		alert('주소를 입력하세요.');
+		$("#addr").focus();
+		return false;
+	}
+	if ($("#tel1").val() == "") {
+		alert('연락처를 입력하세요.');
+		$("#tel1").focus();
+		return false;
+	}
+	if ($("#tel2").val() == "") {
+		alert('연락처를 입력하세요.');
+		$("#tel2").focus();
+		return false;
+	}
+	if ($("#tel3").val() == "") {
+		alert('연락처를 입력하세요.');
+		$("#tel3").focus();
+		return false;
+	}
+	
+	
+
+	return true;
+}
 	
 	$(function(){
 		var trIdx = 0;
@@ -106,8 +130,8 @@
 											</tr>
 											<tr>
 												<th scope="row"><label for="">연락처</label></th>
-												<td colspan="3"><input type="text" id="tel"
-													name="tel" class="w50" title="제목을 입력해주세요" /></td>
+												<td colspan="3">
+												<input type="text" id="tel1" name="tel1">-<input type="text" id="tel2" name="tel2">-<input type="text" id="tel3" name="tel3"></td>
 											</tr>
 											<tr>
 												<th scope="row"><label for="">사진</label></th>

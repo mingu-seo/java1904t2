@@ -9,7 +9,7 @@
 	SchedVO sched = (SchedVO) request.getAttribute("slist");
 	ArrayList<ReserveVO> tlist = (ArrayList) request.getAttribute("tlist");
 	String arg = (String) request.getAttribute("arg");
-	int argInt = Function.getIntParameter(arg);
+	int argInt = Function.getIntParameter(request.getParameter("arg"));
 %>
 <select name="res_hour" >
 	<%=CodeUtil.getDoctorScheduleOptionForReserve(argInt, sched.getStart_time(), sched.getEnd_time(), tlist) %>
