@@ -125,6 +125,7 @@ function goSearch() {
                         <%
                         }else{                       
                         %>
+                        	<li><a href="#">문의하려면 로그인해주세요</a></li>
 						<%
                         }
 

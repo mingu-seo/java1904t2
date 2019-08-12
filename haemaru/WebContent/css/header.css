@@ -153,7 +153,6 @@ input[type='password']::placeholder {color:#4d6877; font-size:14px;}
 .pass-chk-head {width:100%; height:50px; background-color: #83c1aa; color:#fff;}
 .pass-chk-head p {float:left; margin-left:28px; line-height:50px;}
 .pass-chk-head img {float:right; margin-right:28px; width:35px; margin-top:8px; animation:mover 1s infinite ease-out alternate; cursor: pointer; }
-
 .pass-chk-back-arrow {position: absolute; top:50%; transform:translateY(-50%); left:50px;}
 .pass-chk-back-arrow a {display:block; width:100%; transition: all 0.3s;}
 .pass-chk-back-arrow:hover a {transform: scale(1.1);}

@@ -172,7 +172,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/adopt/animalprofile">입양</a>
+                    <a href="/adopt/animalprofile/animalprofile.do">입양</a>
                     <ul class="header-sub">
                         <li><a href="/adopt/animalprofile/animalprofile.do">프로필</a></li>
                         <li><a href="/adopt/review/review.do">입양후기</a></li>
