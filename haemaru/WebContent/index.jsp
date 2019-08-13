@@ -1,3 +1,0 @@
-spring
-withsky
-summer

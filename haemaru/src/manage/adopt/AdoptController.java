@@ -30,6 +30,7 @@ public class AdoptController {
 		
 		model.addAttribute("totCount", rowPageCount[0]);
 		model.addAttribute("totPage", rowPageCount[1]);
+		model.addAttribute("alist", list);
 		model.addAttribute("list", list);
 		model.addAttribute("list2", clist);
 		model.addAttribute("list3", slist);
