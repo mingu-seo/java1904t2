@@ -99,10 +99,6 @@ function goSave() {
                             </div>
                             <input type="hidden" id="user_no" name="no" value=""/>
                         </form>
-                        <ul class="myinfo-bot clear">
-                            <li><a href="#">개인정보처리방침</a></li>
-                            <li><a href="#">이메일무단수집거부</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
