@@ -1,6 +1,5 @@
 <%@page import="util.CodeUtil"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<<<<<<< HEAD
 <%@ page import="java.util.*" %>
 <%@ page import="board.review.*" %>
 <%@ page import="manage.adopt.*" %>
@@ -17,8 +16,6 @@ NoticeVO nparam = (NoticeVO)request.getAttribute("vo");
 ArrayList<NoticeVO> nlist = (ArrayList)request.getAttribute("nlist");
 AdoptVO aparam = (AdoptVO)request.getAttribute("vo");
 ArrayList<AdoptVO> alist = (ArrayList)request.getAttribute("alist");
-ArrayList<AdoptVO> list2 = (ArrayList)request.getAttribute("list2");
-ArrayList<AdoptVO> list3 = (ArrayList)request.getAttribute("list3");
 ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
 %>
 <!DOCTYPE html>
@@ -185,12 +182,12 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
                     <h3>공지사항</h3>
                     <h4>Notice</h4>
             <%
-            for(int n=0; n<=3; n++){
+            for(int n=0; n<=nlist.size(); n++){
             %>
                     <div class="notice-btn">
                         <a href="sub5-1.html">
                         <h6><%=nlist.get(n).getTitle()%></h6>
-                        <p><%=DateUtil.getDateFormat(list.get(n).getRegistdate())%></p>
+                        <p><%=DateUtil.getDateFormat(nlist.get(n).getCre_date())%></p>
                         </a>
                     </div>
               <%	
@@ -445,18 +442,18 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
 					%>
                 <div class="con5-box-info">
                     <div class="con5-box-info-img">
-                        <a href="adopt/review"><img src="/<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=list.get(i).getFilename()%>"></a>
+                        <a href="adopt/review"><img src="/<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=rlist.get(i).getFilename()%>"></a>
                     </div>
                     <div class="con5-box-info-text">
                         <h5>Haemaru adoption</h5>
-                        <h4><%=list.get(i).getTitle() %></h4>
-                        <p><%=list.get(i).getContents() %></p>
+                        <h4><%=rlist.get(i).getTitle() %></h4>
+                        <p><%=rlist.get(i).getContents() %></p>
                     </div>
                     <div class="review-writer clear">
                         <div class="writer-1 con5-img-1"></div>
                         <div class="writer-2">
-                            <h6><%=list.get(i).getMember_name() %></h6>
-                            <p><%=DateUtil.getDateFormat(list.get(i).getRegistdate())%></p>
+                            <h6><%=rlist.get(i).getMember_name() %></h6>
+                            <p><%=DateUtil.getDateFormat(rlist.get(i).getRegistdate())%></p>
                         </div>
                     </div>
                 </div>
@@ -471,61 +468,16 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
                 
                 <div class="con5-bot-info clear">
                     <div>
-                        <a href="adopt/review"><img src="/<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=list.get(j).getFilename()%>"></a>
+                        <a href="adopt/review"><img src="/<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=alist.get(j).getAnimal_image()%>"></a>
                     </div>
                     <div>
-                        <h5><%=list.get(j).getTitle() %></h5>
-                        <h6><%=list.get(j).getContents() %></h6>
+                        <h5><%=alist.get(j).getName() %></h5>
+                        <h6><%=alist.get(j).getAge() %></h6>
                     </div>
                 </div>
                 <%
                		 }
                 %>
-                <div class="con5-bot-info clear">
-                    <div>
-                        <a href="sub4-2.html"> <img src="img/con4-2/con4-2-4.jpg"></a>
-                    </div>
-                    <div>
-                        <h5>Haemaru adoption</h5>
-                        <h6>Welcome my love house with pet!</h6>
-                    </div>
-                </div>
-                <div class="con5-bot-info clear">
-                    <div>
-                        <a href="sub4-2.html"><img src="img/con4-2/con4-2-5.jpg"></a>
-                    </div>
-                    <div>
-                        <h5>Haemaru adoption</h5>
-                        <h6>Welcome my love house with pet!</h6>
-                    </div>
-                </div>
-                <div class="con5-bot-info clear">
-                    <div>
-                        <a href="sub4-2.html"> <img src="img/con4-2/con4-2-6.jpg"></a>
-                    </div>
-                    <div>
-                        <h5>Haemaru adoption</h5>
-                        <h6>Welcome my love house with pet!</h6>
-                    </div>
-                </div>
-                <div class="con5-bot-info clear">
-                    <div>
-                        <a href="sub4-2.html"><img src="img/con4-2/con4-2-7.jpg"></a>
-                    </div>
-                    <div>
-                        <h5>Haemaru adoption</h5>
-                        <h6>Welcome my love house with pet!</h6>
-                    </div>
-                </div>
-                <div class="con5-bot-info clear">
-                    <div>
-                        <a href="sub4-2.html"> <img src="img/con4-2/con4-2-8.jpg"></a>
-                    </div>
-                    <div>
-                        <h5>Haemaru adoption</h5>
-                        <h6>Welcome my love house with pet!</h6>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- 다섯번째  화면 -->
