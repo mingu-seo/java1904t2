@@ -63,12 +63,6 @@ int totPage = (Integer)request.getAttribute("totPage");
 				   <div class="review-box-area clear">
                         <div class="review-img"><a href="#"><img src="<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=list.get(i).getFilename()%>"/></a></div>
                         <div class="review-info">
-                            <ul class="review-icon clear">
-                                <li></li>
-                                <li>78</li>
-                                <li></li>
-                                <li>11</li>
-                            </ul>
                             <!-- 리뷰 텍스트 부분 -->
                             <div class="review-text">
                                 <h2><%=list.get(i).getTitle() %></h2>

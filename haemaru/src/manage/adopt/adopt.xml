@@ -59,4 +59,10 @@
         select * from animal_pro where no=#no#
     </select>
     
+    <select id="Intro" parameterClass="adopt_vo" resultClass="adopt_vo">
+        SELECT name, age, breed 
+        FROM animal_pro 
+        ORDER BY no desc limit 0,7
+    </select>
+    
 </sqlMap>

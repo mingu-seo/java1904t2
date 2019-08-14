@@ -10,6 +10,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import board.notice.NoticeService;
+import board.notice.NoticeVO;
+import board.review.ReviewService;
+import board.review.ReviewVO;
+import manage.adopt.AdoptService;
+import manage.adopt.AdoptVO;
 import manage.doctor.DoctorService;
 import manage.doctor.DoctorVO;
 import member.MemberService;
@@ -23,11 +29,25 @@ public class MemberMainController {
 	private MemberService memberService;
 	@Autowired
 	private DoctorService doctorService;
+	@Autowired
+	private NoticeService noticeService;
+	@Autowired
+	private ReviewService reviewService;
+	@Autowired
+	private AdoptService adoptService;
 	
 	@RequestMapping("/index.do")
-	public String read(Model model, DoctorVO param) throws Exception {
+	public String read(Model model, DoctorVO param, AdoptVO aparam, NoticeVO nparam, ReviewVO rparam) throws Exception {
 		ArrayList list = doctorService.Intro(param);
 		model.addAttribute("list", list);
+		ArrayList alist = adoptService.Intro(aparam);
+		model.addAttribute("alist", alist);
+		ArrayList nlist = noticeService.Intro(nparam);
+		model.addAttribute("nlist", nlist);
+		ArrayList rlist = reviewService.Intro(rparam);
+		model.addAttribute("rlist", rlist);
+		ArrayList rlist2 = reviewService.IntroA(rparam);
+		model.addAttribute("rlist2", rlist2);
 
 		return "index";
 	}

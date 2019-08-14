@@ -12,6 +12,7 @@
 <%
 ReviewVO param = (ReviewVO)request.getAttribute("vo");
 ArrayList<ReviewVO> rlist = (ArrayList)request.getAttribute("rlist");
+ArrayList<ReviewVO> rlist2 = (ArrayList)request.getAttribute("rlist2");
 NoticeVO nparam = (NoticeVO)request.getAttribute("vo");
 ArrayList<NoticeVO> nlist = (ArrayList)request.getAttribute("nlist");
 AdoptVO aparam = (AdoptVO)request.getAttribute("vo");
@@ -154,7 +155,7 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
                 </div>
                 <div class="con2-info2">
                     <a href="/intro/intro-map.do">
-                        <h3>찿아 오시는 길</h3>
+                        <h3>찾아오시는 길</h3>
                         <h4>How to Find</h4>
                         <img src="/img/mapbg.png">
                     </a>
@@ -182,13 +183,11 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
                     <h3>공지사항</h3>
                     <h4>Notice</h4>
             <%
-            for(int n=0; n<=nlist.size(); n++){
+            for(int n=0; n<nlist.size(); n++){
             %>
                     <div class="notice-btn">
-                        <a href="sub5-1.html">
                         <h6><%=nlist.get(n).getTitle()%></h6>
                         <p><%=DateUtil.getDateFormat(nlist.get(n).getCre_date())%></p>
-                        </a>
                     </div>
               <%	
             }
@@ -438,11 +437,11 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
             </div>
             <div class="con5-box clear">
             		<%
-					for(int i=0; i<=3; i++){
+					for(int i=0; i<rlist.size(); i++){
 					%>
                 <div class="con5-box-info">
                     <div class="con5-box-info-img">
-                        <a href="adopt/review"><img src="/<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=rlist.get(i).getFilename()%>"></a>
+                        <a href="adopt/review/review.do"><img src="<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=rlist.get(i).getFilename()%>"></a>
                     </div>
                     <div class="con5-box-info-text">
                         <h5>Haemaru adoption</h5>
@@ -463,16 +462,16 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
             </div>
             <div class="con5-bot clear">
                 <%
-                for (int j=0; j<=6; j++){
+                for (int j=0; j<rlist2.size(); j++){
                 %>
                 
                 <div class="con5-bot-info clear">
                     <div>
-                        <a href="adopt/review"><img src="/<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=alist.get(j).getAnimal_image()%>"></a>
+                        <a href="adopt/review/review.do"><img src="<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=rlist2.get(j).getFilename()%>"></a>
                     </div>
                     <div>
-                        <h5><%=alist.get(j).getName() %></h5>
-                        <h6><%=alist.get(j).getAge() %></h6>
+                        <h5>입양후기</h5>
+                        <h6>Welcome my love house with pet!</h6>
                     </div>
                 </div>
                 <%
@@ -500,7 +499,7 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
 						for(int a=0; a<alist.size(); a++){                    
                     %>
                     <div class="con4-box">
-                        <a href="sub4-1.html" class="hover-color1">   
+                        <a href="/adopt/animalprofile/animalprofile.do" class="hover-color1">   
                             <div class="con4-hover"> 
                                 <h4><%=alist.get(a).getName() %></h4>
                                 <img src="icon/icon_man.png">
@@ -521,7 +520,6 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
                     <%
 						}
                     %>
-                </div>
                 <!-- <div class="con4-arrow">
                     <a href="sub4-1.html">
                     <img src="icon/right-arrow.png">

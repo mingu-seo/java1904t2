@@ -100,18 +100,11 @@ public class ReviewDAO extends SqlMapClientDAOSupport {
 	 * @return ArrayList
 	 * @throws SQLException
 	 */
-//	public ArrayList listLoginHistory(ReviewVO param) throws SQLException {
-//		return (ArrayList)getSqlMapClient().queryForList("review.listLoginHistory", param);
-//	}
-
-	/**
-	 * 로그인 시 히스토리 저장
-	 * @param param
-	 * @return int
-	 * @throws SQLException  
-	 */
-//	public void insertLoginHistory(ReviewVO param) throws SQLException {
-//		getSqlMapClient().insert("review.insertLoginHistory", param);
-//	}
+	public ArrayList<ReviewVO> Intro(ReviewVO rparam) throws SQLException {
+		return (ArrayList<ReviewVO>)getSqlMapClient().queryForList("review.Intro", rparam);
+	}
+	public ArrayList<ReviewVO> IntroA(ReviewVO rparam) throws SQLException {
+		return (ArrayList<ReviewVO>)getSqlMapClient().queryForList("review.Intro", rparam);
+	}
 
 }

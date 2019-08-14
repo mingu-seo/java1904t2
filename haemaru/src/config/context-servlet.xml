@@ -53,6 +53,8 @@
 	   <mvc:interceptor>
 			<mvc:mapping path="/my/**" />
 			<mvc:mapping path="/reservation/**" />
+			<mvc:mapping path="/adopt/review/addreview.do"/>
+			<mvc:mapping path="/cscenter/qna/addqna.do"/>
 			<mvc:exclude-mapping path="/my" />
 			<mvc:exclude-mapping path="/my/" />
 			<mvc:exclude-mapping path="/my/css/*" />

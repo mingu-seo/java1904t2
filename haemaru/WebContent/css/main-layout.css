@@ -274,9 +274,9 @@
 /* 사용자 이미지, 이름 날짜 부분 */
 .review-writer {margin-top:40px; cursor: pointer;}
 .review-writer .writer-1 {cursor: pointer; float:left; width:40px; height:40px; border:1px solid #ebebeb; border-radius: 50%;  background-position: center center; background-size:30px; background-repeat: no-repeat;}
-.review-writer .con5-img-1 {background-image: url(../icon/woman.png);}
-.review-writer .con5-img-2 {background-image: url(../icon/man.jpg);}
-.review-writer .con5-img-3 {background-image: url(../icon/woman2.jpg); background-position: top  center; background-size:40px;}
+.review-writer .con5-img-1 {background-image: none;}
+.review-writer .con5-img-2 {background-image: none;}
+.review-writer .con5-img-3 {background-image: none; background-position: top  center; background-size:40px;}
 .review-writer .writer-1 {float:left;  margin-right:10px; font-size:14px;}
 .review-writer .writer-2 h6 {font-size:14px; color:#666;}
 .review-writer .writer-2 p {color:#666; margin-top:5px; font-size:14px;}

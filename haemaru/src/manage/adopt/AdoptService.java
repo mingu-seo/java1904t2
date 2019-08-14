@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import board.notice.NoticeVO;
 import property.SiteProperty;
 import util.FileUtil;
 import util.Function;
@@ -128,6 +129,9 @@ public class AdoptService {
 			r += adoptDao.delete(nos);
 		}
 		return r;
+	}
+	public ArrayList<AdoptVO> Intro(AdoptVO aparam) throws Exception {
+		return adoptDao.Intro(aparam);
 	}
 	
 }

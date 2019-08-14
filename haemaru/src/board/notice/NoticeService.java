@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import manage.doctor.DoctorVO;
 import property.SiteProperty;
 import util.FileUtil;
 import util.Function;
@@ -97,6 +98,10 @@ public class NoticeService {
 		return delCount;
 	}
 
+	
+	public ArrayList<NoticeVO> Intro(NoticeVO nparam) throws Exception {
+		return noticeDao.Intro(nparam);
+	}
 	/*
 	public ArrayList mainList(NoticeVO vo) throws Exception {
 		// TODO Auto-generated method stub

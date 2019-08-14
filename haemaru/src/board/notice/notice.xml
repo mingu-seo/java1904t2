@@ -32,7 +32,7 @@
     </select>
     
 	<select id="list" parameterClass="notice_vo" resultClass="notice_vo">
-        select *
+        select no, type, title, contents, cre_date
         from notice
         <include refid="searchSql" />
 		ORDER BY cre_date DESC LIMIT $startPageNo$, $pageRows$
@@ -41,11 +41,9 @@
 	<!-- 해당 테이블에 게시글 작성 -->
     <insert id="insert" parameterClass="notice_vo">
         INSERT INTO notice (
-        	type, title, contents, cre_date, readno,
-        	filename_org, filename, display
+        	type, title, contents, cre_date
         ) VALUES (
-        	#type#, #title#, #contents#, now(), #readno#,
-        	#filename_org#, #filename#, #display#
+        	#type#, #title#, #contents#, now()
         )
         <selectKey keyProperty="no" resultClass="Integer">
         	SELECT LAST_INSERT_ID()
@@ -71,20 +69,11 @@
     </update>
     
     <select id="read" parameterClass="notice_vo" resultClass="notice_vo">
-        SELECT 
-        	*
+        SELECT no, type, title, contents, cre_date
         FROM notice
         where no = #no#
     </select>
     
-    <select id="filenames" parameterClass="notice_vo" resultClass="notice_vo">
-    	<![CDATA[
-        SELECT 
-        	filename
-        FROM notice
-        where no = #no#
-        ]]>
-    </select> 
         
     <select id="getRowNum" parameterClass="notice_vo" resultClass="Integer">
         select rownum from (
@@ -123,15 +112,17 @@
         DELETE FROM notice WHERE no=#no#
     </delete>
     
-    <update id="updateReadno" parameterClass="notice_vo">
-        UPDATE notice SET readno = readno+1 WHERE no = #no#
-    </update>
-    
     <select id="mainList" parameterClass="notice_vo" resultClass="notice_vo">
         select *
         from notice
         <include refid="searchSql" />
 		ORDER BY cre_date DESC LIMIT 0, $number$
+    </select>
+    
+    <select id="Intro" parameterClass="notice_vo" resultClass="notice_vo">
+        SELECT title 
+        FROM notice 
+        ORDER BY cre_date desc limit 0,3
     </select>
     
 </sqlMap>
