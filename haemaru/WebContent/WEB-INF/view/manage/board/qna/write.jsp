@@ -79,15 +79,7 @@ function goSave() {
                                     			 <option value="6">입양</option>
                                 			</select>
 										</td>
-										<th scope="row"><label for="">이메일</label></th>
-										<td>
-											<input type="text" id="email" name="email" value="" class="w50" title="이메일을 입력해주세요" />
-										</td>
 									</tr>
-									<tr>
-										<th scope="row"><label for="">첨부파일</label></th>
-										<td><input type="file" id="filename_tmp" name="filename_tmp" class="w50" title="첨부파일을 업로드 해주세요." />	
-										</td>
 									<tr>
 										<th scope="row"><label for="">*제목</label></th>
 										<td colspan="3">

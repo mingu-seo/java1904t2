@@ -498,7 +498,7 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
                     <%
 						for(int a=0; a<alist.size(); a++){                    
                     %>
-                    <div class="con4-box">
+                    <div class="con4-box" style="background-image: url(<%=SiteProperty.ANIMAL_UPLOAD_PATH%><%=alist.get(a).getAnimal_image()%>);">
                         <a href="/adopt/animalprofile/animalprofile.do" class="hover-color1">   
                             <div class="con4-hover"> 
                                 <h4><%=alist.get(a).getName() %></h4>

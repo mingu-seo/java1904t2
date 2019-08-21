@@ -67,7 +67,6 @@ int totPage = (Integer)request.getAttribute("totPage");
                                 <th>Category</th>
                                 <th>Title</th>
                                 <th>Data</th>
-                                <th>View</th>
                             </tr>
                         <% if (totCount == 0) { %>
                         	<tr>
@@ -87,7 +86,6 @@ int totPage = (Integer)request.getAttribute("totPage");
                                 <td><%=CodeUtil.getNoticeCategory(data.getType())%></td>
                                 <td><a href="viewnotice?no=<%=data.getNo()%>"><%=data.getTitle()%></a></td>
                                 <td><%=DateUtil.getDateFormat(data.getCre_date())%></td>
-                                <td><%=data.getReadno()%></td>
                             </tr>
                             <%
 								}

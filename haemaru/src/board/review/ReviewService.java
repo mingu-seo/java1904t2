@@ -22,7 +22,7 @@ public class ReviewService {
 	@Autowired
 	private ReviewDAO reviewDao;
 	
-
+ 
 	public int[] count(ReviewVO vo) throws Exception {
 		int rowCount = reviewDao.count(vo);
 		int[] rowPageCount = new int[2];
@@ -100,7 +100,7 @@ public class ReviewService {
 	}
 	
 	public ArrayList<ReviewVO> IntroA(ReviewVO rparam) throws Exception {
-		return reviewDao.Intro(rparam);
+		return reviewDao.IntroA(rparam);
 	}
 	
 	

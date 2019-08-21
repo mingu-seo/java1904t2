@@ -26,6 +26,20 @@ int totPage = (Integer)request.getAttribute("totPage");
     <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="/js/custom.js"></script>
 <script type="text/javascript">
+
+function getThumbnailPrivew(html, $target) {
+    if (html.files && html.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $target.css('display', '');
+            $target.css('background-image', 'url(\"' + e.target.result + '\")'); // 배경으로 지정시
+            //$target.html('<img src="' + e.target.result + '" alt="" />');
+        }
+        reader.readAsDataURL(html.files[0]);
+    }
+}
+
+
 function goSave() {
 	if ($("#title").val() == "") {
 		alert("제목을 입력해주세요.");
@@ -40,6 +54,7 @@ function goSave() {
 	}
 	$("#frm").submit();
 }
+
 </script>
 </head>
 <body>
@@ -87,7 +102,7 @@ function goSave() {
                 <p>내 반려동물의 입양 후기를 등록해주세요.</p>
                 <div class="sub4-3-box-group">
                     <!-- 이메일 부분 -->
-					<form name="frm" id="frm" action="<%=Function.getSslCheckUrl(request.getRequestURL())%>/process.do" enctype="multipart/form-data" method="post" >
+					<form name="frm" id="frm" action="<%=Function.getSslCheckUrl(request.getRequestURL())%>/process.do" enctype="multipart/form-data" method="post">
 				    <div class="sub4-3-email clear">
                         <p>제목</p><input type="text" id="title_input" name="title" placeholder="제목을 등록해주세요.">
                         	<div class="sub4-3-emailbox"></div>
@@ -95,10 +110,12 @@ function goSave() {
                     <div class="sub4-3-box clear">
                         <!-- 반려동물 사진 추가 부분 -->
                         <div class="sub4-3-list">
-                            <div class="sub4-petplus-img">
-                                <img src="/img/sub6-2-petimg.jpg">
+                            <div class="sub4-petplus-img" id="thumb_img">	
+                                <!-- <img src="/img/sub6-2-petimg.jpg" > -->
                             </div>
-                            <div class="sub4-file"><input type="file" name="filename_tmp" id="filename_tmp" name="filename_tmp" value="파일찾기"></div>
+                            <div class="sub4-file">
+                            	<input type="file" name="filename_tmp" id="filename_tmp" name="filename_tmp" onchange="getThumbnailPrivew(this,$('#thumb_img'))"/>
+                            </div>
                         </div>
                         <!-- 후기 적는 텍스트 박스 부분 -->
                         <div class="sub4-3-list">

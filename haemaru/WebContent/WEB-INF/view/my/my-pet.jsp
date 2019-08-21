@@ -172,7 +172,6 @@ function getThumbnailPrivew(html, $target) {
 					<li><a href="/my/my-infor.do">나의 정보</a></li>
 					<li class="on"><a href="/my/my-pet.do">반려동물 정보</a></li>
 					<li><a href="/my/my-res.do">예약확인</a></li>
-					<li><a href="/my/my-ask.do">문의내역</a></li>
 				</ul>
 			</div>
 			<!-- main 부분 (여기다가 하면 됨) -->

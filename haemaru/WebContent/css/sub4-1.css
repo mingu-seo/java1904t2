@@ -20,7 +20,7 @@
 
 /* main : 여기다가 하면 됨 */
 /* .main {margin-left:300px;} */
-.main {width:1200px; margin-left:400px; height:2000px;}
+.main {width:1200px; margin-left:400px; }
 .main > h3 {font-size:30px; color:#666; text-align:center; padding-top:80px;}
 .main > p {font-size:14px; color:#4d6877; text-align: center; padding-top:10px;}
 
@@ -41,7 +41,7 @@
 
 /* 프로필 부분 */
 .tab-group {position: relative; width:100%;}
-.tab-group > div {display:none; position: absolute; left:0; }
+.tab-group > div {display:none; left:0; }
 .tab-box:nth-child(1) {display:block;}
 .tab-box {position: relative;}
 

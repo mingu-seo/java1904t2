@@ -138,7 +138,7 @@ function goSearch() {
 							</div>
 							<!--//btn-->
 							<!-- 페이징 처리 -->
-							<%=Page.userIndexList(param.getReqPageNo(), totPage, request)%>
+							<%=Page.indexList(param.getReqPageNo(), totPage, request)%>
 							<!-- //페이징 처리 -->
 							<form name="searchForm" id="searchForm" action="index" method="post">
 								<div class="search">

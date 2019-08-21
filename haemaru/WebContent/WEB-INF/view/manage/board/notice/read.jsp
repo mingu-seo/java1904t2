@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ page import="java.util.*" %>
 <%@ page import="board.notice.*" %>
-<%@ page import="util.*" %>\
+<%@ page import="util.*" %>
 <%
 NoticeVO param = (NoticeVO)request.getAttribute("param");
 NoticeVO data = (NoticeVO)request.getAttribute("data");
@@ -62,27 +62,13 @@ NoticeVO data = (NoticeVO)request.getAttribute("data");
 										</td>
 										<th><label for="">유형</label></th>
 										<td>
-											<%=data.getType()%>
+											<%=CodeUtil.getNoticeCategory(data.getType())%>
 										</td>
 									</tr>
 									<tr>
 										<th><label for="">등록일</label></th>
 										<td>
 											<%=data.getCre_date()%>
-										</td>
-										<th><label for="">노출여부</label></th>
-										<td>
-											<%=data.getDisplay()%>
-										</td>
-									</tr>
-									<tr>
-										<th><label for="">첨부파일</label></th>
-										<td>
-											<a href="upload/notice/<%=data.getFilename()%>"><%=data.getFilename_org()%></a>	
-										</td>
-										<th><label for="">조회수</label></th>
-										<td>
-											<%=data.getReadno()%>
 										</td>
 									</tr>
 									<tr>

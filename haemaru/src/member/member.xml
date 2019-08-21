@@ -75,7 +75,7 @@
     </select>  
     
     <select id="loginCheck" parameterClass="membervo" resultClass="Integer">
-    	SELECT count(*) FROM haemaru.member where concat(email1, email2) = #email1# and pw=md5(#pw#)
+    	SELECT count(*) FROM member where concat(email1, email2) = #email1# and pw=md5(#pw#)
     </select>    
     
     

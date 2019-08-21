@@ -52,14 +52,11 @@ input[type='text']::placeholder {font-size:12px; }
 .reply-table tr td:nth-child(3) span {margin-right:15px;}
 
 /* 문의하기 버튼 */
-.reply-btn {width:320px; float:right; margin-right:76px; margin-top:30px;}
-.reply-btn li {float:left; width:150px; height:28px;}
+.reply-btn {width:300px; float:right; margin-right:0; margin-top:30px;}
+.reply-btn li {float:left; width:200px; height:28px;}
 .reply-btn li a {display:block; height:100%; color:#fff; text-align: center; font-size:14px; line-height:28px; transition: all 0.3s;}
-.reply-btn li:nth-child(1) {background-color: #83c1aa; margin-right:10px;}
-.reply-btn li:nth-child(2) {background-color: #4d6877;}
+.reply-btn li:nth-child(1) {background-color: #4d6877; margin-right:0;}
 .reply-btn li:nth-child(1):hover a {background-color: #378367;}
-.reply-btn li:nth-child(2):hover a {background-color: #378367;}
-
 
 /* 번호 */
 .reply-number-all {width:350px; margin:0 auto; margin-top:80px; text-align:center;}

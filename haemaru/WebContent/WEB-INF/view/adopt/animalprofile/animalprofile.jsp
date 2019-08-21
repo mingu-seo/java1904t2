@@ -89,7 +89,7 @@ int totPage = (Integer)request.getAttribute("totPage");
                                 <p><span class="info-text">접종</span><%=list.get(i).getVac()%></p>
                                 <p><span class="info-text">성격</span><%=list.get(i).getCharr()%></p>
                                 <!-- 상담신청 버튼 부분 -->
-                                <div class="sub4-1-more"><a href="sub5-4.html">상담신청</a></div>
+                                <div class="sub4-1-more"><a href="/cscenter/qna/addqna.do">상담신청</a></div>
                                 <!-- 아이콘 부분 -->
                                 <img src="/icon/sub_dog.png">
                             </div>
@@ -116,7 +116,7 @@ int totPage = (Integer)request.getAttribute("totPage");
                                 <p><span class="info-text">나이</span><%=list2.get(n).getAge() %></p>
                                 <p><span class="info-text">접종</span><%=list2.get(n).getVac() %></p>
                                 <p><span class="info-text">성격</span><%=list2.get(n).getCharr() %></p>
-                                <div class="sub4-1-more"><a href="sub5-4.html">상담신청</a></div>
+                                <div class="sub4-1-more"><a href="/cscenter/qna/addqna.do">상담신청</a></div>
                                 <img src="/icon/sub_cat.jpg">
                             </div>
                              <% if (n%2 != 0) { %>
@@ -144,7 +144,7 @@ int totPage = (Integer)request.getAttribute("totPage");
                                 <p><span class="info-text">나이</span><%=list3.get(a).getAge() %></p>
                                 <p><span class="info-text">접종</span><%=list3.get(a).getVac() %></p>
                                 <p><span class="info-text">성격</span><%=list3.get(a).getCharr() %></p>
-                                <div class="sub4-1-more"><a href="sub5-4.html">상담신청</a></div>
+                                <div class="sub4-1-more"><a href="/cscenter/qna/addqna.do">상담신청</a></div>
                                 <img src="/icon/sub_bird.jpg">
                             </div>
                             <% if (a%2 != 0) { %>

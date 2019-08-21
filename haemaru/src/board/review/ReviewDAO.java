@@ -104,7 +104,7 @@ public class ReviewDAO extends SqlMapClientDAOSupport {
 		return (ArrayList<ReviewVO>)getSqlMapClient().queryForList("review.Intro", rparam);
 	}
 	public ArrayList<ReviewVO> IntroA(ReviewVO rparam) throws SQLException {
-		return (ArrayList<ReviewVO>)getSqlMapClient().queryForList("review.Intro", rparam);
+		return (ArrayList<ReviewVO>)getSqlMapClient().queryForList("review.IntroA", rparam);
 	}
 
 }

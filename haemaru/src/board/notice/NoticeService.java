@@ -88,10 +88,10 @@ public class NoticeService {
 				NoticeVO nvo = new NoticeVO();
 				nvo.setNo(Function.getIntParameter(nos[i]));
 				NoticeVO data = noticeDao.read(vo);
-				int r = noticeDao.delete(vo);
+				int r = noticeDao.delete(nvo);
 				if (r > 0) {
 					delCount++;
-					Function.fileDelete(vo.getUploadPath(), data.getFilename());
+//					Function.fileDelete(nvo.getUploadPath(), data.getFilename());
 				}
 			}
 		}

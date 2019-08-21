@@ -2,7 +2,6 @@
 <%@ page import="java.util.*" %>
 <%@ page import="board.notice.*" %>
 <%@ page import="util.*" %>
-<%@ page import="java.util.*" %>
 <%
 NoticeVO param = (NoticeVO)request.getAttribute("vo");
 ArrayList<NoticeVO> list = (ArrayList)request.getAttribute("list");
@@ -51,12 +50,9 @@ function groupDelete() {
 							<table width="100%" border="0" cellspacing="0" cellpadding="0" summary="공지사항 관리목록입니다.">
 								<colgroup>
 									<col class="w3" />
-									<col class="w3" />
 									<col class="w5" />
 									<col class="w20" />
-									<col class="w10" />
-									<col class="w10" />
-									<col class="w5" />
+									<col class="" />
 									<col class="w20" />
 								</colgroup>
 								<thead>
@@ -65,15 +61,13 @@ function groupDelete() {
 										<th scope="col">번호</th>
 										<th scope="col">유형</th>
 										<th scope="col">제목</th>
-										<th scope="col">노출여부</th>
-										<th scope="col">조회수</th>
 										<th scope="col" class="last">등록일</th>
 									</tr>
 								</thead>
 								<tbody>
 								<% if (list.size() == 0) { %>
 									<tr>
-										<td class="first" colspan="7">등록된 자료가 없습니다.</td>
+										<td class="first" colspan="5">등록된 자료가 없습니다.</td>
 									</tr>
 								<%
 									 } else {
@@ -86,8 +80,6 @@ function groupDelete() {
 										<td <%=targetUrl%>><%=list.get(i).getNo()%></td>
 										<td <%=targetUrl%>><%=CodeUtil.getNoticeCategory(list.get(i).getType())%></td>
 										<td <%=targetUrl%>><%=list.get(i).getTitle()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getDisplay()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getReadno()%></td>
 										<td <%=targetUrl%>><%=DateUtil.getDateTimeFormat(list.get(i).getCre_date())%></td>
 									</tr>
 								<%

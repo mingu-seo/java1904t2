@@ -97,10 +97,10 @@ public class QnaService {
 				QnaVO nvo = new QnaVO();
 				nvo.setNo(Function.getIntParameter(nos[i]));
 				QnaVO data = qnaDao.read(vo);
-				int r = qnaDao.delete(vo);
+				int r = qnaDao.delete(nvo);
 				if (r > 0) {
 					delCount++;
-					Function.fileDelete(vo.getUploadPath(), data.getFilename());
+//					Function.fileDelete(vo.getUploadPath(), data.getFilename());
 				}
 			}
 		}
