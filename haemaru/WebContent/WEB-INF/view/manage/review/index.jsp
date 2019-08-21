@@ -8,7 +8,7 @@
 MemberVO loginInfo = (MemberVO)session.getAttribute("memberInfo");
 MemberVO mdata = (MemberVO)request.getAttribute("data");
 ReviewVO param = (ReviewVO)request.getAttribute("vo");
-ArrayList<ReviewVO> list = (ArrayList)request.getAttribute("list");
+ArrayList<ReviewVO> list = (ArrayList<ReviewVO>)request.getAttribute("list");
 int totCount = (Integer)request.getAttribute("totCount");
 int totPage = (Integer)request.getAttribute("totPage");
 %>

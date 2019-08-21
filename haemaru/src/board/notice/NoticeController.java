@@ -44,7 +44,8 @@ public class NoticeController {
 		model.addAttribute("param", param);
 		
 		return "cscenter/notice/viewnotice";
-	}	
+	}
+	
 	
 	@RequestMapping("/manage/board/notice/index")
 	public String index(Model model, NoticeVO param) throws Exception {

@@ -1,9 +1,23 @@
 <%@page import="util.CodeUtil"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<%@ page import="board.review.*" %>
+<%@ page import="manage.adopt.*" %>
+<%@ page import="board.notice.*" %>
+<%@ page import="member.*" %>
+<%@ page import="property.SiteProperty" %>
+<%@ page import="util.*" %>
+<%@ page import="java.util.*" %>
 <%@ page import="manage.doctor.*"%>
-<%@ page import="java.util.*"%>
 <%
-	ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
+ReviewVO param = (ReviewVO)request.getAttribute("vo");
+ArrayList<ReviewVO> rlist = (ArrayList)request.getAttribute("rlist");
+ArrayList<ReviewVO> rlist2 = (ArrayList)request.getAttribute("rlist2");
+NoticeVO nparam = (NoticeVO)request.getAttribute("vo");
+ArrayList<NoticeVO> nlist = (ArrayList)request.getAttribute("nlist");
+AdoptVO aparam = (AdoptVO)request.getAttribute("vo");
+ArrayList<AdoptVO> alist = (ArrayList)request.getAttribute("alist");
+ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -141,7 +155,7 @@
                 </div>
                 <div class="con2-info2">
                     <a href="/intro/intro-map.do">
-                        <h3>찿아 오시는 길</h3>
+                        <h3>찾아오시는 길</h3>
                         <h4>How to Find</h4>
                         <img src="/img/mapbg.png">
                     </a>
@@ -168,24 +182,16 @@
                 <div class="con2-info5">
                     <h3>공지사항</h3>
                     <h4>Notice</h4>
+            <%
+            for(int n=0; n<nlist.size(); n++){
+            %>
                     <div class="notice-btn">
-                        <a href="sub5-1.html">
-                        <h6>[소식] 해마루이차진료동물병원 김진경 원장 취임 인터뷰</h6>
-                        <p>2019-06-04</p>
-                        </a>
+                        <h6><%=nlist.get(n).getTitle()%></h6>
+                        <p><%=DateUtil.getDateFormat(nlist.get(n).getCre_date())%></p>
                     </div>
-                    <div class="notice-btn">
-                        <a href="sub5-1.html">
-                        <h6>[칼럼] 반려동물 건강이야기 - 전염성 강한 ‘강아지 인플루엔자’ 주의보</h6>
-                        <p>2019-03-02</p>
-                        </a>
-                    </div>
-                    <div class="notice-btn">
-                        <a href="sub5-1.html">
-                        <h6>[카드뉴스] 마이크로바이옴이란?</h6>
-                        <p>2019-04-22</p>
-                        </a>
-                    </div>
+              <%	
+            }
+              %>      
                 </div>
                   <div class="con2-info6">
                     <h3>의료진소개</h3>
@@ -430,116 +436,47 @@
                 <h3>입양 후기</h3>
             </div>
             <div class="con5-box clear">
+            		<%
+					for(int i=0; i<rlist.size(); i++){
+					%>
                 <div class="con5-box-info">
                     <div class="con5-box-info-img">
-                        <a href="adopt/review"><img src="img/con4-2/con4-2-20.jpg"></a>
+                        <a href="adopt/review/review.do"><img src="<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=rlist.get(i).getFilename()%>"></a>
                     </div>
                     <div class="con5-box-info-text">
                         <h5>Haemaru adoption</h5>
-                        <h4>봉봉이가 우리 집에 온 날</h4>
-                        <p>Praesent in nunc sit amet orci dignissim mollis. Pellentesque elementum lacinia urna, 
-                            sit amet scelerisque libero...</p>
+                        <h4><%=rlist.get(i).getTitle() %></h4>
+                        <p><%=rlist.get(i).getContents() %></p>
                     </div>
                     <div class="review-writer clear">
                         <div class="writer-1 con5-img-1"></div>
                         <div class="writer-2">
-                            <h6>rronn1</h6>
-                            <p>September 5. 2019</p>
+                            <h6><%=rlist.get(i).getMember_name() %></h6>
+                            <p><%=DateUtil.getDateFormat(rlist.get(i).getRegistdate())%></p>
                         </div>
                     </div>
                 </div>
-                <div class="con5-box-info">
-                    <div class="con5-box-info-img">
-                        <a href="adopt/review"><img src="img/con4-2/con4-2-21.jpg"></a>
-                    </div>
-                    <div class="con5-box-info-text">
-                        <h5>Haemaru adoption</h5>
-                        <h4>우리 똘이가 집에 온 날~</h4>
-                        <p>Praesent in nunc sit amet orci dignissim mollis. Pellentesque elementum lacinia urna, 
-                            sit amet scelerisque libero...</p>
-                    </div>
-                    <div class="review-writer clear">
-                        <div class="writer-1 con5-img-2"></div>
-                        <div class="writer-2">
-                            <h6>NamJ</h6>
-                            <p>November 22. 2019</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="con5-box-info">
-                    <div class="con5-box-info-img">
-                        <a href="adopt/review"><img src="img/con4-2/con4-2-22.jpg"></a>
-                    </div>
-                    <div class="con5-box-info-text">
-                        <h5>Haemaru adoption</h5>
-                        <h4>사랑스런 둘리 입양 후기!</h4>
-                        <p>Praesent in nunc sit amet orci dignissim mollis. Pellentesque elementum lacinia urna, 
-                            sit amet scelerisque libero...</p>
-                    </div>
-                    <div class="review-writer clear">
-                        <div class="writer-1 con5-img-3"></div>
-                        <div class="writer-2">
-                            <h6>KimFlowerDure</h6>
-                            <p>September 5. 2019</p>
-                        </div>
-                    </div>
-                </div>
+                <%
+					}
+                %>
             </div>
             <div class="con5-bot clear">
+                <%
+                for (int j=0; j<rlist2.size(); j++){
+                %>
+                
                 <div class="con5-bot-info clear">
                     <div>
-                        <a href="adopt/review"><img src="img/con4-2/con4-2-9.jpg"></a>
+                        <a href="adopt/review/review.do"><img src="<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=rlist2.get(j).getFilename()%>"></a>
                     </div>
                     <div>
-                        <h5>Haemaru adoption</h5>
+                        <h5>입양후기</h5>
                         <h6>Welcome my love house with pet!</h6>
                     </div>
                 </div>
-                <div class="con5-bot-info clear">
-                    <div>
-                        <a href="sub4-2.html"> <img src="img/con4-2/con4-2-4.jpg"></a>
-                    </div>
-                    <div>
-                        <h5>Haemaru adoption</h5>
-                        <h6>Welcome my love house with pet!</h6>
-                    </div>
-                </div>
-                <div class="con5-bot-info clear">
-                    <div>
-                        <a href="sub4-2.html"><img src="img/con4-2/con4-2-5.jpg"></a>
-                    </div>
-                    <div>
-                        <h5>Haemaru adoption</h5>
-                        <h6>Welcome my love house with pet!</h6>
-                    </div>
-                </div>
-                <div class="con5-bot-info clear">
-                    <div>
-                        <a href="sub4-2.html"> <img src="img/con4-2/con4-2-6.jpg"></a>
-                    </div>
-                    <div>
-                        <h5>Haemaru adoption</h5>
-                        <h6>Welcome my love house with pet!</h6>
-                    </div>
-                </div>
-                <div class="con5-bot-info clear">
-                    <div>
-                        <a href="sub4-2.html"><img src="img/con4-2/con4-2-7.jpg"></a>
-                    </div>
-                    <div>
-                        <h5>Haemaru adoption</h5>
-                        <h6>Welcome my love house with pet!</h6>
-                    </div>
-                </div>
-                <div class="con5-bot-info clear">
-                    <div>
-                        <a href="sub4-2.html"> <img src="img/con4-2/con4-2-8.jpg"></a>
-                    </div>
-                    <div>
-                        <h5>Haemaru adoption</h5>
-                        <h6>Welcome my love house with pet!</h6>
-                    </div>
-                </div>
+                <%
+               		 }
+                %>
             </div>
         </div>
         <!-- 다섯번째  화면 -->
@@ -548,8 +485,8 @@
                 <div class="con4-title">
                     <h4>입양 프로필</h4>
                     <h3>아이들과 함께하며<br/>
-                    사람과 동물이 함께 존중하며<br/>
-                    나란히 함께 할 수 있는 해마루</h3>
+                  	  사람과 동물이 함께 존중하며<br/>
+                   	 나란히 함께 할 수 있는 해마루</h3>
                     <div class="con4-more-btn">
                         <a href="sub4-2.html" class="more-btn-a">
                             <span class="con4-more-bg"></span>
@@ -558,13 +495,16 @@
                     </div>
                 </div>
                 <div class="con4-box-group clear">
+                    <%
+						for(int a=0; a<alist.size(); a++){                    
+                    %>
                     <div class="con4-box">
-                        <a href="sub4-1.html" class="hover-color1">   
+                        <a href="/adopt/animalprofile/animalprofile.do" class="hover-color1">   
                             <div class="con4-hover"> 
-                                <h4>뭉치</h4>
+                                <h4><%=alist.get(a).getName() %></h4>
                                 <img src="icon/icon_man.png">
-                                <p>나이 : 2개월</p>
-                                <p>푸들</p>
+                                <p>나이 : <%=alist.get(a).getAge() %></p>
+                                <p><%=alist.get(a).getBreed() %></p>
                                 <p class="con4-more">MORE</p>
                             </div>
                         </a>
@@ -573,125 +513,13 @@
                                     <img src="icon/heart.png">
                                 </div>
                                 <div>
-                                    <p>뭉치</p>
+                                    <p><%=alist.get(a).getName() %></p>
                                 </div>
                             </div>
                     </div>
-                    <div class="con4-box">
-                        <a href="sub4-1.html" class="hover-color2">
-                        <div class="con4-hover">
-                            <h4>똘이</h4>
-                            <img src="icon/icon_women.png">
-                            <p>나이 : 4개월</p>
-                            <p>고양이</p>
-                            <p class="con4-more">MORE</p>
-                        </div>
-                        </a>  
-                        <div class="con4-box-text clear">
-                            <div class="text-left clear">
-                                <img src="icon/heart.png">
-                            </div>
-                            <div>
-                            <p>토르</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="con4-box">
-                        <a href="sub4-1.html" class="hover-color3">
-                        <div class="con4-hover">
-                            <h4>깜이</h4>
-                            <img src="icon/icon_man.png">
-                            <p>나이 : 3개월</p>
-                            <p>닥스훈트</p>
-                            <p class="con4-more">MORE</p>
-                        </div>
-                        </a>
-                        <div class="con4-box-text clear">
-                            <div class="text-left clear">
-                                <img src="icon/heart.png">
-                            </div>
-                            <div>
-                            <p>깜이</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="con4-box">
-                        <a href="sub4-1.html" class="hover-color4">
-                        <div class="con4-hover">
-                            <h4>아부</h4>
-                            <img src="icon/icon_man.png">
-                            <p>나이 : 2개월</p>
-                            <p>고슴도치</p>
-                            <p class="con4-more">MORE</p>
-                        </div>
-                          </a>
-                        <div class="con4-box-text clear">
-                            <div class="text-left clear">
-                                <img src="icon/heart.png">
-                            </div>
-                            <div>
-                            <p>아부</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="con4-box">
-                        <a href="sub4-1.html" class="hover-color5">
-                        <div class="con4-hover">
-                            <h4>이아고</h4>
-                            <img src="icon/icon_man.png">
-                            <p>나이 : 1살</p>
-                            <p>앵무새</p>
-                            <p class="con4-more">MORE</p> 
-                        </div>
-                        </a>
-                        <div class="con4-box-text clear">
-                            <div class="text-left clear">
-                                <img src="icon/heart.png">
-                            </div>
-                            <div>
-                            <p>이아고</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="con4-box">
-                        <a href="sub4-1.html" class="hover-color6">
-                        <div class="con4-hover bg6">
-                            <h4>냥냥이</h4>
-                            <img src="icon/icon_women.png">
-                            <p>나이 : 1살</p>
-                            <p>고양이</p>
-                            <p class="con4-more">MORE</p>
-                        </div>
-                        </a>
-                        <div class="con4-box-text clear">
-                            <div class="text-left clear">
-                                <img src="icon/heart.png">
-                            </div>
-                            <div>
-                                <p>냥냥이</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="con4-box">
-                        <a href="sub4-1.html" class="hover-color7">
-                        <div class="con4-hover bg6">
-                            <h4>점박이</h4>
-                            <img src="icon/icon_women.png">
-                            <p>나이 : 2살</p>
-                            <p>레오파드</p>
-                            <p class="con4-more">MORE</p>
-                        </div>
-                        </a>
-                        <div class="con4-box-text clear">
-                            <div class="text-left clear">
-                                <img src="icon/heart.png">
-                            </div>
-                            <div>
-                            <p>점박이</p>
-                            </div>
-                        </div>
-                    </div>                 
-                </div>
+                    <%
+						}
+                    %>
                 <!-- <div class="con4-arrow">
                     <a href="sub4-1.html">
                     <img src="icon/right-arrow.png">

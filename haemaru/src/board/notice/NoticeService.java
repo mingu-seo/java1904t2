@@ -1,6 +1,5 @@
 package board.notice;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -10,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import manage.doctor.DoctorVO;
 import property.SiteProperty;
 import util.FileUtil;
 import util.Function;
@@ -36,6 +36,15 @@ public class NoticeService {
 	}
 
 	public int insert(NoticeVO vo, HttpServletRequest request) throws Exception {
+		
+		FileUtil fu = new FileUtil();
+		Map fileMap = fu.getFileMap(request);
+		MultipartFile file= (MultipartFile)fileMap.get("filename_tmp");
+		if (!file.isEmpty()) {
+			fu.upload(file, SiteProperty.NOTICE_UPLOAD_PATH, SiteProperty.REAL_PATH, "notice");
+			vo.setFilename(fu.getName());
+			vo.setFilename_org(fu.getSrcName());
+		}
 		
 		int lastNo = (Integer)noticeDao.insert(vo);
 		
@@ -79,10 +88,10 @@ public class NoticeService {
 				NoticeVO nvo = new NoticeVO();
 				nvo.setNo(Function.getIntParameter(nos[i]));
 				NoticeVO data = noticeDao.read(vo);
-				int r = noticeDao.delete(nvo);
+				int r = noticeDao.delete(vo);
 				if (r > 0) {
 					delCount++;
-
+					Function.fileDelete(vo.getUploadPath(), data.getFilename());
 				}
 			}
 		}
@@ -90,6 +99,9 @@ public class NoticeService {
 	}
 
 
+	public ArrayList<NoticeVO> Intro(NoticeVO nparam) throws Exception {
+		return noticeDao.Intro(nparam);
+	}	
 	/*
 	public ArrayList mainList(NoticeVO vo) throws Exception {
 		// TODO Auto-generated method stub

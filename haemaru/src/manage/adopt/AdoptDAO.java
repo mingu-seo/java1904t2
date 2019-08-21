@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Repository;
 
+import board.notice.NoticeVO;
 import db.SqlMapClientDAOSupport;
 
 @Repository
@@ -120,6 +121,10 @@ public class AdoptDAO extends SqlMapClientDAOSupport {
 		getSqlMapClient().insert("adopt.insertLoginHistory", param);
 	}
 
+	public ArrayList<AdoptVO> Intro(AdoptVO aparam) throws SQLException {
+		return (ArrayList<AdoptVO>)getSqlMapClient().queryForList("adopt.Intro", aparam);
+	}
+	
 	
 	public static void main(String[] args) throws Exception {
 		AdoptDAO ad = new AdoptDAO();

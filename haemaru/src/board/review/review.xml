@@ -58,4 +58,18 @@
         select * from review where no=#no#
     </select>
     
+    <select id="Intro" parameterClass="reviewvo" resultClass="reviewvo">
+        SELECT title, contents, filename,
+        IFNULL((SELECT name FROM member WHERE no=review.member_pk), 0) AS member_name
+        FROM review
+        ORDER BY registdate desc limit 0,3
+    </select>
+    
+        <select id="IntroA" parameterClass="reviewvo" resultClass="reviewvo">
+        SELECT filename,
+        FROM review
+        ORDER BY registdate asc limit 0,6
+    </select>
+    
+    
 </sqlMap>

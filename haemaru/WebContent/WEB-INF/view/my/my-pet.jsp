@@ -57,7 +57,7 @@ function getThumbnailPrivew(html, $target) {
                 <div class="mypet-box">
                     <div class="mypet-head">
                         <p>반려동물 정보 수정</p>
-                        <img src="/icon/footer-icon.png">
+                        <img src="/icon/footer-icon.png" magin-top=55px;>
                     </div>
                     <div class="mypet-page">
                         <div class="mypet-back-arrow">

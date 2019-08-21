@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import manage.adopt.AdoptVO;
 import property.SiteProperty;
 import util.FileUtil;
 import util.Function;
@@ -94,5 +95,13 @@ public class ReviewService {
 		}
 		return r;
 	}
+	public ArrayList<ReviewVO> Intro(ReviewVO rparam) throws Exception {
+		return reviewDao.Intro(rparam);
+	}
+	
+	public ArrayList<ReviewVO> IntroA(ReviewVO rparam) throws Exception {
+		return reviewDao.Intro(rparam);
+	}
+	
 	
 }

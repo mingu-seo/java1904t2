@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Repository;
 
 import db.SqlMapClientDAOSupport;
+import manage.doctor.DoctorVO;
 
 @Repository
 public class NoticeDAO extends SqlMapClientDAOSupport {
@@ -83,5 +84,9 @@ public class NoticeDAO extends SqlMapClientDAOSupport {
 	 */
 	public ArrayList mainList(NoticeVO vo) throws SQLException {
 		return (ArrayList)getSqlMapClient().queryForList("notice.mainList", vo);
+	}
+	
+	public ArrayList<NoticeVO> Intro(NoticeVO param) throws SQLException {
+		return (ArrayList<NoticeVO>)getSqlMapClient().queryForList("notice.Intro", param);
 	}
 }
