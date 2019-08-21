@@ -33,7 +33,7 @@ FaqVO data = (FaqVO)request.getAttribute("data");
 		<div id="container">
 			<div id="content">
 				<div class="con_tit">
-					<h2>동물관리 - [상세]</h2>
+					<h2>문의하기 - [상세]</h2>
 				</div>
 				<!-- //con_tit -->
 				<div class="con">

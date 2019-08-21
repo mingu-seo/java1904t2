@@ -25,12 +25,12 @@
             <!-- sub bar 부분 (고정) -->
             <div class="fixed-sub">
                 <div class="title-area">
-                    <h2>병원소개</h2>
+                    <h2>진료과목</h2>
                     <p>information</p>
                 </div>
                 <ul class="sub-bar">
                     <li class="on"><a href="/department/surgery.do">외과</a></li>
-                    <li ><a href="/department/surgery.do">내과</a></li>
+                    <li ><a href="/department/internal.do">내과</a></li>
                     <li><a href="/department/radiology.do">영상의학과</a></li>
                     <li><a href="/department/emergency.do">응급중환자의료센터</a></li>
                 </ul>

@@ -61,14 +61,9 @@ int totPage = (Integer)request.getAttribute("totPage");
 					%>
                 <div class="review-box-group">
 				   <div class="review-box-area clear">
-                        <div class="review-img"><a href="#"><img src="<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=list.get(i).getFilename()%>"/></a></div>
+                        <div class="review-img" style='background-image:URL("<%=SiteProperty.REVIEW_UPLOAD_PATH%><%=list.get(i).getFilename()%>");'>
+                        </div>
                         <div class="review-info">
-                            <ul class="review-icon clear">
-                                <li></li>
-                                <li>78</li>
-                                <li></li>
-                                <li>11</li>
-                            </ul>
                             <!-- 리뷰 텍스트 부분 -->
                             <div class="review-text">
                                 <h2><%=list.get(i).getTitle() %></h2>
@@ -79,8 +74,8 @@ int totPage = (Integer)request.getAttribute("totPage");
                             <div class="review-writer clear">
                              <!-- <div class="writer-1"></div>  -->   
                                 <div class="writer-2">
-                                    <h6><%=list.get(i).getMember_name()%></h6>
-                                    <p><%=DateUtil.getDateFormat(param.getRegistdate())%></p>
+                                    <h6><%=list.get(i).getMember_name()%> 님</h6>
+                                    <p><%=DateUtil.getDateFormat(list.get(i).getRegistdate())%></p>
                                 </div>
                             </div>
                         </div>

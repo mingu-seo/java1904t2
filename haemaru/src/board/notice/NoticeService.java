@@ -1,5 +1,6 @@
 package board.notice;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -35,15 +36,6 @@ public class NoticeService {
 	}
 
 	public int insert(NoticeVO vo, HttpServletRequest request) throws Exception {
-		
-		FileUtil fu = new FileUtil();
-		Map fileMap = fu.getFileMap(request);
-		MultipartFile file= (MultipartFile)fileMap.get("filename_tmp");
-		if (!file.isEmpty()) {
-			fu.upload(file, SiteProperty.NOTICE_UPLOAD_PATH, SiteProperty.REAL_PATH, "notice");
-			vo.setFilename(fu.getName());
-			vo.setFilename_org(fu.getSrcName());
-		}
 		
 		int lastNo = (Integer)noticeDao.insert(vo);
 		
@@ -87,15 +79,16 @@ public class NoticeService {
 				NoticeVO nvo = new NoticeVO();
 				nvo.setNo(Function.getIntParameter(nos[i]));
 				NoticeVO data = noticeDao.read(vo);
-				int r = noticeDao.delete(vo);
+				int r = noticeDao.delete(nvo);
 				if (r > 0) {
 					delCount++;
-					Function.fileDelete(vo.getUploadPath(), data.getFilename());
+
 				}
 			}
 		}
 		return delCount;
 	}
+
 
 	/*
 	public ArrayList mainList(NoticeVO vo) throws Exception {

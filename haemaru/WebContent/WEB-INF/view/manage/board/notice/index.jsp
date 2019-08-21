@@ -51,12 +51,9 @@ function groupDelete() {
 							<table width="100%" border="0" cellspacing="0" cellpadding="0" summary="공지사항 관리목록입니다.">
 								<colgroup>
 									<col class="w3" />
-									<col class="w3" />
 									<col class="w5" />
-									<col class="w20" />
-									<col class="w10" />
-									<col class="w10" />
-									<col class="w5" />
+									<col class="w15" />
+									<col class="" />
 									<col class="w20" />
 								</colgroup>
 								<thead>
@@ -65,8 +62,6 @@ function groupDelete() {
 										<th scope="col">번호</th>
 										<th scope="col">유형</th>
 										<th scope="col">제목</th>
-										<th scope="col">노출여부</th>
-										<th scope="col">조회수</th>
 										<th scope="col" class="last">등록일</th>
 									</tr>
 								</thead>
@@ -86,8 +81,6 @@ function groupDelete() {
 										<td <%=targetUrl%>><%=list.get(i).getNo()%></td>
 										<td <%=targetUrl%>><%=CodeUtil.getNoticeCategory(list.get(i).getType())%></td>
 										<td <%=targetUrl%>><%=list.get(i).getTitle()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getDisplay()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getReadno()%></td>
 										<td <%=targetUrl%>><%=DateUtil.getDateTimeFormat(list.get(i).getCre_date())%></td>
 									</tr>
 								<%

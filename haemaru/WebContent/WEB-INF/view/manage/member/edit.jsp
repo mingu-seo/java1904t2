@@ -70,7 +70,8 @@ function goSave() {
 										</td>
 										<th scope="row"><label for="">이메일</label></th>
 										<td>
-											<input type="text" id="email" name="email" value="<%=data.getEmail()%>" />
+											<input type="text" id="email1" name="email1" value="<%=data.getEmail1()%>" size="10px";/>
+											<input type="text" id="email2" name="email2" value="<%=data.getEmail2()%>" size="15px";/>
 										</td>
 									</tr>
 									<tr>
@@ -80,7 +81,9 @@ function goSave() {
 										</td>
 										<th scope="row"><label for="">연락처</label></th>
 										<td>
-											<input type="text" id="tel" name="tel" value="<%=data.getTel()%>" />
+											<input type="text" id="tel" name="tel1" value="<%=data.getTel1()%>" size="7px";/>  -  
+											<input type="text" id="tel" name="tel2" value="<%=data.getTel2()%>" size="7px";/>  -  
+											<input type="text" id="tel" name="tel3" value="<%=data.getTel3()%>" size="7px";/>
 										</td>
 									</tr>
 									<tr>

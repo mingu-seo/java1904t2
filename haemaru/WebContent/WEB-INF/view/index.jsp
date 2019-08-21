@@ -325,34 +325,34 @@
                 <div class="con3-info clear">
                     <div class="con3-view">
                         <a href="department/surgery.do">
-                            <div class="con3-view-img"><img src="img/subcon3/subcon3-1.jpg"></div>
+                            <div class="con3-view-img"><img src="/img/subcon3/subcon3-1.jpg"></div>
                             <div class="con3-view-bg"></div>
                             <div class="con3-view-text">
                                 <h3>정형외과</h3>
                                 <p>Orthopedics</p>
-                                <img src="icon/medicine-class.png">
+                                <img src="/icon/medicine-class.png">
                             </div>
                         </a>
                     </div>
                     <div class="con3-view">
                         <a href="department/surgery.do">
-                            <div class="con3-view-img"><img src="img/subcon3/subcon3-2.jpg"></div>
+                            <div class="con3-view-img"><img src="/img/subcon3/subcon3-2.jpg"></div>
                             <div class="con3-view-bg"></div>
                             <div class="con3-view-text">
                                 <h3>흉부외과</h3>
                                 <p>Thoracic surgery</p>
-                                <img src="icon/medicine-class.png">
+                                <img src="/icon/medicine-class.png">
                             </div>
                         </a>
                     </div>
                     <div class="con3-view">
                         <a href="department/internal.do">
-                            <div class="con3-view-img"><img src="img/subcon3/subcon3-3.jpg"></div>
+                            <div class="con3-view-img"><img src="/img/subcon3/subcon3-3.jpg"></div>
                             <div class="con3-view-bg"></div>
                             <div class="con3-view-text">
                                 <h3>내분비내과</h3>
                                 <p>Endocrinology Internal Medicine</p>
-                                <img src="icon/medicine-class.png">
+                                <img src="/icon/medicine-class.png">
                             </div>
                         </a>
                     </div>
@@ -369,45 +369,45 @@
                     </div>
                     <div class="con3-view">
                         <a href="department/radiology.do">
-                            <div class="con3-view-img"><img src="img/subcon3/subcon3-5.jpg"></div>
+                            <div class="con3-view-img"><img src="/img/subcon3/subcon3-5.jpg"></div>
                             <div class="con3-view-bg"></div>
                             <div class="con3-view-text">
                                 <h3>신경내과</h3>
                                 <p>Neurology</p>
-                                <img src="icon/medicine-class.png">
+                                <img src="/icon/medicine-class.png">
                             </div>
                         </a>
                     </div>
                     <div class="con3-view">
                         <a href="department/radiology.do">
-                            <div class="con3-view-img"><img src="img/subcon3/subcon3-6.jpg"></div>
+                            <div class="con3-view-img"><img src="/img/subcon3/subcon3-6.jpg"></div>
                             <div class="con3-view-bg"></div>
                             <div class="con3-view-text">
                                 <h3>방사선검사</h3>
                                 <p>Radiation examination</p>
-                                <img src="icon/medicine-class.png">
+                                <img src="/icon/medicine-class.png">
                             </div>
                         </a>
                     </div>
                     <div class="con3-view">
                         <a href="department/radiology.do">
-                            <div class="con3-view-img"><img src="img/subcon3/subcon3-7.jpg"></div>
+                            <div class="con3-view-img"><img src="/img/subcon3/subcon3-7.jpg"></div>
                             <div class="con3-view-bg"></div>
                             <div class="con3-view-text">
                                 <h3>초음파검사</h3>
                                 <p>Ultrasound examination</p>
-                                <img src="icon/medicine-class.png">
+                                <img src="/icon/medicine-class.png">
                             </div>
                         </a>
                     </div>
                     <div class="con3-view">
                         <a href="department/emergency.do">
-                            <div class="con3-view-img"><img src="img/subcon3/subcon3-8.jpg"></div>
+                            <div class="con3-view-img"><img src="/img/subcon3/subcon3-8.jpg"></div>
                             <div class="con3-view-bg"></div>
                             <div class="con3-view-text">
                                 <h3>응급중환자의료센터</h3>
                                 <p>Emergency and Critical Care Medicine</p>
-                                <img src="icon/medicine-class.png">
+                                <img src="/icon/medicine-class.png">
                             </div>
                         </a>
                     </div>

@@ -26,13 +26,14 @@
 
 /* 반려동물 부분 */
 
-.sub6-pet {width:750px; margin:50px auto; position: relative;}
+.sub6-pet {width:750px; margin:60px auto; position: relative; min-height:280px;}
 
 /* 나의 반려동물 타이틀 */
 .sub6-text > h3::before {content: ''; display: block; background-color:#e8eaec; width:70px; height:2px; margin-bottom:20px; margin-left:0px;}
 .sub6-text > h3 {float:left; padding-top:0; font-size:20px; color:#666; margin-left:20px; margin-top:5px;}
-.sub6-text > a {display:block; position: absolute; bottom:-20px; left:50%; transform: translateX(-50%);  float:right; width:140px; height:40px; text-align: center; line-height:40px; color:#4d6877; font-size:14px; font-weight: 700;
-                background-image: url("../icon/icon_plus.png"); background-position:right 2px center; background-size:20px; background-repeat: no-repeat;}
+.sub6-text > a {display:block; position: absolute; left:50%; transform: translateX(-50%);  float:right; width:140px; height:40px; text-align: center; line-height:40px; color:#4d6877; font-size:14px; font-weight: 700;
+                background-image: url("../icon/icon_plus.png"); background-position:right 2px center; background-size:20px; background-repeat: no-repeat; bottom: 110px;}
+.sub6-text {height: 100px; display: block;}
 
 /* 반려동물 박스 */
 .pet-box-center {margin-top:80px;}
@@ -66,6 +67,7 @@
 .mypet-back-arrow a img {width:60px;}
 .mypet-back-arrow p {font-size:14px; color:#4d6877; margin-top:20px;}
 .mypet-back-arrow:hover a {transform: scale(1.1);}
+
 
 .mypet-logo {width:200px; margin:0 auto; margin-top:50px;}
 .mypet-logo a {display:block;}
@@ -104,7 +106,7 @@ input[type='text']::placeholder {color:#4d6877; font-size:14px;}
 
 
 /* 반려동물 추가 */
-#pet-plus {display:none; position: fixed; z-index: 5;top:50%; left:50%; transform: translate(-50%, -50%); width:900px; background-color:#fff; height:800px; margin:0 auto;  box-shadow: 0 3px 5px rgba(0,0,0,0.2);}
+#pet-plus {display:none; position: fixed; z-index: 5;top:50%; left:50%; transform: translate(-50%, -50%); width:900px; background-color:#fff; height:800px; margin:0 auto;  box-shadow: 0 3px 5px rgba(0,0,0,0.2); }
 .pet-plus-area {position: relative; height:100%;}
 .petplus-head {width:100%; height:50px; background-color: #83c1aa; color:#fff;}
 .petplus-head p {float:left; margin-left:28px; line-height:50px;}
@@ -150,4 +152,5 @@ input[type='text']::placeholder {color:#4d6877; font-size:12px;}
 .petplus-bot li:first-child a {color:#4d6877;} 
 .petplus-bot li a {display:block; height:100%; color:#a2a1a1; font-size:14px;}
 /* 끝 */
+
 

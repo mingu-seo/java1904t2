@@ -61,7 +61,6 @@ function groupDelete() {
 									<col class="w10" />
 									<col class="w10" />
 									<col class="w10" />
-									<col class="w10" />
 								</colgroup>
 								<thead>
 									<tr>
@@ -75,7 +74,6 @@ function groupDelete() {
 										<th scope="col">성격</th>
 										<th scope="col">품종</th>
 										<th scope="col">접종현황</th>
-										<th scope="col">상태</th>
 										<th scope="col" class="last">등록일</th>
 									</tr>
 								</thead>
@@ -96,12 +94,11 @@ function groupDelete() {
 										<td <%=targetUrl%>><%=list.get(i).getAnimal_category()%></td>
 										<td <%=targetUrl%>><img src="/upload/adopt/<%=list.get(i).getAnimal_image()%>" width="100px" height="100px"/></td>
 										<td <%=targetUrl%>><%=list.get(i).getName()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getGender()%></td>
+										<td <%=targetUrl%>><%=list.get(i).getGender() !=1 ? "남아" : "여아"%></td>
 										<td <%=targetUrl%>><%=list.get(i).getAge()%></td>
 										<td <%=targetUrl%>><%=list.get(i).getCharr()%></td>
 										<td <%=targetUrl%>><%=list.get(i).getBreed()%></td>
 										<td <%=targetUrl%>><%=list.get(i).getVac()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getState()%></td>
 										<td <%=targetUrl%>><%=DateUtil.getDateTimeFormat(list.get(i).getRegistdate())%></td>
 									</tr>
 								<%

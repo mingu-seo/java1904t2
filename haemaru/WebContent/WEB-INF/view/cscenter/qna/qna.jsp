@@ -4,7 +4,6 @@
 <%@ page import="java.util.*" %>
 <%@ page import="util.*" %>
 <%
-
 QnaVO param = (QnaVO)request.getAttribute("vo");
 ArrayList<QnaVO> list = (ArrayList)request.getAttribute("list");
 int totCount = (Integer)request.getAttribute("totCount");
@@ -119,8 +118,18 @@ function goSearch() {
                            %>
                         </table>
                         <ul class="reply-btn clear">
+                        <%
+                        if(memberInfo != null){
+                        %>
                             <li><a href="/cscenter/qna/addqna.do">문의하기</a></li>
-                            <li><a href="sub5-5.html">내 질문 보기</a></li>
+                        <%
+                        }else{                       
+                        %>
+                        	<li><a href="#">문의하려면 로그인해주세요</a></li>
+						<%
+                        }
+
+						%>                        
                         </ul>
                         <div class="reply-number-all clear">
                             <p class="reply-number-arrow"><a href="#"></a></p>
