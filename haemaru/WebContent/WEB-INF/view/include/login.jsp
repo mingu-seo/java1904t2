@@ -17,10 +17,10 @@
                             </h1>
                             <form class="login-form" method="POST" action="/member/login">
                                 <div class="login-email">
-                                    <input type="text" maxlength="20" id="email_input" name="email1" placeholder="E-Mail">
+                                    <input type="text" maxlength="40" id="email_input" name="email1" placeholder="E-Mail">
                                 </div>
                                 <div class="login-password">
-                                    <input type="password" maxlength="12" id="id_pass" name="pw" placeholder="Password">
+                                    <input type="password" maxlength="20" id="id_pass" name="pw" placeholder="Password">
                                 </div>
                                 <div class="login-btn">
                                     <input type="submit" value="LOGIN"  id="btn_submit1">

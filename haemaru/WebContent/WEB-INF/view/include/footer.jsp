@@ -8,8 +8,7 @@
                 <h3>Direction</h3>
                 <p>오시는 길</p>
             </div>
-            <!-- 맵 연동은 맨 마지막 -->
-            <!-- <div id="map" style="width:837px;height:428px; float:left; margin-left:50px;"></div>
+            <div id="map" style="width:837px;height:428px; float:left; margin-left:50px;"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b39455382198dd3c3860a5e9a81fdcc3"></script>
             <script>
                 var container = document.getElementById('map');
@@ -19,7 +18,7 @@
                 };
         
                 var map = new kakao.maps.Map(container, options);
-            </script> -->
+            </script>
         </div>
     </div>
     <div class="footer-basic">
