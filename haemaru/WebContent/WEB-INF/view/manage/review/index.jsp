@@ -85,12 +85,12 @@ function groupDelete() {
 								%>
 									<tr>
 										<td class="first"><input type="checkbox" name="no" id="no" value="<%=list.get(i).getNo()%>"/></td>
-										<td <%=targetUrl%>><%=list.get(i).getNo()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getMember_pk()%></td>
-										<td <%=targetUrl%>><img src="/upload/review/<%=list.get(i).getFilename()%>" width="100px" height="100px"/></td>
-										<td <%=targetUrl%>><%=list.get(i).getTitle()%></td>
-										<td <%=targetUrl%>><%=list.get(i).getContents()%></td>
-										<td <%=targetUrl%>><%=DateUtil.getDateTimeFormat(list.get(i).getRegistdate())%></td>
+										<td><%=list.get(i).getNo()%></td>
+										<td><%=list.get(i).getMember_name()%></td>
+										<td><img src="/upload/review/<%=list.get(i).getFilename()%>" width="100px" height="100px"/></td>
+										<td><%=list.get(i).getTitle()%></td>
+										<td><%=list.get(i).getContents()%></td>
+										<td><%=DateUtil.getDateTimeFormat(list.get(i).getRegistdate())%></td>
 									</tr>
 								<%
 										}
@@ -106,9 +106,9 @@ function groupDelete() {
 								<div class="btnLeft">
 									<a class="btns" href="#" onclick="groupDelete();"><strong>삭제</strong> </a>
 								</div>
-								<div class="btnRight">
+								<!-- <div class="btnRight">
 									<a class="wbtn" href="write"><strong>글쓰기</strong> </a>
-								</div>
+								</div> --> 
 							</div>
 							<!--//btn-->
 							<!-- 페이징 처리 -->

@@ -66,7 +66,12 @@ int totPage = (Integer)request.getAttribute("totPage");
                                 <th>No.</th>
                                 <th>Category</th>
                                 <th>Title</th>
+<<<<<<< HEAD
                                 <th>Data</th>
+=======
+                                <th colspan="2">Data</th>
+                                
+>>>>>>> branch 'master' of https://github.com/mingu-seo/java1904t2.git
                             </tr>
                         <% if (totCount == 0) { %>
                         	<tr>
@@ -85,7 +90,11 @@ int totPage = (Integer)request.getAttribute("totPage");
                                 <td><%=data.getNo()%></td>
                                 <td><%=CodeUtil.getNoticeCategory(data.getType())%></td>
                                 <td><a href="viewnotice?no=<%=data.getNo()%>"><%=data.getTitle()%></a></td>
+<<<<<<< HEAD
                                 <td><%=DateUtil.getDateFormat(data.getCre_date())%></td>
+=======
+                                <td colspan="2"><%=DateUtil.getDateFormat(data.getCre_date())%></td>
+>>>>>>> branch 'master' of https://github.com/mingu-seo/java1904t2.git
                             </tr>
                             <%
 								}

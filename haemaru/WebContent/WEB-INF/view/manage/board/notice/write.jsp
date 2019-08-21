@@ -52,16 +52,6 @@ function goSave() {
 							<h3>공지사항 기본 정보</h3>
 							<form name="frm" id="frm" action="<%=Function.getSslCheckUrl(request.getRequestURL())%>/process.do" method="post" enctype="multipart/form-data">
 							<table width="100%" border="0" cellspacing="0" cellpadding="0" summary="공지사항 관리 기본내용입니다.">
-								<colgroup>
-									<col width="15%" />
-									<col width="35%" />
-									<col width="15%" />
-									<col width="35%" />
-									<col width="15%" />
-									<col width="35%" />
-									<col width="15%" />
-									<col width="35%" />
-								</colgroup>
 								<tbody>
 									<tr>
 										<th scope="row"><label for="">유형</label></th>
@@ -73,24 +63,11 @@ function goSave() {
 												<option value="4">증례소개</option>
 											</select>
 										</td>
-										<th scope="row"><label for="">노출여부</label></th>
-										<td>
-											<select name="display">
-												<option value="0">미노출</option>
-												<option value="1">노출</option>
-											</select>
-										</td>
-									</tr>
-									<tr>
-										<th scope="row"><label for="">첨부파일</label></th>
-										<td>
-											<input type="file" id="filename_tmp" name="filename_tmp" class="w50" title="첨부파일을 업로드 해주세요." />	
-										</td>
 									</tr>
 									<tr>
 										<th scope="row"><label for="">제목</label></th>
 										<td>
-											<input type="text" id="title" name="title" value="" title="공지사항 이름을 입력해주세요." />
+											<input type="text" id="title" name="title" value="" size="100" title="공지사항 이름을 입력해주세요." />
 										</td>
 									</tr>
 									<tr>

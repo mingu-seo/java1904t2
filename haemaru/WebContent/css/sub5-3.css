@@ -57,6 +57,10 @@ input[type='text']::placeholder {font-size:12px; }
 .reply-btn li a {display:block; height:100%; color:#fff; text-align: center; font-size:14px; line-height:28px; transition: all 0.3s;}
 .reply-btn li:nth-child(1) {background-color: #4d6877; margin-right:0;}
 .reply-btn li:nth-child(1):hover a {background-color: #378367;}
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/mingu-seo/java1904t2.git
 
 /* 번호 */
 .reply-number-all {width:350px; margin:0 auto; margin-top:80px; text-align:center;}

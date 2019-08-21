@@ -119,7 +119,7 @@ $(function() {
 			<div class="reservation-ck-page">
 				<div class="headline">
 					<p>예약확인</p>
-					<img src="/img/icon/footer-icon.png">
+					<img src="/icon/footer-icon.png">
 				</div>
 				<div class="re-page-ck-text">
 					<img src="/img/con2-4.png">
@@ -144,7 +144,7 @@ $(function() {
 			<div class="reservation-page">
 				<div class="headline">
 					<p>예약확인</p>
-					<img src="/img/icon/footer-icon.png">
+					<img src="/icon/footer-icon.png">
 				</div>
 				<div class="re-page-text">
 					<img src="/img/con2-4.png">

@@ -97,6 +97,10 @@ function getThumbnailPrivew(html, $target) {
                             </div>
                         <input type="hidden" id="pet_no" name="no" value=""/>
                         </form>
+                        <ul class="mypet-bot clear">
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">이메일무단수집거부</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -158,6 +162,10 @@ function getThumbnailPrivew(html, $target) {
                                 <input type="button" value="반려동물 추가" id="btn_submit3" onclick="goSave();">
                             </div>
                         </div>
+                        <ul class="petplus-bot clear">
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">이메일무단수집거부</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -209,11 +217,6 @@ function getThumbnailPrivew(html, $target) {
 				<div class="sub6-text clear">
 						<a class="pet-plus-more" href="#">반려동물추가</a>
 					</div>
-				<div class="sub6-botbox">
-					<p>
-						<span><%=memberInfo.getName()%></span> 님의 다음 진료 / 접종 예정일은 2019 년 06 월 20 일 입니다.
-					</p>
-				</div> 
 			</div>
 		</div>
 	</div>

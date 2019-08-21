@@ -98,10 +98,10 @@ public class NoticeService {
 		return delCount;
 	}
 
-	
+
 	public ArrayList<NoticeVO> Intro(NoticeVO nparam) throws Exception {
 		return noticeDao.Intro(nparam);
-	}
+	}	
 	/*
 	public ArrayList mainList(NoticeVO vo) throws Exception {
 		// TODO Auto-generated method stub

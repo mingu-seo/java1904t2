@@ -35,7 +35,7 @@ NoticeVO data = (NoticeVO)request.getAttribute("data");
 		<div id="container">
 			<div id="content">
 				<div class="con_tit">
-					<h2>동물관리 - [상세]</h2>
+					<h2>공지사항 - [상세]</h2>
 				</div>
 				<!-- //con_tit -->
 				<div class="con">
@@ -46,16 +46,13 @@ NoticeVO data = (NoticeVO)request.getAttribute("data");
 							<table width="100%" border="0" cellspacing="0" cellpadding="0" summary="동물 관리 기본내용입니다.">
 								<colgroup>
 									<col width="15%" />
-									<col width="35%" />
+									<col width="35%" />	
 									<col width="15%" />
-									<col width="35%" />
-									<col width="15%" />
-									<col width="35%" />
-									<col width="15%" />
-									<col width="35%" />
+									<col width="35%" />	
 								</colgroup>
 								<tbody>
 									<tr>
+<<<<<<< HEAD
 										<th><label for="">번호</label></th>
 										<td>
 											<%=data.getNo()%>
@@ -64,22 +61,29 @@ NoticeVO data = (NoticeVO)request.getAttribute("data");
 										<td>
 											<%=CodeUtil.getNoticeCategory(data.getType())%>
 										</td>
+=======
+										<th scope="row"><label for="">번호</label></th>
+										<td><%=data.getNo()%></td>
+										<th scope="row"><label for="">유형</label></th>
+										<td><%=CodeUtil.getNoticeCategory(data.getType())%></td>
+>>>>>>> branch 'master' of https://github.com/mingu-seo/java1904t2.git
 									</tr>
-									<tr>
+									<tr>						
 										<th><label for="">등록일</label></th>
+<<<<<<< HEAD
 										<td>
 											<%=data.getCre_date()%>
 										</td>
+=======
+										<td colspan="3"><%=data.getCre_date()%></td>
 									</tr>
 									<tr>
-										<td colspan="4">
-											<%=data.getTitle()%>
-										</td>
+										<th scope="row">제목</th>
+										<td colspan="3"><%=data.getTitle()%></td>
+>>>>>>> branch 'master' of https://github.com/mingu-seo/java1904t2.git
 									</tr>
 									<tr>
-										<td colspan="4">
-											<%=data.getContents()%>
-										</td>
+										<td colspan="4"><%=data.getContents()%></td>
 									</tr>
 								</tbody>
 							</table>

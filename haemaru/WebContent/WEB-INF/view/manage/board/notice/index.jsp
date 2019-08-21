@@ -51,7 +51,11 @@ function groupDelete() {
 								<colgroup>
 									<col class="w3" />
 									<col class="w5" />
+<<<<<<< HEAD
 									<col class="w20" />
+=======
+									<col class="w15" />
+>>>>>>> branch 'master' of https://github.com/mingu-seo/java1904t2.git
 									<col class="" />
 									<col class="w20" />
 								</colgroup>

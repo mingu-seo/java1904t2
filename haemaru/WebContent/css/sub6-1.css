@@ -85,7 +85,7 @@ input[type='password']::placeholder {color:#4d6877; font-size:14px;}
 #btn_submit:hover {transform: scale(1.03); color:#378367;}
 .half {margin-left:17px;}
 
-.myinfo-bot {width:376px; margin:0 auto;}
+.myinfo-bot {width:376px; margin:0 auto; padding-top:50px;}
 .myinfo-bot li {float:left; width:188px; height:30px; text-align: center; line-height:30px;}
 .myinfo-bot li:first-child a {color:#4d6877;} 
 .myinfo-bot li a {display:block; height:100%; color:#a2a1a1; font-size:14px;}
