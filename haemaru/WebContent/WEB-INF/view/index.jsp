@@ -87,7 +87,7 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
                             </div>
                             <div class="view2-bot clear">
                                 <div class="view2-bot-img"></div>
-                                <h6><a href='/adopt/animalprofile/animalprofile.do'>View Propile</a></h6>
+                                <h6><a href='/adopt/animalprofile/animalprofile.do'>View Profile</a></h6>
                             </div>
                         </div>
                         <!-- 베너 세번째 화면 -->
@@ -119,10 +119,10 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
                                  <li>
                                      <!-- 이미지 사이즈 1000px -->
                                     <div class="section-img">
-                                        <img class="view3-img-3" src="img/con4-1.jpg">
+                                        <img class="view3-img-3" src="/img/con4-1.jpg">
                                         <div class="section-text">
                                             <img src="/img/heamaru_clinic.png">
-                                            <p class="medical-text"><a href="sub2-1.html">외과</a>&nbsp;&nbsp;&nbsp;<a href="sub2-2.html">내과</a>&nbsp;&nbsp;&nbsp;<a href="sub2-3.html">영상의학과</a></a></p>
+                                            <p class="medical-text"><a href="/department/surgery.do">외과</a>&nbsp;&nbsp;&nbsp;<a href="/department/internal.do">내과</a>&nbsp;&nbsp;&nbsp;<a href="/department/radiology.do">영상의학과</a></a></p>
                                         </div>
                                     </div>
                                 </li>
@@ -488,9 +488,9 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
                   	  사람과 동물이 함께 존중하며<br/>
                    	 나란히 함께 할 수 있는 해마루</h3>
                     <div class="con4-more-btn">
-                        <a href="sub4-2.html" class="more-btn-a">
+                        <a href="/adopt/animalprofile/animalprofile.do" class="more-btn-a">
                             <span class="con4-more-bg"></span>
-                            <span class="con4-more-text">Propile More</span>
+                            <span class="con4-more-text">Profile More</span>
                         </a>
                     </div>
                 </div>
