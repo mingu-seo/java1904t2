@@ -120,7 +120,7 @@
     </select>
     
     <select id="Intro" parameterClass="notice_vo" resultClass="notice_vo">
-        SELECT title 
+        SELECT no, title 
         FROM notice 
         ORDER BY cre_date desc limit 0,3
     </select>

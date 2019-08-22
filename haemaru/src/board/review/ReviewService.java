@@ -36,7 +36,7 @@ public class ReviewService {
 		ArrayList list = reviewDao.list(param);
 		return list;
 	}
-
+ 
 	public int insert(ReviewVO vo, HttpServletRequest request) throws Exception {
 
 		FileUtil fu = new FileUtil();

@@ -53,16 +53,16 @@ public class SiteProperty {
 	/**
 	 * 메일서버
 	 */
-	public static final String 	SMTP_HOST				= "smtp.naver.com";
-	public static final String 	SMTP_PORT				= "465";
+	public static final String 	SMTP_HOST				= "smtp.cafe24.com";
+	public static final String 	SMTP_PORT				= "587";
 	/**
 	 * 메일계정 아이디
 	 */
-	public static final String 	SMTP_USER				= "eungi-8";
+	public static final String 	SMTP_USER				= "webmaster@thesugarnana.com";
 	/**
 	 * 메일계정 패스워드
 	 */
-	public static final String 	SMTP_PASSWORD			= "zxzxzxzx12";
+	public static final String 	SMTP_PASSWORD			= "whdms031@";
 	/**
 	 * 이메일 기본 폼
 	 */
@@ -97,7 +97,7 @@ public class SiteProperty {
 	/**
 	 * 로컬 홈디렉토리경로 (실서버 변경 필요)
 	 */
-	public static final String REAL_PATH				= "C:\\java\\git\\java1904t2\\haemaru\\WebContent";
+	public static final String REAL_PATH				= "/home/hosting_users/sugarnana/tomcat/webapps/ROOT";
 	/**
 	 * 공지사항 첨부파일 경로
 	 */

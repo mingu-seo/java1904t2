@@ -186,7 +186,7 @@ ArrayList<DoctorVO> list = (ArrayList) request.getAttribute("list");
             for(int n=0; n<nlist.size(); n++){
             %>
                     <div class="notice-btn">
-                        <h6><%=nlist.get(n).getTitle()%></h6>
+                        <h6><a href="/cscenter/notice/viewnotice?no=<%=nlist.get(n).getNo()%>"><%=nlist.get(n).getTitle()%></a></h6>
                         <p><%=DateUtil.getDateFormat(nlist.get(n).getCre_date())%></p>
                     </div>
               <%	

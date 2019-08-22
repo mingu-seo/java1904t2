@@ -48,9 +48,9 @@ QnaVO data = (QnaVO)request.getAttribute("data");
                     <p>Customer Center</p>
                 </div>
                 <ul class="sub-bar">
-                    <li ><a href="sub5-1.html">공지사항</a></li>
-                    <li><a href="sub5-2.html">FAQ</a></li>
-                    <li class="on"><a href="sub5-3.html">문의하기</a></li>
+                    <li ><a href="/cscenter/notice/notice.do">공지사항</a></li>
+                    <li><a href="/cscenter/faq/faq.do">FAQ</a></li>
+                    <li class="on"><a href="/cscenter/qna/qna.do">문의하기</a></li>
                 </ul>
             </div>
             <!-- main 부분 (여기다가 하면 됨) -->

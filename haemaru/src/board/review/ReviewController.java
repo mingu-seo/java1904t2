@@ -33,7 +33,7 @@ public class ReviewController {
 		return "adopt/review/review";
 	}	
 	 
-	
+	 
 	@RequestMapping("/adopt/review/addreview")
 	public String addreview(Model model, ReviewVO param) throws Exception {
 		model.addAttribute("vo", param);

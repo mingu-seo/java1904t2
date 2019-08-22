@@ -187,6 +187,7 @@
 .con2-box .con2-info5 h4 {text-align:left; text-indent: 155px; margin-bottom:50px; color:#7d909b; margin-top:10px; font-size:14px;}
 .notice-btn {width:480px; height:70px; border-bottom:1px solid #d4d9dd; margin:0 auto; padding-top:5px;
              background-image:url("../img/arrow.png"); background-repeat:no-repeat; background-position:center right 20px; text-align: left; text-indent:20px;}
+.notice-btn a {font-size:14px; color:#4d6877;}
 .notice-btn a h6 {font-size:14px; color:#4d6877; margin-top:10px;}
 .notice-btn a p {color:#d3d9dd; font-size:14px; margin:5px 0;}
 /* 공지사항 박스 부분 끝 */
